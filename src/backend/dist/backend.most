@@ -1,0 +1,149 @@
+// Version: 1.0.0
+type AdmissionForm__133778553 =
+  {
+    aadharNumber : Text;
+    accountHolderName : Text;
+    annualFamilyIncome : Text;
+    apparNumber : Text;
+    bankAccountNumber : Text;
+    bankName : BankName__364782684;
+    block : Text;
+    caste : Text;
+    category : Category__164941945;
+    dateOfBirth : Int;
+    district : Text;
+    documentsChecklist : DocumentsChecklist__1023277684;
+    eShikshakoshNumber : Text;
+    fathersAadhaar : Text;
+    fathersContact : Text;
+    fathersName : Text;
+    fathersOccupation : Text;
+    gender : Gender__579703926;
+    guardianDeclaration : Bool;
+    handicapPercentage : ?Nat;
+    handicapType : ?Text;
+    hasEShikshakosh : Bool;
+    hasPenAndApaar : Bool;
+    ifscCode : Text;
+    marksObtained : Nat;
+    mothersAadhaar : Text;
+    mothersGuardianContact : Text;
+    mothersName : Text;
+    mothersOccupation : Text;
+    orphanedAndDestitute : Bool;
+    passingDivision : PassingDivision__570077736;
+    passingYear : Nat;
+    photoUrl : ?Text;
+    physicallyHandicapped : Bool;
+    pinCode : Text;
+    policeStation : Text;
+    postOffice : Text;
+    previousExam : Text;
+    previousRollNo : Text;
+    previousSchool : Text;
+    religion : Religion__473788274;
+    religionOther : Text;
+    state : State__1030826395;
+    studentEmail : Text;
+    studentPen : Text;
+    studentPhone : Text;
+    subjects : SubjectSelection__371910165;
+    village : Text
+  };
+type ApplicationStatus__938853177 = {#approved; #draft; #pending; #rejected};
+type BankName__364782684 =
+  {
+    #dakshinBiharGraminBank;
+    #finoPaymentBank;
+    #indianPostPaymentBank;
+    #madhyaBiharGraminBank;
+    #other;
+    #punjabNationalBank;
+    #stateBankOfIndia;
+    #unionBankOfIndia
+  };
+type Category__164941945 = {#bc; #ebc; #general; #sc; #st};
+type Class__342182132 = {#class09th; #class10th; #class11th; #class12th};
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type DocumentsChecklist__1023277684 =
+  {
+    casteCertificate : Bool;
+    deathCertificate : Bool;
+    fathersAadhaarCard : Bool;
+    incomeCertificate : Bool;
+    mothersAadhaarCard : Bool;
+    previousMarksheets : Bool;
+    residenceCertificate : Bool;
+    studentAadhaarCard : Bool;
+    transferCertificate : Bool
+  };
+type Gender__579703926 = {#female; #male; #other};
+type Int__270357528 = Int__616954475;
+type Int__616954475 = Int;
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type OtpRecord__232976240 = {expiry : Int; otp : Text};
+type PassingDivision__570077736 = {#first; #second; #third};
+type Religion__473788274 =
+  {#buddhism; #christianity; #hinduism; #islam; #other};
+type State__1030826395 = {#bihar; #jharkhand; #other};
+type Stream__705987045 = {#arts; #commerce; #science};
+type Student__975845730 =
+  {
+    _class : Class__342182132;
+    admissionNumber : Text;
+    email : Text;
+    form : ?AdmissionForm__133778553;
+    name : Text;
+    password : Text;
+    principal : Principal;
+    registrationDate : Time__900049286;
+    rejectionReason : ?Text;
+    status : ApplicationStatus__938853177
+  };
+type SubjectSelection__371910165 =
+  {
+    additionalSubject : ?Text;
+    compulsoryGroup1 : ?Text;
+    compulsoryGroup2 : ?Text;
+    electiveSubjects : [Text];
+    extraSubject : ?Text;
+    mil : ?Text;
+    sil : ?Text;
+    stream : ?Stream__705987045
+  };
+type Time__796480547 = Int__270357528;
+type Time__900049286 = Time__796480547;
+type UserProfile__491224006 =
+  {_class : Class__342182132; email : Text; isStudent : Bool; name : Text};
+actor {
+  stable ADMIN_PASSWORD : Text;
+  stable OTP_EXPIRY_NS : Int;
+  stable var admissionCounter10 : Nat;
+  stable var admissionCounter11 : Nat;
+  stable var admissionCounter12 : Nat;
+  stable var admissionCounter9 : Nat;
+  stable otpStore :
+    {
+      var root : Node__46230540<Text, OtpRecord__232976240>;
+      var size : Nat__490723111
+    };
+  stable principalToEmail :
+    {var root : Node__46230540<Principal, Text>; var size : Nat__490723111};
+  stable students :
+    {
+      var root : Node__46230540<Text, Student__975845730>;
+      var size : Nat__490723111
+    };
+  stable userProfiles :
+    {
+      var root : Node__46230540<Principal, UserProfile__491224006>;
+      var size : Nat__490723111
+    }
+};

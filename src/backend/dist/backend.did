@@ -1,0 +1,194 @@
+type UserProfile = 
+ record {
+   _class: Class;
+   email: text;
+   isStudent: bool;
+   name: text;
+ };
+type Time = int;
+type SubjectSelection = 
+ record {
+   additionalSubject: opt text;
+   compulsoryGroup1: opt text;
+   compulsoryGroup2: opt text;
+   electiveSubjects: vec text;
+   extraSubject: opt text;
+   mil: opt text;
+   sil: opt text;
+   stream: opt Stream;
+ };
+type Student = 
+ record {
+   _class: Class;
+   admissionNumber: text;
+   email: text;
+   form: opt AdmissionForm;
+   name: text;
+   password: text;
+   "principal": principal;
+   registrationDate: Time;
+   rejectionReason: opt text;
+   status: ApplicationStatus;
+ };
+type Stream = 
+ variant {
+   arts;
+   commerce;
+   science;
+ };
+type State = 
+ variant {
+   bihar;
+   jharkhand;
+   other;
+ };
+type Religion = 
+ variant {
+   buddhism;
+   christianity;
+   hinduism;
+   islam;
+   other;
+ };
+type PassingDivision = 
+ variant {
+   first;
+   second;
+   third;
+ };
+type Gender = 
+ variant {
+   female;
+   male;
+   other;
+ };
+type DocumentsChecklist = 
+ record {
+   casteCertificate: bool;
+   deathCertificate: bool;
+   fathersAadhaarCard: bool;
+   incomeCertificate: bool;
+   mothersAadhaarCard: bool;
+   previousMarksheets: bool;
+   residenceCertificate: bool;
+   studentAadhaarCard: bool;
+   transferCertificate: bool;
+ };
+type Class = 
+ variant {
+   class09th;
+   class10th;
+   class11th;
+   class12th;
+ };
+type Category = 
+ variant {
+   bc;
+   ebc;
+   general;
+   sc;
+   st;
+ };
+type BankName = 
+ variant {
+   dakshinBiharGraminBank;
+   finoPaymentBank;
+   indianPostPaymentBank;
+   madhyaBiharGraminBank;
+   other;
+   punjabNationalBank;
+   stateBankOfIndia;
+   unionBankOfIndia;
+ };
+type ApplicationStatus = 
+ variant {
+   approved;
+   draft;
+   pending;
+   rejected;
+ };
+type AdmissionForm = 
+ record {
+   aadharNumber: text;
+   accountHolderName: text;
+   annualFamilyIncome: text;
+   apparNumber: text;
+   bankAccountNumber: text;
+   bankName: BankName;
+   block: text;
+   caste: text;
+   category: Category;
+   dateOfBirth: int;
+   district: text;
+   documentsChecklist: DocumentsChecklist;
+   eShikshakoshNumber: text;
+   fathersAadhaar: text;
+   fathersContact: text;
+   fathersName: text;
+   fathersOccupation: text;
+   gender: Gender;
+   guardianDeclaration: bool;
+   handicapPercentage: opt nat;
+   handicapType: opt text;
+   hasEShikshakosh: bool;
+   hasPenAndApaar: bool;
+   ifscCode: text;
+   marksObtained: nat;
+   mothersAadhaar: text;
+   mothersGuardianContact: text;
+   mothersName: text;
+   mothersOccupation: text;
+   orphanedAndDestitute: bool;
+   passingDivision: PassingDivision;
+   passingYear: nat;
+   photoUrl: opt text;
+   physicallyHandicapped: bool;
+   pinCode: text;
+   policeStation: text;
+   postOffice: text;
+   previousExam: text;
+   previousRollNo: text;
+   previousSchool: text;
+   religion: Religion;
+   religionOther: text;
+   state: State;
+   studentEmail: text;
+   studentPen: text;
+   studentPhone: text;
+   subjects: SubjectSelection;
+   village: text;
+ };
+service : {
+  approveApplication: (email: text) -> ();
+  approveApplicationForAdmin: (email: text, adminPassword: text) -> ();
+  generateOtp: (email: text) -> (text);
+  getAdmissionNumber: (email: text) -> (text) query;
+  getAllAdmissionNumbers: () -> (vec record {
+                                       text;
+                                       text;
+                                     }) query;
+  getAllApplications: () -> (vec Student) query;
+  getAllApplicationsForAdmin: (adminPassword: text) -> (vec Student) query;
+  getAllApprovedApplications: () -> (vec Student) query;
+  getAllPendingApplications: () -> (vec Student) query;
+  getAllRejectedApplications: () -> (vec Student) query;
+  getApplicationStatus: (email: text) -> (ApplicationStatus) query;
+  getApplicationsSortedByDate: () -> (vec Student) query;
+  getCallerStudent: () -> (opt Student) query;
+  getCallerUserProfile: () -> (opt UserProfile) query;
+  getDraftData: (email: text) -> (opt AdmissionForm) query;
+  getStudent: (email: text) -> (Student) query;
+  getUserProfile: (user: principal) -> (opt UserProfile) query;
+  loginStudent: (email: text, password: text) -> (bool) query;
+  registerStudent: (_class: Class, name: text, email: text, password:
+   text) -> (text);
+  rejectApplication: (email: text) -> ();
+  rejectApplicationForAdmin: (email: text, adminPassword: text,
+   rejectionReason: text) -> ();
+  resetPassword: (email: text, otp: text, newPassword: text) -> ();
+  resetPasswordDirect: (email: text, newPassword: text) -> ();
+  saveCallerUserProfile: (profile: UserProfile) -> ();
+  saveDraft: (email: text, form: AdmissionForm) -> ();
+  submitForm: (email: text, form: AdmissionForm) -> ();
+  verifyOtp: (email: text, otp: text) -> (bool) query;
+}
