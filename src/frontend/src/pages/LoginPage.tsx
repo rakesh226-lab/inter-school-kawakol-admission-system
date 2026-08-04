@@ -51,6 +51,9 @@ export default function LoginPage() {
         password: formData.password,
       });
 
+      // Store email so AdmissionForm can fetch student by email (avoids IC anonymous-principal collision)
+      sessionStorage.setItem("studentEmail", formData.email);
+
       // Fetch student data to determine redirect
       const { data: student } = await refetchStudent();
 
@@ -84,11 +87,21 @@ export default function LoginPage() {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            {(actorLoading || (!actor && !actorLoading)) && (
+            {actorLoading && (
               <Alert>
                 <Loader2 className="h-4 w-4 animate-spin" />
                 <AlertDescription>
                   Connecting to server, please wait...
+                </AlertDescription>
+              </Alert>
+            )}
+
+            {!actorLoading && !actor && (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>
+                  Could not connect to the server. Please refresh the page and
+                  try again.
                 </AlertDescription>
               </Alert>
             )}

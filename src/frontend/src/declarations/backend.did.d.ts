@@ -16,6 +16,7 @@ export interface AdmissionForm {
   'studentEmail' : string,
   'hasEShikshakosh' : boolean,
   'subjects' : SubjectSelection,
+  'fathersNameAsPerAadhaar' : string,
   'previousSchool' : string,
   'ifscCode' : string,
   'marksObtained' : bigint,
@@ -32,6 +33,7 @@ export interface AdmissionForm {
   'photoUrl' : [] | [string],
   'mothersOccupation' : string,
   'policeStation' : string,
+  'mothersNameAsPerAadhaar' : string,
   'fathersName' : string,
   'bankName' : BankName,
   'district' : string,
@@ -121,6 +123,15 @@ export interface Student {
   'admissionNumber' : string,
   'registrationDate' : Time,
 }
+export interface StudentSummary {
+  'status' : ApplicationStatus,
+  'studentName' : string,
+  'class' : string,
+  'rejectionReason' : string,
+  'email' : string,
+  'admissionNumber' : string,
+  'registrationDate' : bigint,
+}
 export interface SubjectSelection {
   'mil' : [] | [string],
   'sil' : [] | [string],
@@ -141,19 +152,33 @@ export interface UserProfile {
 export interface _SERVICE {
   'approveApplication' : ActorMethod<[string], undefined>,
   'approveApplicationForAdmin' : ActorMethod<[string, string], undefined>,
+  'deleteApplicationForAdmin' : ActorMethod<
+    [Array<string>, string],
+    { 'ok' : string } |
+      { 'err' : string }
+  >,
   'generateOtp' : ActorMethod<[string], string>,
   'getAdmissionNumber' : ActorMethod<[string], string>,
   'getAllAdmissionNumbers' : ActorMethod<[], Array<[string, string]>>,
   'getAllApplications' : ActorMethod<[], Array<Student>>,
   'getAllApplicationsForAdmin' : ActorMethod<[string], Array<Student>>,
+  'getAllApplicationsForExport' : ActorMethod<[string], Array<Student>>,
   'getAllApprovedApplications' : ActorMethod<[], Array<Student>>,
   'getAllPendingApplications' : ActorMethod<[], Array<Student>>,
   'getAllRejectedApplications' : ActorMethod<[], Array<Student>>,
+  'getApplicationDetailForAdmin' : ActorMethod<
+    [string, string],
+    [] | [Student]
+  >,
   'getApplicationStatus' : ActorMethod<[string], ApplicationStatus>,
   'getApplicationsSortedByDate' : ActorMethod<[], Array<Student>>,
   'getCallerStudent' : ActorMethod<[], [] | [Student]>,
   'getCallerUserProfile' : ActorMethod<[], [] | [UserProfile]>,
   'getDraftData' : ActorMethod<[string], [] | [AdmissionForm]>,
+  'getLightweightApplicationsForAdmin' : ActorMethod<
+    [string],
+    Array<StudentSummary>
+  >,
   'getStudent' : ActorMethod<[string], Student>,
   'getUserProfile' : ActorMethod<[Principal], [] | [UserProfile]>,
   'loginStudent' : ActorMethod<[string, string], boolean>,

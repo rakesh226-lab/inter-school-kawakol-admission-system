@@ -5,15 +5,7 @@ import type { ExternalBlob } from "../backend";
 
 export type Class = "class09th" | "class10th" | "class11th" | "class12th";
 export type Gender = "male" | "female" | "other";
-export type Category =
-  | "general"
-  | "ews"
-  | "sc"
-  | "st"
-  | "bci"
-  | "bcii"
-  | "ebc"
-  | "bc";
+export type Category = "general" | "ebc" | "bc" | "sc" | "st";
 export type Stream = "science" | "arts" | "commerce";
 export type BankName =
   | "stateBankOfIndia"
@@ -173,6 +165,17 @@ export interface Student {
   form?: AdmissionForm;
 }
 
+// Lightweight summary for admin table list — no photos, fits within IC 3MB limit
+export interface StudentSummary {
+  email: string;
+  admissionNumber: string;
+  studentName: string;
+  class_: string; // "9", "10", "11", "12"
+  status: ApplicationStatus;
+  registrationDate: bigint;
+  rejectionReason: string;
+}
+
 // Enum-like constants
 export const Gender = {
   male: "male" as Gender,
@@ -182,13 +185,10 @@ export const Gender = {
 
 export const Category = {
   general: "general" as Category,
-  ews: "ews" as Category,
-  sc: "sc" as Category,
-  st: "st" as Category,
-  bci: "bci" as Category,
-  bcii: "bcii" as Category,
   ebc: "ebc" as Category,
   bc: "bc" as Category,
+  sc: "sc" as Category,
+  st: "st" as Category,
 };
 
 export const BankName = {

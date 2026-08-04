@@ -12,6 +12,14 @@ const NETWORK_ERROR_MESSAGE =
 /**
  * Checks whether the given error is a canister-unavailability error
  * (IC0508 "Canister is stopped", reject code 5, or similar replica rejections).
+ *
+ * IMPORTANT: Do NOT match reject_code 4 / Reject code: 4 here.
+ * Reject code 4 = CanisterReject = normal backend validation errors (e.g.
+ * "Email already registered", "Unauthorized", field validation failures).
+ * Those must surface their real message unchanged.
+ *
+ * Also do NOT match IC0504 (msg_reply_data_append payload too large) here —
+ * that is a data-size issue on a running canister, not a canister-down scenario.
  */
 function isCanisterUnavailableError(error: unknown): boolean {
   if (!error) return false;
@@ -29,6 +37,7 @@ function isCanisterUnavailableError(error: unknown): boolean {
   if (message.includes("canister is stopped")) return true;
 
   // Reject code 5 – system-level rejection (canister not running)
+  // NOTE: Do NOT add reject_code 4 / Reject code: 4 here — those are normal backend errors.
   if (
     message.includes("reject_code: 5") ||
     message.includes('"reject_code":5') ||
@@ -37,10 +46,15 @@ function isCanisterUnavailableError(error: unknown): boolean {
     return true;
   if (message.includes("Reject code: 5")) return true;
 
-  // Generic replica rejection patterns
+  // non_replicated_rejection is specifically canister not running / module not found
   if (message.includes("non_replicated_rejection")) return true;
-  if (message.includes("Request ID:") && message.includes("Reject code:"))
-    return true;
+
+  // IC0301 – canister not found / does not exist (wrong canister ID)
+  if (message.includes("IC0301")) return true;
+
+  // NOTE: IC0504 (msg_reply_data_append payload too large) is intentionally NOT matched here.
+  // That error means the canister is running fine but the response is too large — it is not
+  // a canister-unavailability error and should surface its real message for debugging.
 
   return false;
 }
@@ -68,9 +82,9 @@ function isNetworkError(error: unknown): boolean {
 
 /**
  * Returns a user-friendly error message for the given error.
- * - IC0508 / canister stopped / reject code 5 → service unavailable message
+ * - IC0508 / canister stopped / reject code 5 / IC0301 → service unavailable message
  * - Network errors → connectivity message
- * - All other errors → original message (unchanged)
+ * - All other errors (including reject code 4 validation errors) → original message unchanged
  */
 export function getCanisterErrorMessage(error: unknown): string {
   if (isCanisterUnavailableError(error)) {
@@ -81,7 +95,7 @@ export function getCanisterErrorMessage(error: unknown): string {
     return NETWORK_ERROR_MESSAGE;
   }
 
-  // Return original message for non-canister errors (e.g. validation errors)
+  // Return original message for non-canister errors (e.g. validation errors, reject code 4)
   if (error instanceof Error) {
     return error.message;
   }

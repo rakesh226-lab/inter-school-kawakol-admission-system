@@ -35826,35 +35826,58 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$o = [
+const __iconNode$q = [
   ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
   ["path", { d: "M19 12H5", key: "x3x0zl" }]
 ];
-const ArrowLeft = createLucideIcon("arrow-left", __iconNode$o);
+const ArrowLeft = createLucideIcon("arrow-left", __iconNode$q);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$n = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$n);
+const __iconNode$p = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$p);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$m = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
-const ChevronDown = createLucideIcon("chevron-down", __iconNode$m);
+const __iconNode$o = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
+const ChevronDown = createLucideIcon("chevron-down", __iconNode$o);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$l = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
-const ChevronUp = createLucideIcon("chevron-up", __iconNode$l);
+const __iconNode$n = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
+const ChevronUp = createLucideIcon("chevron-up", __iconNode$n);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$m = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
+  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
+];
+const CircleAlert = createLucideIcon("circle-alert", __iconNode$m);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$l = [
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+];
+const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$l);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -35863,10 +35886,9 @@ const ChevronUp = createLucideIcon("chevron-up", __iconNode$l);
  */
 const __iconNode$k = [
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
-  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
 ];
-const CircleAlert = createLucideIcon("circle-alert", __iconNode$k);
+const CircleCheck = createLucideIcon("circle-check", __iconNode$k);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -35874,21 +35896,19 @@ const CircleAlert = createLucideIcon("circle-alert", __iconNode$k);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$j = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "m15 9-6 6", key: "1uzhvr" }],
+  ["path", { d: "m9 9 6 6", key: "z0biqf" }]
 ];
-const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$j);
+const CircleX = createLucideIcon("circle-x", __iconNode$j);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$i = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
-];
-const CircleCheck = createLucideIcon("circle-check", __iconNode$i);
+const __iconNode$i = [["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]];
+const Circle = createLucideIcon("circle", __iconNode$i);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -35897,18 +35917,21 @@ const CircleCheck = createLucideIcon("circle-check", __iconNode$i);
  */
 const __iconNode$h = [
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m15 9-6 6", key: "1uzhvr" }],
-  ["path", { d: "m9 9 6 6", key: "z0biqf" }]
+  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
 ];
-const CircleX = createLucideIcon("circle-x", __iconNode$h);
+const Clock = createLucideIcon("clock", __iconNode$h);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$g = [["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]];
-const Circle = createLucideIcon("circle", __iconNode$g);
+const __iconNode$g = [
+  ["path", { d: "M12 15V3", key: "m9g1x1" }],
+  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
+  ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
+];
+const Download = createLucideIcon("download", __iconNode$g);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -35916,29 +35939,6 @@ const Circle = createLucideIcon("circle", __iconNode$g);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$f = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
-];
-const Clock = createLucideIcon("clock", __iconNode$f);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$e = [
-  ["path", { d: "M12 15V3", key: "m9g1x1" }],
-  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
-  ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
-];
-const Download = createLucideIcon("download", __iconNode$e);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$d = [
   [
     "path",
     {
@@ -35948,14 +35948,14 @@ const __iconNode$d = [
   ],
   ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
 ];
-const Eye = createLucideIcon("eye", __iconNode$d);
+const Eye = createLucideIcon("eye", __iconNode$f);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$c = [
+const __iconNode$e = [
   [
     "path",
     {
@@ -35965,15 +35965,38 @@ const __iconNode$c = [
   ],
   ["circle", { cx: "16.5", cy: "7.5", r: ".5", fill: "currentColor", key: "w0ekpg" }]
 ];
-const KeyRound = createLucideIcon("key-round", __iconNode$c);
+const KeyRound = createLucideIcon("key-round", __iconNode$e);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$b = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
-const LoaderCircle = createLucideIcon("loader-circle", __iconNode$b);
+const __iconNode$d = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
+const LoaderCircle = createLucideIcon("loader-circle", __iconNode$d);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$c = [
+  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
+  ["path", { d: "M21 12H9", key: "dn1m92" }],
+  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
+];
+const LogOut = createLucideIcon("log-out", __iconNode$c);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$b = [
+  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
+  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
+];
+const Mail = createLucideIcon("mail", __iconNode$b);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -35981,29 +36004,6 @@ const LoaderCircle = createLucideIcon("loader-circle", __iconNode$b);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$a = [
-  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
-  ["path", { d: "M21 12H9", key: "dn1m92" }],
-  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
-];
-const LogOut = createLucideIcon("log-out", __iconNode$a);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$9 = [
-  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
-  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
-];
-const Mail = createLucideIcon("mail", __iconNode$9);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$8 = [
   [
     "path",
     {
@@ -36014,27 +36014,27 @@ const __iconNode$8 = [
   ["path", { d: "M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6", key: "1itne7" }],
   ["rect", { x: "6", y: "14", width: "12", height: "8", rx: "1", key: "1ue0tg" }]
 ];
-const Printer = createLucideIcon("printer", __iconNode$8);
+const Printer = createLucideIcon("printer", __iconNode$a);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$7 = [
+const __iconNode$9 = [
   ["path", { d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8", key: "v9h5vc" }],
   ["path", { d: "M21 3v5h-5", key: "1q7to0" }],
   ["path", { d: "M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16", key: "3uifl3" }],
   ["path", { d: "M8 16H3v5", key: "1cv678" }]
 ];
-const RefreshCw = createLucideIcon("refresh-cw", __iconNode$7);
+const RefreshCw = createLucideIcon("refresh-cw", __iconNode$9);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$6 = [
+const __iconNode$8 = [
   [
     "path",
     {
@@ -36045,7 +36045,35 @@ const __iconNode$6 = [
   ["path", { d: "M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7", key: "1ydtos" }],
   ["path", { d: "M7 3v4a1 1 0 0 0 1 1h7", key: "t51u73" }]
 ];
-const Save = createLucideIcon("save", __iconNode$6);
+const Save = createLucideIcon("save", __iconNode$8);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$7 = [
+  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
+  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
+];
+const Search = createLucideIcon("search", __iconNode$7);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$6 = [
+  [
+    "path",
+    {
+      d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z",
+      key: "1ffxy3"
+    }
+  ],
+  ["path", { d: "m21.854 2.147-10.94 10.939", key: "12cjpa" }]
+];
+const Send = createLucideIcon("send", __iconNode$6);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -36056,13 +36084,13 @@ const __iconNode$5 = [
   [
     "path",
     {
-      d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z",
-      key: "1ffxy3"
+      d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+      key: "oel41y"
     }
   ],
-  ["path", { d: "m21.854 2.147-10.94 10.939", key: "12cjpa" }]
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
 ];
-const Send = createLucideIcon("send", __iconNode$5);
+const ShieldCheck = createLucideIcon("shield-check", __iconNode$5);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -36076,10 +36104,9 @@ const __iconNode$4 = [
       d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
       key: "oel41y"
     }
-  ],
-  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
+  ]
 ];
-const ShieldCheck = createLucideIcon("shield-check", __iconNode$4);
+const Shield = createLucideIcon("shield", __iconNode$4);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -36087,22 +36114,6 @@ const ShieldCheck = createLucideIcon("shield-check", __iconNode$4);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$3 = [
-  [
-    "path",
-    {
-      d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
-      key: "oel41y"
-    }
-  ]
-];
-const Shield = createLucideIcon("shield", __iconNode$3);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$2 = [
   ["path", { d: "M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7", key: "1m0v6g" }],
   [
     "path",
@@ -36112,7 +36123,21 @@ const __iconNode$2 = [
     }
   ]
 ];
-const SquarePen = createLucideIcon("square-pen", __iconNode$2);
+const SquarePen = createLucideIcon("square-pen", __iconNode$3);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$2 = [
+  ["path", { d: "M3 6h18", key: "d0wm0j" }],
+  ["path", { d: "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6", key: "4alrt4" }],
+  ["path", { d: "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2", key: "v07s0e" }],
+  ["line", { x1: "10", x2: "10", y1: "11", y2: "17", key: "1uufr5" }],
+  ["line", { x1: "14", x2: "14", y1: "11", y2: "17", key: "xtxkd" }]
+];
+const Trash2 = createLucideIcon("trash-2", __iconNode$2);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -36308,14 +36333,6 @@ function CardContent({ className, ...props }) {
     }
   );
 }
-function composeEventHandlers(originalEventHandler, ourEventHandler, { checkForDefaultPrevented = true } = {}) {
-  return function handleEvent(event) {
-    originalEventHandler == null ? void 0 : originalEventHandler(event);
-    if (checkForDefaultPrevented === false || !event.defaultPrevented) {
-      return ourEventHandler == null ? void 0 : ourEventHandler(event);
-    }
-  };
-}
 function createContext2(rootComponentName, defaultContext) {
   const Context = reactExports.createContext(defaultContext);
   const Provider = (props) => {
@@ -36391,17 +36408,16 @@ function composeContextScopes(...scopes) {
   createScope.scopeName = baseScope.scopeName;
   return createScope;
 }
+function composeEventHandlers(originalEventHandler, ourEventHandler, { checkForDefaultPrevented = true } = {}) {
+  return function handleEvent(event) {
+    originalEventHandler == null ? void 0 : originalEventHandler(event);
+    if (checkForDefaultPrevented === false || !event.defaultPrevented) {
+      return ourEventHandler == null ? void 0 : ourEventHandler(event);
+    }
+  };
+}
 var useLayoutEffect2 = (globalThis == null ? void 0 : globalThis.document) ? reactExports.useLayoutEffect : () => {
 };
-var useReactId = React$4[" useId ".trim().toString()] || (() => void 0);
-var count$1 = 0;
-function useId(deterministicId) {
-  const [id, setId] = reactExports.useState(useReactId());
-  useLayoutEffect2(() => {
-    setId((reactId) => reactId ?? String(count$1++));
-  }, [deterministicId]);
-  return deterministicId || (id ? `radix-${id}` : "");
-}
 var useInsertionEffect = React$4[" useInsertionEffect ".trim().toString()] || useLayoutEffect2;
 function useControllableState({
   prop,
@@ -36468,6 +36484,173 @@ function useUncontrolledState({
 function isFunction$1(value) {
   return typeof value === "function";
 }
+function usePrevious(value) {
+  const ref = reactExports.useRef({ value, previous: value });
+  return reactExports.useMemo(() => {
+    if (ref.current.value !== value) {
+      ref.current.previous = ref.current.value;
+      ref.current.value = value;
+    }
+    return ref.current.previous;
+  }, [value]);
+}
+function useSize(element) {
+  const [size2, setSize] = reactExports.useState(void 0);
+  useLayoutEffect2(() => {
+    if (element) {
+      setSize({ width: element.offsetWidth, height: element.offsetHeight });
+      const resizeObserver = new ResizeObserver((entries) => {
+        if (!Array.isArray(entries)) {
+          return;
+        }
+        if (!entries.length) {
+          return;
+        }
+        const entry = entries[0];
+        let width;
+        let height;
+        if ("borderBoxSize" in entry) {
+          const borderSizeEntry = entry["borderBoxSize"];
+          const borderSize = Array.isArray(borderSizeEntry) ? borderSizeEntry[0] : borderSizeEntry;
+          width = borderSize["inlineSize"];
+          height = borderSize["blockSize"];
+        } else {
+          width = element.offsetWidth;
+          height = element.offsetHeight;
+        }
+        setSize({ width, height });
+      });
+      resizeObserver.observe(element, { box: "border-box" });
+      return () => resizeObserver.unobserve(element);
+    } else {
+      setSize(void 0);
+    }
+  }, [element]);
+  return size2;
+}
+function useStateMachine$1(initialState, machine) {
+  return reactExports.useReducer((state, event) => {
+    const nextState = machine[state][event];
+    return nextState ?? state;
+  }, initialState);
+}
+var Presence = (props) => {
+  const { present, children } = props;
+  const presence = usePresence(present);
+  const child = typeof children === "function" ? children({ present: presence.isPresent }) : reactExports.Children.only(children);
+  const ref = useComposedRefs(presence.ref, getElementRef$1(child));
+  const forceMount = typeof children === "function";
+  return forceMount || presence.isPresent ? reactExports.cloneElement(child, { ref }) : null;
+};
+Presence.displayName = "Presence";
+function usePresence(present) {
+  const [node, setNode] = reactExports.useState();
+  const stylesRef = reactExports.useRef(null);
+  const prevPresentRef = reactExports.useRef(present);
+  const prevAnimationNameRef = reactExports.useRef("none");
+  const initialState = present ? "mounted" : "unmounted";
+  const [state, send] = useStateMachine$1(initialState, {
+    mounted: {
+      UNMOUNT: "unmounted",
+      ANIMATION_OUT: "unmountSuspended"
+    },
+    unmountSuspended: {
+      MOUNT: "mounted",
+      ANIMATION_END: "unmounted"
+    },
+    unmounted: {
+      MOUNT: "mounted"
+    }
+  });
+  reactExports.useEffect(() => {
+    const currentAnimationName = getAnimationName(stylesRef.current);
+    prevAnimationNameRef.current = state === "mounted" ? currentAnimationName : "none";
+  }, [state]);
+  useLayoutEffect2(() => {
+    const styles = stylesRef.current;
+    const wasPresent = prevPresentRef.current;
+    const hasPresentChanged = wasPresent !== present;
+    if (hasPresentChanged) {
+      const prevAnimationName = prevAnimationNameRef.current;
+      const currentAnimationName = getAnimationName(styles);
+      if (present) {
+        send("MOUNT");
+      } else if (currentAnimationName === "none" || (styles == null ? void 0 : styles.display) === "none") {
+        send("UNMOUNT");
+      } else {
+        const isAnimating = prevAnimationName !== currentAnimationName;
+        if (wasPresent && isAnimating) {
+          send("ANIMATION_OUT");
+        } else {
+          send("UNMOUNT");
+        }
+      }
+      prevPresentRef.current = present;
+    }
+  }, [present, send]);
+  useLayoutEffect2(() => {
+    if (node) {
+      let timeoutId;
+      const ownerWindow = node.ownerDocument.defaultView ?? window;
+      const handleAnimationEnd = (event) => {
+        const currentAnimationName = getAnimationName(stylesRef.current);
+        const isCurrentAnimation = currentAnimationName.includes(CSS.escape(event.animationName));
+        if (event.target === node && isCurrentAnimation) {
+          send("ANIMATION_END");
+          if (!prevPresentRef.current) {
+            const currentFillMode = node.style.animationFillMode;
+            node.style.animationFillMode = "forwards";
+            timeoutId = ownerWindow.setTimeout(() => {
+              if (node.style.animationFillMode === "forwards") {
+                node.style.animationFillMode = currentFillMode;
+              }
+            });
+          }
+        }
+      };
+      const handleAnimationStart = (event) => {
+        if (event.target === node) {
+          prevAnimationNameRef.current = getAnimationName(stylesRef.current);
+        }
+      };
+      node.addEventListener("animationstart", handleAnimationStart);
+      node.addEventListener("animationcancel", handleAnimationEnd);
+      node.addEventListener("animationend", handleAnimationEnd);
+      return () => {
+        ownerWindow.clearTimeout(timeoutId);
+        node.removeEventListener("animationstart", handleAnimationStart);
+        node.removeEventListener("animationcancel", handleAnimationEnd);
+        node.removeEventListener("animationend", handleAnimationEnd);
+      };
+    } else {
+      send("ANIMATION_END");
+    }
+  }, [node, send]);
+  return {
+    isPresent: ["mounted", "unmountSuspended"].includes(state),
+    ref: reactExports.useCallback((node2) => {
+      stylesRef.current = node2 ? getComputedStyle(node2) : null;
+      setNode(node2);
+    }, [])
+  };
+}
+function getAnimationName(styles) {
+  return (styles == null ? void 0 : styles.animationName) || "none";
+}
+function getElementRef$1(element) {
+  var _a3, _b3;
+  let getter = (_a3 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a3.get;
+  let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
+  if (mayWarn) {
+    return element.ref;
+  }
+  getter = (_b3 = Object.getOwnPropertyDescriptor(element, "ref")) == null ? void 0 : _b3.get;
+  mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
+  if (mayWarn) {
+    return element.props.ref;
+  }
+  return element.props.ref || element.ref;
+}
 // @__NO_SIDE_EFFECTS__
 function createSlot(ownerName) {
   const SlotClone = /* @__PURE__ */ createSlotClone(ownerName);
@@ -36497,7 +36680,7 @@ function createSlotClone(ownerName) {
   const SlotClone = reactExports.forwardRef((props, forwardedRef) => {
     const { children, ...slotProps } = props;
     if (reactExports.isValidElement(children)) {
-      const childrenRef = getElementRef$1(children);
+      const childrenRef = getElementRef(children);
       const props2 = mergeProps(slotProps, children.props);
       if (children.type !== reactExports.Fragment) {
         props2.ref = forwardedRef ? composeRefs(forwardedRef, childrenRef) : childrenRef;
@@ -36537,7 +36720,7 @@ function mergeProps(slotProps, childProps) {
   }
   return { ...slotProps, ...overrideProps };
 }
-function getElementRef$1(element) {
+function getElementRef(element) {
   var _a3, _b3;
   let getter = (_a3 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a3.get;
   let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
@@ -36585,6 +36768,296 @@ var Primitive$1 = NODES$1.reduce((primitive, node) => {
 }, {});
 function dispatchDiscreteCustomEvent(target, event) {
   if (target) reactDomExports.flushSync(() => target.dispatchEvent(event));
+}
+var CHECKBOX_NAME = "Checkbox";
+var [createCheckboxContext] = createContextScope(CHECKBOX_NAME);
+var [CheckboxProviderImpl, useCheckboxContext] = createCheckboxContext(CHECKBOX_NAME);
+function CheckboxProvider(props) {
+  const {
+    __scopeCheckbox,
+    checked: checkedProp,
+    children,
+    defaultChecked,
+    disabled,
+    form,
+    name,
+    onCheckedChange,
+    required,
+    value = "on",
+    // @ts-expect-error
+    internal_do_not_use_render
+  } = props;
+  const [checked, setChecked] = useControllableState({
+    prop: checkedProp,
+    defaultProp: defaultChecked ?? false,
+    onChange: onCheckedChange,
+    caller: CHECKBOX_NAME
+  });
+  const [control, setControl] = reactExports.useState(null);
+  const [bubbleInput, setBubbleInput] = reactExports.useState(null);
+  const hasConsumerStoppedPropagationRef = reactExports.useRef(false);
+  const isFormControl = control ? !!form || !!control.closest("form") : (
+    // We set this to true by default so that events bubble to forms without JS (SSR)
+    true
+  );
+  const context = {
+    checked,
+    disabled,
+    setChecked,
+    control,
+    setControl,
+    name,
+    form,
+    value,
+    hasConsumerStoppedPropagationRef,
+    required,
+    defaultChecked: isIndeterminate(defaultChecked) ? false : defaultChecked,
+    isFormControl,
+    bubbleInput,
+    setBubbleInput
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    CheckboxProviderImpl,
+    {
+      scope: __scopeCheckbox,
+      ...context,
+      children: isFunction(internal_do_not_use_render) ? internal_do_not_use_render(context) : children
+    }
+  );
+}
+var TRIGGER_NAME$2 = "CheckboxTrigger";
+var CheckboxTrigger = reactExports.forwardRef(
+  ({ __scopeCheckbox, onKeyDown, onClick, ...checkboxProps }, forwardedRef) => {
+    const {
+      control,
+      value,
+      disabled,
+      checked,
+      required,
+      setControl,
+      setChecked,
+      hasConsumerStoppedPropagationRef,
+      isFormControl,
+      bubbleInput
+    } = useCheckboxContext(TRIGGER_NAME$2, __scopeCheckbox);
+    const composedRefs = useComposedRefs(forwardedRef, setControl);
+    const initialCheckedStateRef = reactExports.useRef(checked);
+    reactExports.useEffect(() => {
+      const form = control == null ? void 0 : control.form;
+      if (form) {
+        const reset = () => setChecked(initialCheckedStateRef.current);
+        form.addEventListener("reset", reset);
+        return () => form.removeEventListener("reset", reset);
+      }
+    }, [control, setChecked]);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive$1.button,
+      {
+        type: "button",
+        role: "checkbox",
+        "aria-checked": isIndeterminate(checked) ? "mixed" : checked,
+        "aria-required": required,
+        "data-state": getState$2(checked),
+        "data-disabled": disabled ? "" : void 0,
+        disabled,
+        value,
+        ...checkboxProps,
+        ref: composedRefs,
+        onKeyDown: composeEventHandlers(onKeyDown, (event) => {
+          if (event.key === "Enter") event.preventDefault();
+        }),
+        onClick: composeEventHandlers(onClick, (event) => {
+          setChecked((prevChecked) => isIndeterminate(prevChecked) ? true : !prevChecked);
+          if (bubbleInput && isFormControl) {
+            hasConsumerStoppedPropagationRef.current = event.isPropagationStopped();
+            if (!hasConsumerStoppedPropagationRef.current) event.stopPropagation();
+          }
+        })
+      }
+    );
+  }
+);
+CheckboxTrigger.displayName = TRIGGER_NAME$2;
+var Checkbox$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const {
+      __scopeCheckbox,
+      name,
+      checked,
+      defaultChecked,
+      required,
+      disabled,
+      value,
+      onCheckedChange,
+      form,
+      ...checkboxProps
+    } = props;
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      CheckboxProvider,
+      {
+        __scopeCheckbox,
+        checked,
+        defaultChecked,
+        disabled,
+        required,
+        onCheckedChange,
+        name,
+        form,
+        value,
+        internal_do_not_use_render: ({ isFormControl }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            CheckboxTrigger,
+            {
+              ...checkboxProps,
+              ref: forwardedRef,
+              __scopeCheckbox
+            }
+          ),
+          isFormControl && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            CheckboxBubbleInput,
+            {
+              __scopeCheckbox
+            }
+          )
+        ] })
+      }
+    );
+  }
+);
+Checkbox$1.displayName = CHECKBOX_NAME;
+var INDICATOR_NAME$1 = "CheckboxIndicator";
+var CheckboxIndicator = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeCheckbox, forceMount, ...indicatorProps } = props;
+    const context = useCheckboxContext(INDICATOR_NAME$1, __scopeCheckbox);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Presence,
+      {
+        present: forceMount || isIndeterminate(context.checked) || context.checked === true,
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Primitive$1.span,
+          {
+            "data-state": getState$2(context.checked),
+            "data-disabled": context.disabled ? "" : void 0,
+            ...indicatorProps,
+            ref: forwardedRef,
+            style: { pointerEvents: "none", ...props.style }
+          }
+        )
+      }
+    );
+  }
+);
+CheckboxIndicator.displayName = INDICATOR_NAME$1;
+var BUBBLE_INPUT_NAME$2 = "CheckboxBubbleInput";
+var CheckboxBubbleInput = reactExports.forwardRef(
+  ({ __scopeCheckbox, ...props }, forwardedRef) => {
+    const {
+      control,
+      hasConsumerStoppedPropagationRef,
+      checked,
+      defaultChecked,
+      required,
+      disabled,
+      name,
+      value,
+      form,
+      bubbleInput,
+      setBubbleInput
+    } = useCheckboxContext(BUBBLE_INPUT_NAME$2, __scopeCheckbox);
+    const composedRefs = useComposedRefs(forwardedRef, setBubbleInput);
+    const prevChecked = usePrevious(checked);
+    const controlSize = useSize(control);
+    reactExports.useEffect(() => {
+      const input = bubbleInput;
+      if (!input) return;
+      const inputProto = window.HTMLInputElement.prototype;
+      const descriptor = Object.getOwnPropertyDescriptor(
+        inputProto,
+        "checked"
+      );
+      const setChecked = descriptor.set;
+      const bubbles = !hasConsumerStoppedPropagationRef.current;
+      if (prevChecked !== checked && setChecked) {
+        const event = new Event("click", { bubbles });
+        input.indeterminate = isIndeterminate(checked);
+        setChecked.call(input, isIndeterminate(checked) ? false : checked);
+        input.dispatchEvent(event);
+      }
+    }, [bubbleInput, prevChecked, checked, hasConsumerStoppedPropagationRef]);
+    const defaultCheckedRef = reactExports.useRef(isIndeterminate(checked) ? false : checked);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive$1.input,
+      {
+        type: "checkbox",
+        "aria-hidden": true,
+        defaultChecked: defaultChecked ?? defaultCheckedRef.current,
+        required,
+        disabled,
+        name,
+        value,
+        form,
+        ...props,
+        tabIndex: -1,
+        ref: composedRefs,
+        style: {
+          ...props.style,
+          ...controlSize,
+          position: "absolute",
+          pointerEvents: "none",
+          opacity: 0,
+          margin: 0,
+          // We transform because the input is absolutely positioned but we have
+          // rendered it **after** the button. This pulls it back to sit on top
+          // of the button.
+          transform: "translateX(-100%)"
+        }
+      }
+    );
+  }
+);
+CheckboxBubbleInput.displayName = BUBBLE_INPUT_NAME$2;
+function isFunction(value) {
+  return typeof value === "function";
+}
+function isIndeterminate(checked) {
+  return checked === "indeterminate";
+}
+function getState$2(checked) {
+  return isIndeterminate(checked) ? "indeterminate" : checked ? "checked" : "unchecked";
+}
+function Checkbox({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Checkbox$1,
+    {
+      "data-slot": "checkbox",
+      className: cn(
+        "peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
+        className
+      ),
+      ...props,
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        CheckboxIndicator,
+        {
+          "data-slot": "checkbox-indicator",
+          className: "flex items-center justify-center text-current transition-none",
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "size-3.5" })
+        }
+      )
+    }
+  );
+}
+var useReactId = React$4[" useId ".trim().toString()] || (() => void 0);
+var count$1 = 0;
+function useId(deterministicId) {
+  const [id, setId] = reactExports.useState(useReactId());
+  useLayoutEffect2(() => {
+    setId((reactId) => reactId ?? String(count$1++));
+  }, [deterministicId]);
+  return deterministicId || (id ? `radix-${id}` : "");
 }
 function useCallbackRef$1(callback) {
   const callbackRef = reactExports.useRef(callback);
@@ -37019,129 +37492,6 @@ var Portal$2 = reactExports.forwardRef((props, forwardedRef) => {
   return container ? ReactDOM$2.createPortal(/* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.div, { ...portalProps, ref: forwardedRef }), container) : null;
 });
 Portal$2.displayName = PORTAL_NAME$2;
-function useStateMachine$1(initialState, machine) {
-  return reactExports.useReducer((state, event) => {
-    const nextState = machine[state][event];
-    return nextState ?? state;
-  }, initialState);
-}
-var Presence = (props) => {
-  const { present, children } = props;
-  const presence = usePresence(present);
-  const child = typeof children === "function" ? children({ present: presence.isPresent }) : reactExports.Children.only(children);
-  const ref = useComposedRefs(presence.ref, getElementRef(child));
-  const forceMount = typeof children === "function";
-  return forceMount || presence.isPresent ? reactExports.cloneElement(child, { ref }) : null;
-};
-Presence.displayName = "Presence";
-function usePresence(present) {
-  const [node, setNode] = reactExports.useState();
-  const stylesRef = reactExports.useRef(null);
-  const prevPresentRef = reactExports.useRef(present);
-  const prevAnimationNameRef = reactExports.useRef("none");
-  const initialState = present ? "mounted" : "unmounted";
-  const [state, send] = useStateMachine$1(initialState, {
-    mounted: {
-      UNMOUNT: "unmounted",
-      ANIMATION_OUT: "unmountSuspended"
-    },
-    unmountSuspended: {
-      MOUNT: "mounted",
-      ANIMATION_END: "unmounted"
-    },
-    unmounted: {
-      MOUNT: "mounted"
-    }
-  });
-  reactExports.useEffect(() => {
-    const currentAnimationName = getAnimationName(stylesRef.current);
-    prevAnimationNameRef.current = state === "mounted" ? currentAnimationName : "none";
-  }, [state]);
-  useLayoutEffect2(() => {
-    const styles = stylesRef.current;
-    const wasPresent = prevPresentRef.current;
-    const hasPresentChanged = wasPresent !== present;
-    if (hasPresentChanged) {
-      const prevAnimationName = prevAnimationNameRef.current;
-      const currentAnimationName = getAnimationName(styles);
-      if (present) {
-        send("MOUNT");
-      } else if (currentAnimationName === "none" || (styles == null ? void 0 : styles.display) === "none") {
-        send("UNMOUNT");
-      } else {
-        const isAnimating = prevAnimationName !== currentAnimationName;
-        if (wasPresent && isAnimating) {
-          send("ANIMATION_OUT");
-        } else {
-          send("UNMOUNT");
-        }
-      }
-      prevPresentRef.current = present;
-    }
-  }, [present, send]);
-  useLayoutEffect2(() => {
-    if (node) {
-      let timeoutId;
-      const ownerWindow = node.ownerDocument.defaultView ?? window;
-      const handleAnimationEnd = (event) => {
-        const currentAnimationName = getAnimationName(stylesRef.current);
-        const isCurrentAnimation = currentAnimationName.includes(CSS.escape(event.animationName));
-        if (event.target === node && isCurrentAnimation) {
-          send("ANIMATION_END");
-          if (!prevPresentRef.current) {
-            const currentFillMode = node.style.animationFillMode;
-            node.style.animationFillMode = "forwards";
-            timeoutId = ownerWindow.setTimeout(() => {
-              if (node.style.animationFillMode === "forwards") {
-                node.style.animationFillMode = currentFillMode;
-              }
-            });
-          }
-        }
-      };
-      const handleAnimationStart = (event) => {
-        if (event.target === node) {
-          prevAnimationNameRef.current = getAnimationName(stylesRef.current);
-        }
-      };
-      node.addEventListener("animationstart", handleAnimationStart);
-      node.addEventListener("animationcancel", handleAnimationEnd);
-      node.addEventListener("animationend", handleAnimationEnd);
-      return () => {
-        ownerWindow.clearTimeout(timeoutId);
-        node.removeEventListener("animationstart", handleAnimationStart);
-        node.removeEventListener("animationcancel", handleAnimationEnd);
-        node.removeEventListener("animationend", handleAnimationEnd);
-      };
-    } else {
-      send("ANIMATION_END");
-    }
-  }, [node, send]);
-  return {
-    isPresent: ["mounted", "unmountSuspended"].includes(state),
-    ref: reactExports.useCallback((node2) => {
-      stylesRef.current = node2 ? getComputedStyle(node2) : null;
-      setNode(node2);
-    }, [])
-  };
-}
-function getAnimationName(styles) {
-  return (styles == null ? void 0 : styles.animationName) || "none";
-}
-function getElementRef(element) {
-  var _a3, _b3;
-  let getter = (_a3 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a3.get;
-  let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
-  if (mayWarn) {
-    return element.ref;
-  }
-  getter = (_b3 = Object.getOwnPropertyDescriptor(element, "ref")) == null ? void 0 : _b3.get;
-  mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
-  if (mayWarn) {
-    return element.props.ref;
-  }
-  return element.props.ref || element.ref;
-}
 var count = 0;
 function useFocusGuards() {
   reactExports.useEffect(() => {
@@ -37984,11 +38334,11 @@ var Dialog$1 = (props) => {
   );
 };
 Dialog$1.displayName = DIALOG_NAME;
-var TRIGGER_NAME$2 = "DialogTrigger";
+var TRIGGER_NAME$1 = "DialogTrigger";
 var DialogTrigger = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeDialog, ...triggerProps } = props;
-    const context = useDialogContext(TRIGGER_NAME$2, __scopeDialog);
+    const context = useDialogContext(TRIGGER_NAME$1, __scopeDialog);
     const composedTriggerRef = useComposedRefs(forwardedRef, context.triggerRef);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
       Primitive$1.button,
@@ -37997,7 +38347,7 @@ var DialogTrigger = reactExports.forwardRef(
         "aria-haspopup": "dialog",
         "aria-expanded": context.open,
         "aria-controls": context.contentId,
-        "data-state": getState$2(context.open),
+        "data-state": getState$1(context.open),
         ...triggerProps,
         ref: composedTriggerRef,
         onClick: composeEventHandlers(props.onClick, context.onOpenToggle)
@@ -38005,7 +38355,7 @@ var DialogTrigger = reactExports.forwardRef(
     );
   }
 );
-DialogTrigger.displayName = TRIGGER_NAME$2;
+DialogTrigger.displayName = TRIGGER_NAME$1;
 var PORTAL_NAME$1 = "DialogPortal";
 var [PortalProvider, usePortalContext] = createDialogContext(PORTAL_NAME$1, {
   forceMount: void 0
@@ -38037,7 +38387,7 @@ var DialogOverlayImpl = reactExports.forwardRef(
       /* @__PURE__ */ jsxRuntimeExports.jsx(ReactRemoveScroll, { as: Slot$1, allowPinchZoom: true, shards: [context.contentRef], children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         Primitive$1.div,
         {
-          "data-state": getState$2(context.open),
+          "data-state": getState$1(context.open),
           ...overlayProps,
           ref: forwardedRef,
           style: { pointerEvents: "auto", ...overlayProps.style }
@@ -38156,7 +38506,7 @@ var DialogContentImpl = reactExports.forwardRef(
               id: context.contentId,
               "aria-describedby": context.descriptionId,
               "aria-labelledby": context.titleId,
-              "data-state": getState$2(context.open),
+              "data-state": getState$1(context.open),
               ...contentProps,
               ref: composedRefs,
               onDismiss: () => context.onOpenChange(false)
@@ -38206,7 +38556,7 @@ var DialogClose = reactExports.forwardRef(
   }
 );
 DialogClose.displayName = CLOSE_NAME;
-function getState$2(open) {
+function getState$1(open) {
   return open ? "open" : "closed";
 }
 var TITLE_WARNING_NAME = "DialogTitleWarning";
@@ -38343,6 +38693,22 @@ function DialogTitle({
     {
       "data-slot": "dialog-title",
       className: cn("text-lg leading-none font-semibold", className),
+      ...props
+    }
+  );
+}
+function Input({ className, type, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "input",
+    {
+      type,
+      "data-slot": "input",
+      className: cn(
+        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+        className
+      ),
       ...props
     }
   );
@@ -39390,6 +39756,7 @@ const AdmissionForm = Record({
   "studentEmail": Text,
   "hasEShikshakosh": Bool,
   "subjects": SubjectSelection,
+  "fathersNameAsPerAadhaar": Text,
   "previousSchool": Text,
   "ifscCode": Text,
   "marksObtained": Nat,
@@ -39406,6 +39773,7 @@ const AdmissionForm = Record({
   "photoUrl": Opt(Text),
   "mothersOccupation": Text,
   "policeStation": Text,
+  "mothersNameAsPerAadhaar": Text,
   "fathersName": Text,
   "bankName": BankName$1,
   "district": Text,
@@ -39459,9 +39827,23 @@ const UserProfile = Record({
   "email": Text,
   "isStudent": Bool
 });
+const StudentSummary = Record({
+  "status": ApplicationStatus,
+  "studentName": Text,
+  "class": Text,
+  "rejectionReason": Text,
+  "email": Text,
+  "admissionNumber": Text,
+  "registrationDate": Int
+});
 Service({
   "approveApplication": Func([Text], [], []),
   "approveApplicationForAdmin": Func([Text, Text], [], []),
+  "deleteApplicationForAdmin": Func(
+    [Vec(Text), Text],
+    [Variant({ "ok": Text, "err": Text })],
+    []
+  ),
   "generateOtp": Func([Text], [Text], []),
   "getAdmissionNumber": Func([Text], [Text], ["query"]),
   "getAllAdmissionNumbers": Func(
@@ -39475,14 +39857,29 @@ Service({
     [Vec(Student)],
     ["query"]
   ),
+  "getAllApplicationsForExport": Func(
+    [Text],
+    [Vec(Student)],
+    ["query"]
+  ),
   "getAllApprovedApplications": Func([], [Vec(Student)], ["query"]),
   "getAllPendingApplications": Func([], [Vec(Student)], ["query"]),
   "getAllRejectedApplications": Func([], [Vec(Student)], ["query"]),
+  "getApplicationDetailForAdmin": Func(
+    [Text, Text],
+    [Opt(Student)],
+    ["query"]
+  ),
   "getApplicationStatus": Func([Text], [ApplicationStatus], ["query"]),
   "getApplicationsSortedByDate": Func([], [Vec(Student)], ["query"]),
   "getCallerStudent": Func([], [Opt(Student)], ["query"]),
   "getCallerUserProfile": Func([], [Opt(UserProfile)], ["query"]),
   "getDraftData": Func([Text], [Opt(AdmissionForm)], ["query"]),
+  "getLightweightApplicationsForAdmin": Func(
+    [Text],
+    [Vec(StudentSummary)],
+    ["query"]
+  ),
   "getStudent": Func([Text], [Student], ["query"]),
   "getUserProfile": Func(
     [Principal2],
@@ -39586,6 +39983,7 @@ const idlFactory = ({ IDL: IDL2 }) => {
     "studentEmail": IDL2.Text,
     "hasEShikshakosh": IDL2.Bool,
     "subjects": SubjectSelection2,
+    "fathersNameAsPerAadhaar": IDL2.Text,
     "previousSchool": IDL2.Text,
     "ifscCode": IDL2.Text,
     "marksObtained": IDL2.Nat,
@@ -39602,6 +40000,7 @@ const idlFactory = ({ IDL: IDL2 }) => {
     "photoUrl": IDL2.Opt(IDL2.Text),
     "mothersOccupation": IDL2.Text,
     "policeStation": IDL2.Text,
+    "mothersNameAsPerAadhaar": IDL2.Text,
     "fathersName": IDL2.Text,
     "bankName": BankName2,
     "district": IDL2.Text,
@@ -39655,9 +40054,23 @@ const idlFactory = ({ IDL: IDL2 }) => {
     "email": IDL2.Text,
     "isStudent": IDL2.Bool
   });
+  const StudentSummary2 = IDL2.Record({
+    "status": ApplicationStatus2,
+    "studentName": IDL2.Text,
+    "class": IDL2.Text,
+    "rejectionReason": IDL2.Text,
+    "email": IDL2.Text,
+    "admissionNumber": IDL2.Text,
+    "registrationDate": IDL2.Int
+  });
   return IDL2.Service({
     "approveApplication": IDL2.Func([IDL2.Text], [], []),
     "approveApplicationForAdmin": IDL2.Func([IDL2.Text, IDL2.Text], [], []),
+    "deleteApplicationForAdmin": IDL2.Func(
+      [IDL2.Vec(IDL2.Text), IDL2.Text],
+      [IDL2.Variant({ "ok": IDL2.Text, "err": IDL2.Text })],
+      []
+    ),
     "generateOtp": IDL2.Func([IDL2.Text], [IDL2.Text], []),
     "getAdmissionNumber": IDL2.Func([IDL2.Text], [IDL2.Text], ["query"]),
     "getAllAdmissionNumbers": IDL2.Func(
@@ -39671,9 +40084,19 @@ const idlFactory = ({ IDL: IDL2 }) => {
       [IDL2.Vec(Student2)],
       ["query"]
     ),
+    "getAllApplicationsForExport": IDL2.Func(
+      [IDL2.Text],
+      [IDL2.Vec(Student2)],
+      ["query"]
+    ),
     "getAllApprovedApplications": IDL2.Func([], [IDL2.Vec(Student2)], ["query"]),
     "getAllPendingApplications": IDL2.Func([], [IDL2.Vec(Student2)], ["query"]),
     "getAllRejectedApplications": IDL2.Func([], [IDL2.Vec(Student2)], ["query"]),
+    "getApplicationDetailForAdmin": IDL2.Func(
+      [IDL2.Text, IDL2.Text],
+      [IDL2.Opt(Student2)],
+      ["query"]
+    ),
     "getApplicationStatus": IDL2.Func(
       [IDL2.Text],
       [ApplicationStatus2],
@@ -39683,6 +40106,11 @@ const idlFactory = ({ IDL: IDL2 }) => {
     "getCallerStudent": IDL2.Func([], [IDL2.Opt(Student2)], ["query"]),
     "getCallerUserProfile": IDL2.Func([], [IDL2.Opt(UserProfile2)], ["query"]),
     "getDraftData": IDL2.Func([IDL2.Text], [IDL2.Opt(AdmissionForm2)], ["query"]),
+    "getLightweightApplicationsForAdmin": IDL2.Func(
+      [IDL2.Text],
+      [IDL2.Vec(StudentSummary2)],
+      ["query"]
+    ),
     "getStudent": IDL2.Func([IDL2.Text], [Student2], ["query"]),
     "getUserProfile": IDL2.Func(
       [IDL2.Principal],
@@ -39793,6 +40221,20 @@ class Backend {
       return result;
     }
   }
+  async deleteApplicationForAdmin(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.deleteApplicationForAdmin(arg0, arg1);
+        return from_candid_variant_n1(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.deleteApplicationForAdmin(arg0, arg1);
+      return from_candid_variant_n1(this._uploadFile, this._downloadFile, result);
+    }
+  }
   async generateOtp(arg0) {
     if (this.processError) {
       try {
@@ -39839,168 +40281,210 @@ class Backend {
     if (this.processError) {
       try {
         const result = await this.actor.getAllApplications();
-        return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+        return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getAllApplications();
-      return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+      return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
     }
   }
   async getAllApplicationsForAdmin(arg0) {
     if (this.processError) {
       try {
         const result = await this.actor.getAllApplicationsForAdmin(arg0);
-        return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+        return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getAllApplicationsForAdmin(arg0);
-      return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+      return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async getAllApplicationsForExport(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getAllApplicationsForExport(arg0);
+        return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getAllApplicationsForExport(arg0);
+      return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
     }
   }
   async getAllApprovedApplications() {
     if (this.processError) {
       try {
         const result = await this.actor.getAllApprovedApplications();
-        return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+        return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getAllApprovedApplications();
-      return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+      return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
     }
   }
   async getAllPendingApplications() {
     if (this.processError) {
       try {
         const result = await this.actor.getAllPendingApplications();
-        return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+        return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getAllPendingApplications();
-      return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+      return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
     }
   }
   async getAllRejectedApplications() {
     if (this.processError) {
       try {
         const result = await this.actor.getAllRejectedApplications();
-        return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+        return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getAllRejectedApplications();
-      return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+      return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async getApplicationDetailForAdmin(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getApplicationDetailForAdmin(arg0, arg1);
+        return from_candid_opt_n31(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getApplicationDetailForAdmin(arg0, arg1);
+      return from_candid_opt_n31(this._uploadFile, this._downloadFile, result);
     }
   }
   async getApplicationStatus(arg0) {
     if (this.processError) {
       try {
         const result = await this.actor.getApplicationStatus(arg0);
-        return from_candid_ApplicationStatus_n4(this._uploadFile, this._downloadFile, result);
+        return from_candid_ApplicationStatus_n5(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getApplicationStatus(arg0);
-      return from_candid_ApplicationStatus_n4(this._uploadFile, this._downloadFile, result);
+      return from_candid_ApplicationStatus_n5(this._uploadFile, this._downloadFile, result);
     }
   }
   async getApplicationsSortedByDate() {
     if (this.processError) {
       try {
         const result = await this.actor.getApplicationsSortedByDate();
-        return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+        return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getApplicationsSortedByDate();
-      return from_candid_vec_n1(this._uploadFile, this._downloadFile, result);
+      return from_candid_vec_n2(this._uploadFile, this._downloadFile, result);
     }
   }
   async getCallerStudent() {
     if (this.processError) {
       try {
         const result = await this.actor.getCallerStudent();
-        return from_candid_opt_n30(this._uploadFile, this._downloadFile, result);
+        return from_candid_opt_n31(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getCallerStudent();
-      return from_candid_opt_n30(this._uploadFile, this._downloadFile, result);
+      return from_candid_opt_n31(this._uploadFile, this._downloadFile, result);
     }
   }
   async getCallerUserProfile() {
     if (this.processError) {
       try {
         const result = await this.actor.getCallerUserProfile();
-        return from_candid_opt_n31(this._uploadFile, this._downloadFile, result);
+        return from_candid_opt_n32(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getCallerUserProfile();
-      return from_candid_opt_n31(this._uploadFile, this._downloadFile, result);
+      return from_candid_opt_n32(this._uploadFile, this._downloadFile, result);
     }
   }
   async getDraftData(arg0) {
     if (this.processError) {
       try {
         const result = await this.actor.getDraftData(arg0);
-        return from_candid_opt_n6(this._uploadFile, this._downloadFile, result);
+        return from_candid_opt_n7(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getDraftData(arg0);
-      return from_candid_opt_n6(this._uploadFile, this._downloadFile, result);
+      return from_candid_opt_n7(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async getLightweightApplicationsForAdmin(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getLightweightApplicationsForAdmin(arg0);
+        return from_candid_vec_n35(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getLightweightApplicationsForAdmin(arg0);
+      return from_candid_vec_n35(this._uploadFile, this._downloadFile, result);
     }
   }
   async getStudent(arg0) {
     if (this.processError) {
       try {
         const result = await this.actor.getStudent(arg0);
-        return from_candid_Student_n2(this._uploadFile, this._downloadFile, result);
+        return from_candid_Student_n3(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getStudent(arg0);
-      return from_candid_Student_n2(this._uploadFile, this._downloadFile, result);
+      return from_candid_Student_n3(this._uploadFile, this._downloadFile, result);
     }
   }
   async getUserProfile(arg0) {
     if (this.processError) {
       try {
         const result = await this.actor.getUserProfile(arg0);
-        return from_candid_opt_n31(this._uploadFile, this._downloadFile, result);
+        return from_candid_opt_n32(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getUserProfile(arg0);
-      return from_candid_opt_n31(this._uploadFile, this._downloadFile, result);
+      return from_candid_opt_n32(this._uploadFile, this._downloadFile, result);
     }
   }
   async loginStudent(arg0, arg1) {
@@ -40020,14 +40504,14 @@ class Backend {
   async registerStudent(arg0, arg1, arg2, arg3) {
     if (this.processError) {
       try {
-        const result = await this.actor.registerStudent(to_candid_Class_n34(this._uploadFile, this._downloadFile, arg0), arg1, arg2, arg3);
+        const result = await this.actor.registerStudent(to_candid_Class_n38(this._uploadFile, this._downloadFile, arg0), arg1, arg2, arg3);
         return result;
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
-      const result = await this.actor.registerStudent(to_candid_Class_n34(this._uploadFile, this._downloadFile, arg0), arg1, arg2, arg3);
+      const result = await this.actor.registerStudent(to_candid_Class_n38(this._uploadFile, this._downloadFile, arg0), arg1, arg2, arg3);
       return result;
     }
   }
@@ -40090,42 +40574,42 @@ class Backend {
   async saveCallerUserProfile(arg0) {
     if (this.processError) {
       try {
-        const result = await this.actor.saveCallerUserProfile(to_candid_UserProfile_n36(this._uploadFile, this._downloadFile, arg0));
+        const result = await this.actor.saveCallerUserProfile(to_candid_UserProfile_n40(this._uploadFile, this._downloadFile, arg0));
         return result;
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
-      const result = await this.actor.saveCallerUserProfile(to_candid_UserProfile_n36(this._uploadFile, this._downloadFile, arg0));
+      const result = await this.actor.saveCallerUserProfile(to_candid_UserProfile_n40(this._uploadFile, this._downloadFile, arg0));
       return result;
     }
   }
   async saveDraft(arg0, arg1) {
     if (this.processError) {
       try {
-        const result = await this.actor.saveDraft(arg0, to_candid_AdmissionForm_n38(this._uploadFile, this._downloadFile, arg1));
+        const result = await this.actor.saveDraft(arg0, to_candid_AdmissionForm_n42(this._uploadFile, this._downloadFile, arg1));
         return result;
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
-      const result = await this.actor.saveDraft(arg0, to_candid_AdmissionForm_n38(this._uploadFile, this._downloadFile, arg1));
+      const result = await this.actor.saveDraft(arg0, to_candid_AdmissionForm_n42(this._uploadFile, this._downloadFile, arg1));
       return result;
     }
   }
   async submitForm(arg0, arg1) {
     if (this.processError) {
       try {
-        const result = await this.actor.submitForm(arg0, to_candid_AdmissionForm_n38(this._uploadFile, this._downloadFile, arg1));
+        const result = await this.actor.submitForm(arg0, to_candid_AdmissionForm_n42(this._uploadFile, this._downloadFile, arg1));
         return result;
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
-      const result = await this.actor.submitForm(arg0, to_candid_AdmissionForm_n38(this._uploadFile, this._downloadFile, arg1));
+      const result = await this.actor.submitForm(arg0, to_candid_AdmissionForm_n42(this._uploadFile, this._downloadFile, arg1));
       return result;
     }
   }
@@ -40144,104 +40628,119 @@ class Backend {
     }
   }
 }
-function from_candid_AdmissionForm_n7(_uploadFile, _downloadFile, value) {
-  return from_candid_record_n8(_uploadFile, _downloadFile, value);
+function from_candid_AdmissionForm_n8(_uploadFile, _downloadFile, value) {
+  return from_candid_record_n9(_uploadFile, _downloadFile, value);
 }
-function from_candid_ApplicationStatus_n4(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n5(_uploadFile, _downloadFile, value);
+function from_candid_ApplicationStatus_n5(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n6(_uploadFile, _downloadFile, value);
 }
-function from_candid_BankName_n17(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n18(_uploadFile, _downloadFile, value);
+function from_candid_BankName_n18(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n19(_uploadFile, _downloadFile, value);
 }
-function from_candid_Category_n23(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n24(_uploadFile, _downloadFile, value);
+function from_candid_Category_n24(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n25(_uploadFile, _downloadFile, value);
 }
-function from_candid_Class_n28(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n29(_uploadFile, _downloadFile, value);
+function from_candid_Class_n29(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n30(_uploadFile, _downloadFile, value);
 }
-function from_candid_Gender_n21(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n22(_uploadFile, _downloadFile, value);
+function from_candid_Gender_n22(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n23(_uploadFile, _downloadFile, value);
 }
-function from_candid_PassingDivision_n15(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n16(_uploadFile, _downloadFile, value);
+function from_candid_PassingDivision_n16(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n17(_uploadFile, _downloadFile, value);
 }
-function from_candid_Religion_n25(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n26(_uploadFile, _downloadFile, value);
+function from_candid_Religion_n26(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n27(_uploadFile, _downloadFile, value);
 }
-function from_candid_State_n19(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n20(_uploadFile, _downloadFile, value);
+function from_candid_State_n20(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n21(_uploadFile, _downloadFile, value);
 }
-function from_candid_Stream_n13(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n14(_uploadFile, _downloadFile, value);
+function from_candid_Stream_n14(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n15(_uploadFile, _downloadFile, value);
 }
-function from_candid_Student_n2(_uploadFile, _downloadFile, value) {
-  return from_candid_record_n3(_uploadFile, _downloadFile, value);
+function from_candid_StudentSummary_n36(_uploadFile, _downloadFile, value) {
+  return from_candid_record_n37(_uploadFile, _downloadFile, value);
 }
-function from_candid_SubjectSelection_n9(_uploadFile, _downloadFile, value) {
-  return from_candid_record_n10(_uploadFile, _downloadFile, value);
+function from_candid_Student_n3(_uploadFile, _downloadFile, value) {
+  return from_candid_record_n4(_uploadFile, _downloadFile, value);
 }
-function from_candid_UserProfile_n32(_uploadFile, _downloadFile, value) {
-  return from_candid_record_n33(_uploadFile, _downloadFile, value);
+function from_candid_SubjectSelection_n10(_uploadFile, _downloadFile, value) {
+  return from_candid_record_n11(_uploadFile, _downloadFile, value);
 }
-function from_candid_opt_n11(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : value[0];
+function from_candid_UserProfile_n33(_uploadFile, _downloadFile, value) {
+  return from_candid_record_n34(_uploadFile, _downloadFile, value);
 }
 function from_candid_opt_n12(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : from_candid_Stream_n13(_uploadFile, _downloadFile, value[0]);
-}
-function from_candid_opt_n27(_uploadFile, _downloadFile, value) {
   return value.length === 0 ? null : value[0];
 }
-function from_candid_opt_n30(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : from_candid_Student_n2(_uploadFile, _downloadFile, value[0]);
+function from_candid_opt_n13(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : from_candid_Stream_n14(_uploadFile, _downloadFile, value[0]);
+}
+function from_candid_opt_n28(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : value[0];
 }
 function from_candid_opt_n31(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : from_candid_UserProfile_n32(_uploadFile, _downloadFile, value[0]);
+  return value.length === 0 ? null : from_candid_Student_n3(_uploadFile, _downloadFile, value[0]);
 }
-function from_candid_opt_n6(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : from_candid_AdmissionForm_n7(_uploadFile, _downloadFile, value[0]);
+function from_candid_opt_n32(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : from_candid_UserProfile_n33(_uploadFile, _downloadFile, value[0]);
 }
-function from_candid_record_n10(_uploadFile, _downloadFile, value) {
+function from_candid_opt_n7(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : from_candid_AdmissionForm_n8(_uploadFile, _downloadFile, value[0]);
+}
+function from_candid_record_n11(_uploadFile, _downloadFile, value) {
   return {
-    mil: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.mil)),
-    sil: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.sil)),
-    extraSubject: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.extraSubject)),
-    stream: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.stream)),
-    additionalSubject: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.additionalSubject)),
-    compulsoryGroup1: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.compulsoryGroup1)),
-    compulsoryGroup2: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.compulsoryGroup2)),
+    mil: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.mil)),
+    sil: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.sil)),
+    extraSubject: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.extraSubject)),
+    stream: record_opt_to_undefined(from_candid_opt_n13(_uploadFile, _downloadFile, value.stream)),
+    additionalSubject: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.additionalSubject)),
+    compulsoryGroup1: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.compulsoryGroup1)),
+    compulsoryGroup2: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.compulsoryGroup2)),
     electiveSubjects: value.electiveSubjects
   };
 }
-function from_candid_record_n3(_uploadFile, _downloadFile, value) {
+function from_candid_record_n34(_uploadFile, _downloadFile, value) {
   return {
-    status: from_candid_ApplicationStatus_n4(_uploadFile, _downloadFile, value.status),
-    principal: value.principal,
-    form: record_opt_to_undefined(from_candid_opt_n6(_uploadFile, _downloadFile, value.form)),
-    _class: from_candid_Class_n28(_uploadFile, _downloadFile, value._class),
-    password: value.password,
-    name: value.name,
-    rejectionReason: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.rejectionReason)),
-    email: value.email,
-    admissionNumber: value.admissionNumber,
-    registrationDate: value.registrationDate
-  };
-}
-function from_candid_record_n33(_uploadFile, _downloadFile, value) {
-  return {
-    _class: from_candid_Class_n28(_uploadFile, _downloadFile, value._class),
+    _class: from_candid_Class_n29(_uploadFile, _downloadFile, value._class),
     name: value.name,
     email: value.email,
     isStudent: value.isStudent
   };
 }
-function from_candid_record_n8(_uploadFile, _downloadFile, value) {
+function from_candid_record_n37(_uploadFile, _downloadFile, value) {
+  return {
+    status: from_candid_ApplicationStatus_n5(_uploadFile, _downloadFile, value.status),
+    studentName: value.studentName,
+    class: value.class,
+    rejectionReason: value.rejectionReason,
+    email: value.email,
+    admissionNumber: value.admissionNumber,
+    registrationDate: value.registrationDate
+  };
+}
+function from_candid_record_n4(_uploadFile, _downloadFile, value) {
+  return {
+    status: from_candid_ApplicationStatus_n5(_uploadFile, _downloadFile, value.status),
+    principal: value.principal,
+    form: record_opt_to_undefined(from_candid_opt_n7(_uploadFile, _downloadFile, value.form)),
+    _class: from_candid_Class_n29(_uploadFile, _downloadFile, value._class),
+    password: value.password,
+    name: value.name,
+    rejectionReason: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.rejectionReason)),
+    email: value.email,
+    admissionNumber: value.admissionNumber,
+    registrationDate: value.registrationDate
+  };
+}
+function from_candid_record_n9(_uploadFile, _downloadFile, value) {
   return {
     bankAccountNumber: value.bankAccountNumber,
     orphanedAndDestitute: value.orphanedAndDestitute,
     studentEmail: value.studentEmail,
     hasEShikshakosh: value.hasEShikshakosh,
-    subjects: from_candid_SubjectSelection_n9(_uploadFile, _downloadFile, value.subjects),
+    subjects: from_candid_SubjectSelection_n10(_uploadFile, _downloadFile, value.subjects),
+    fathersNameAsPerAadhaar: value.fathersNameAsPerAadhaar,
     previousSchool: value.previousSchool,
     ifscCode: value.ifscCode,
     marksObtained: value.marksObtained,
@@ -40251,120 +40750,134 @@ function from_candid_record_n8(_uploadFile, _downloadFile, value) {
     passingYear: value.passingYear,
     apparNumber: value.apparNumber,
     accountHolderName: value.accountHolderName,
-    passingDivision: from_candid_PassingDivision_n15(_uploadFile, _downloadFile, value.passingDivision),
+    passingDivision: from_candid_PassingDivision_n16(_uploadFile, _downloadFile, value.passingDivision),
     studentPhone: value.studentPhone,
     religionOther: value.religionOther,
     studentPen: value.studentPen,
-    photoUrl: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.photoUrl)),
+    photoUrl: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.photoUrl)),
     mothersOccupation: value.mothersOccupation,
     policeStation: value.policeStation,
+    mothersNameAsPerAadhaar: value.mothersNameAsPerAadhaar,
     fathersName: value.fathersName,
-    bankName: from_candid_BankName_n17(_uploadFile, _downloadFile, value.bankName),
+    bankName: from_candid_BankName_n18(_uploadFile, _downloadFile, value.bankName),
     district: value.district,
     mothersName: value.mothersName,
-    state: from_candid_State_n19(_uploadFile, _downloadFile, value.state),
+    state: from_candid_State_n20(_uploadFile, _downloadFile, value.state),
     fathersContact: value.fathersContact,
     aadharNumber: value.aadharNumber,
-    handicapType: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.handicapType)),
+    handicapType: record_opt_to_undefined(from_candid_opt_n12(_uploadFile, _downloadFile, value.handicapType)),
     village: value.village,
-    gender: from_candid_Gender_n21(_uploadFile, _downloadFile, value.gender),
+    gender: from_candid_Gender_n22(_uploadFile, _downloadFile, value.gender),
     physicallyHandicapped: value.physicallyHandicapped,
-    category: from_candid_Category_n23(_uploadFile, _downloadFile, value.category),
+    category: from_candid_Category_n24(_uploadFile, _downloadFile, value.category),
     pinCode: value.pinCode,
     previousRollNo: value.previousRollNo,
     block: value.block,
     postOffice: value.postOffice,
     mothersGuardianContact: value.mothersGuardianContact,
     guardianDeclaration: value.guardianDeclaration,
-    religion: from_candid_Religion_n25(_uploadFile, _downloadFile, value.religion),
+    religion: from_candid_Religion_n26(_uploadFile, _downloadFile, value.religion),
     fathersAadhaar: value.fathersAadhaar,
     documentsChecklist: value.documentsChecklist,
     annualFamilyIncome: value.annualFamilyIncome,
-    handicapPercentage: record_opt_to_undefined(from_candid_opt_n27(_uploadFile, _downloadFile, value.handicapPercentage)),
+    handicapPercentage: record_opt_to_undefined(from_candid_opt_n28(_uploadFile, _downloadFile, value.handicapPercentage)),
     fathersOccupation: value.fathersOccupation,
     previousExam: value.previousExam,
     hasPenAndApaar: value.hasPenAndApaar,
     mothersAadhaar: value.mothersAadhaar
   };
 }
-function from_candid_variant_n14(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n1(_uploadFile, _downloadFile, value) {
+  return "ok" in value ? {
+    __kind__: "ok",
+    ok: value.ok
+  } : "err" in value ? {
+    __kind__: "err",
+    err: value.err
+  } : value;
+}
+function from_candid_variant_n15(_uploadFile, _downloadFile, value) {
   return "arts" in value ? "arts" : "commerce" in value ? "commerce" : "science" in value ? "science" : value;
 }
-function from_candid_variant_n16(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n17(_uploadFile, _downloadFile, value) {
   return "first" in value ? "first" : "third" in value ? "third" : "second" in value ? "second" : value;
 }
-function from_candid_variant_n18(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n19(_uploadFile, _downloadFile, value) {
   return "other" in value ? "other" : "finoPaymentBank" in value ? "finoPaymentBank" : "dakshinBiharGraminBank" in value ? "dakshinBiharGraminBank" : "indianPostPaymentBank" in value ? "indianPostPaymentBank" : "madhyaBiharGraminBank" in value ? "madhyaBiharGraminBank" : "stateBankOfIndia" in value ? "stateBankOfIndia" : "unionBankOfIndia" in value ? "unionBankOfIndia" : "punjabNationalBank" in value ? "punjabNationalBank" : value;
 }
-function from_candid_variant_n20(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n21(_uploadFile, _downloadFile, value) {
   return "other" in value ? "other" : "bihar" in value ? "bihar" : "jharkhand" in value ? "jharkhand" : value;
 }
-function from_candid_variant_n22(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n23(_uploadFile, _downloadFile, value) {
   return "other" in value ? "other" : "female" in value ? "female" : "male" in value ? "male" : value;
 }
-function from_candid_variant_n24(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n25(_uploadFile, _downloadFile, value) {
   return "bc" in value ? "bc" : "sc" in value ? "sc" : "st" in value ? "st" : "ebc" in value ? "ebc" : "general" in value ? "general" : value;
 }
-function from_candid_variant_n26(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n27(_uploadFile, _downloadFile, value) {
   return "hinduism" in value ? "hinduism" : "other" in value ? "other" : "christianity" in value ? "christianity" : "buddhism" in value ? "buddhism" : "islam" in value ? "islam" : value;
 }
-function from_candid_variant_n29(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n30(_uploadFile, _downloadFile, value) {
   return "class09th" in value ? "class09th" : "class10th" in value ? "class10th" : "class11th" in value ? "class11th" : "class12th" in value ? "class12th" : value;
 }
-function from_candid_variant_n5(_uploadFile, _downloadFile, value) {
+function from_candid_variant_n6(_uploadFile, _downloadFile, value) {
   return "pending" in value ? "pending" : "approved" in value ? "approved" : "rejected" in value ? "rejected" : "draft" in value ? "draft" : value;
 }
-function from_candid_vec_n1(_uploadFile, _downloadFile, value) {
-  return value.map((x3) => from_candid_Student_n2(_uploadFile, _downloadFile, x3));
+function from_candid_vec_n2(_uploadFile, _downloadFile, value) {
+  return value.map((x3) => from_candid_Student_n3(_uploadFile, _downloadFile, x3));
 }
-function to_candid_AdmissionForm_n38(_uploadFile, _downloadFile, value) {
-  return to_candid_record_n39(_uploadFile, _downloadFile, value);
+function from_candid_vec_n35(_uploadFile, _downloadFile, value) {
+  return value.map((x3) => from_candid_StudentSummary_n36(_uploadFile, _downloadFile, x3));
 }
-function to_candid_BankName_n46(_uploadFile, _downloadFile, value) {
-  return to_candid_variant_n47(_uploadFile, _downloadFile, value);
+function to_candid_AdmissionForm_n42(_uploadFile, _downloadFile, value) {
+  return to_candid_record_n43(_uploadFile, _downloadFile, value);
 }
-function to_candid_Category_n52(_uploadFile, _downloadFile, value) {
-  return to_candid_variant_n53(_uploadFile, _downloadFile, value);
-}
-function to_candid_Class_n34(_uploadFile, _downloadFile, value) {
-  return to_candid_variant_n35(_uploadFile, _downloadFile, value);
-}
-function to_candid_Gender_n50(_uploadFile, _downloadFile, value) {
+function to_candid_BankName_n50(_uploadFile, _downloadFile, value) {
   return to_candid_variant_n51(_uploadFile, _downloadFile, value);
 }
-function to_candid_PassingDivision_n44(_uploadFile, _downloadFile, value) {
-  return to_candid_variant_n45(_uploadFile, _downloadFile, value);
+function to_candid_Category_n56(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n57(_uploadFile, _downloadFile, value);
 }
-function to_candid_Religion_n54(_uploadFile, _downloadFile, value) {
+function to_candid_Class_n38(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n39(_uploadFile, _downloadFile, value);
+}
+function to_candid_Gender_n54(_uploadFile, _downloadFile, value) {
   return to_candid_variant_n55(_uploadFile, _downloadFile, value);
 }
-function to_candid_State_n48(_uploadFile, _downloadFile, value) {
+function to_candid_PassingDivision_n48(_uploadFile, _downloadFile, value) {
   return to_candid_variant_n49(_uploadFile, _downloadFile, value);
 }
-function to_candid_Stream_n42(_uploadFile, _downloadFile, value) {
-  return to_candid_variant_n43(_uploadFile, _downloadFile, value);
+function to_candid_Religion_n58(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n59(_uploadFile, _downloadFile, value);
 }
-function to_candid_SubjectSelection_n40(_uploadFile, _downloadFile, value) {
+function to_candid_State_n52(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n53(_uploadFile, _downloadFile, value);
+}
+function to_candid_Stream_n46(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n47(_uploadFile, _downloadFile, value);
+}
+function to_candid_SubjectSelection_n44(_uploadFile, _downloadFile, value) {
+  return to_candid_record_n45(_uploadFile, _downloadFile, value);
+}
+function to_candid_UserProfile_n40(_uploadFile, _downloadFile, value) {
   return to_candid_record_n41(_uploadFile, _downloadFile, value);
 }
-function to_candid_UserProfile_n36(_uploadFile, _downloadFile, value) {
-  return to_candid_record_n37(_uploadFile, _downloadFile, value);
-}
-function to_candid_record_n37(_uploadFile, _downloadFile, value) {
+function to_candid_record_n41(_uploadFile, _downloadFile, value) {
   return {
-    _class: to_candid_Class_n34(_uploadFile, _downloadFile, value._class),
+    _class: to_candid_Class_n38(_uploadFile, _downloadFile, value._class),
     name: value.name,
     email: value.email,
     isStudent: value.isStudent
   };
 }
-function to_candid_record_n39(_uploadFile, _downloadFile, value) {
+function to_candid_record_n43(_uploadFile, _downloadFile, value) {
   return {
     bankAccountNumber: value.bankAccountNumber,
     orphanedAndDestitute: value.orphanedAndDestitute,
     studentEmail: value.studentEmail,
     hasEShikshakosh: value.hasEShikshakosh,
-    subjects: to_candid_SubjectSelection_n40(_uploadFile, _downloadFile, value.subjects),
+    subjects: to_candid_SubjectSelection_n44(_uploadFile, _downloadFile, value.subjects),
+    fathersNameAsPerAadhaar: value.fathersNameAsPerAadhaar,
     previousSchool: value.previousSchool,
     ifscCode: value.ifscCode,
     marksObtained: value.marksObtained,
@@ -40374,32 +40887,33 @@ function to_candid_record_n39(_uploadFile, _downloadFile, value) {
     passingYear: value.passingYear,
     apparNumber: value.apparNumber,
     accountHolderName: value.accountHolderName,
-    passingDivision: to_candid_PassingDivision_n44(_uploadFile, _downloadFile, value.passingDivision),
+    passingDivision: to_candid_PassingDivision_n48(_uploadFile, _downloadFile, value.passingDivision),
     studentPhone: value.studentPhone,
     religionOther: value.religionOther,
     studentPen: value.studentPen,
     photoUrl: value.photoUrl ? candid_some(value.photoUrl) : candid_none(),
     mothersOccupation: value.mothersOccupation,
     policeStation: value.policeStation,
+    mothersNameAsPerAadhaar: value.mothersNameAsPerAadhaar,
     fathersName: value.fathersName,
-    bankName: to_candid_BankName_n46(_uploadFile, _downloadFile, value.bankName),
+    bankName: to_candid_BankName_n50(_uploadFile, _downloadFile, value.bankName),
     district: value.district,
     mothersName: value.mothersName,
-    state: to_candid_State_n48(_uploadFile, _downloadFile, value.state),
+    state: to_candid_State_n52(_uploadFile, _downloadFile, value.state),
     fathersContact: value.fathersContact,
     aadharNumber: value.aadharNumber,
     handicapType: value.handicapType ? candid_some(value.handicapType) : candid_none(),
     village: value.village,
-    gender: to_candid_Gender_n50(_uploadFile, _downloadFile, value.gender),
+    gender: to_candid_Gender_n54(_uploadFile, _downloadFile, value.gender),
     physicallyHandicapped: value.physicallyHandicapped,
-    category: to_candid_Category_n52(_uploadFile, _downloadFile, value.category),
+    category: to_candid_Category_n56(_uploadFile, _downloadFile, value.category),
     pinCode: value.pinCode,
     previousRollNo: value.previousRollNo,
     block: value.block,
     postOffice: value.postOffice,
     mothersGuardianContact: value.mothersGuardianContact,
     guardianDeclaration: value.guardianDeclaration,
-    religion: to_candid_Religion_n54(_uploadFile, _downloadFile, value.religion),
+    religion: to_candid_Religion_n58(_uploadFile, _downloadFile, value.religion),
     fathersAadhaar: value.fathersAadhaar,
     documentsChecklist: value.documentsChecklist,
     annualFamilyIncome: value.annualFamilyIncome,
@@ -40410,19 +40924,19 @@ function to_candid_record_n39(_uploadFile, _downloadFile, value) {
     mothersAadhaar: value.mothersAadhaar
   };
 }
-function to_candid_record_n41(_uploadFile, _downloadFile, value) {
+function to_candid_record_n45(_uploadFile, _downloadFile, value) {
   return {
     mil: value.mil ? candid_some(value.mil) : candid_none(),
     sil: value.sil ? candid_some(value.sil) : candid_none(),
     extraSubject: value.extraSubject ? candid_some(value.extraSubject) : candid_none(),
-    stream: value.stream ? candid_some(to_candid_Stream_n42(_uploadFile, _downloadFile, value.stream)) : candid_none(),
+    stream: value.stream ? candid_some(to_candid_Stream_n46(_uploadFile, _downloadFile, value.stream)) : candid_none(),
     additionalSubject: value.additionalSubject ? candid_some(value.additionalSubject) : candid_none(),
     compulsoryGroup1: value.compulsoryGroup1 ? candid_some(value.compulsoryGroup1) : candid_none(),
     compulsoryGroup2: value.compulsoryGroup2 ? candid_some(value.compulsoryGroup2) : candid_none(),
     electiveSubjects: value.electiveSubjects
   };
 }
-function to_candid_variant_n35(_uploadFile, _downloadFile, value) {
+function to_candid_variant_n39(_uploadFile, _downloadFile, value) {
   return value == "class09th" ? {
     class09th: null
   } : value == "class10th" ? {
@@ -40433,7 +40947,7 @@ function to_candid_variant_n35(_uploadFile, _downloadFile, value) {
     class12th: null
   } : value;
 }
-function to_candid_variant_n43(_uploadFile, _downloadFile, value) {
+function to_candid_variant_n47(_uploadFile, _downloadFile, value) {
   return value == "arts" ? {
     arts: null
   } : value == "commerce" ? {
@@ -40442,7 +40956,7 @@ function to_candid_variant_n43(_uploadFile, _downloadFile, value) {
     science: null
   } : value;
 }
-function to_candid_variant_n45(_uploadFile, _downloadFile, value) {
+function to_candid_variant_n49(_uploadFile, _downloadFile, value) {
   return value == "first" ? {
     first: null
   } : value == "third" ? {
@@ -40451,7 +40965,7 @@ function to_candid_variant_n45(_uploadFile, _downloadFile, value) {
     second: null
   } : value;
 }
-function to_candid_variant_n47(_uploadFile, _downloadFile, value) {
+function to_candid_variant_n51(_uploadFile, _downloadFile, value) {
   return value == "other" ? {
     other: null
   } : value == "finoPaymentBank" ? {
@@ -40470,7 +40984,7 @@ function to_candid_variant_n47(_uploadFile, _downloadFile, value) {
     punjabNationalBank: null
   } : value;
 }
-function to_candid_variant_n49(_uploadFile, _downloadFile, value) {
+function to_candid_variant_n53(_uploadFile, _downloadFile, value) {
   return value == "other" ? {
     other: null
   } : value == "bihar" ? {
@@ -40479,7 +40993,7 @@ function to_candid_variant_n49(_uploadFile, _downloadFile, value) {
     jharkhand: null
   } : value;
 }
-function to_candid_variant_n51(_uploadFile, _downloadFile, value) {
+function to_candid_variant_n55(_uploadFile, _downloadFile, value) {
   return value == "other" ? {
     other: null
   } : value == "female" ? {
@@ -40488,7 +41002,7 @@ function to_candid_variant_n51(_uploadFile, _downloadFile, value) {
     male: null
   } : value;
 }
-function to_candid_variant_n53(_uploadFile, _downloadFile, value) {
+function to_candid_variant_n57(_uploadFile, _downloadFile, value) {
   return value == "bc" ? {
     bc: null
   } : value == "sc" ? {
@@ -40501,7 +41015,7 @@ function to_candid_variant_n53(_uploadFile, _downloadFile, value) {
     general: null
   } : value;
 }
-function to_candid_variant_n55(_uploadFile, _downloadFile, value) {
+function to_candid_variant_n59(_uploadFile, _downloadFile, value) {
   return value == "hinduism" ? {
     hinduism: null
   } : value == "other" ? {
@@ -40531,7 +41045,7 @@ function createActor(canisterId, _uploadFile, _downloadFile, options = {}) {
 function useActor() {
   return useActor$1(createActor);
 }
-const ADMIN_PASSWORD$1 = "InterSchool@951";
+const ADMIN_PASSWORD$2 = "InterSchool@951";
 function useRegisterStudent() {
   const { actor } = useActor();
   const queryClient2 = useQueryClient();
@@ -40568,6 +41082,14 @@ function useGetCallerStudent() {
     queryKey: ["callerStudent"],
     queryFn: async () => {
       if (!actor) throw new Error("Actor not available");
+      const storedEmail = sessionStorage.getItem("studentEmail");
+      if (storedEmail) {
+        try {
+          const student = await actor.getStudent(storedEmail);
+          return student ?? null;
+        } catch {
+        }
+      }
       return actor.getCallerStudent();
     },
     enabled: !!actor && !actorFetching,
@@ -40599,6 +41121,15 @@ function useSubmitForm() {
       form
     }) => {
       if (!actor) throw new Error("Actor not available");
+      const validCategories = ["general", "ebc", "bc", "sc", "st"];
+      if (!validCategories.includes(form.category)) {
+        console.error(
+          `[useSubmitForm] Invalid category value: "${form.category}". Valid values are: ${validCategories.join(", ")}`
+        );
+        throw new Error(
+          `Invalid category: "${form.category}". Must be one of: ${validCategories.join(", ")}`
+        );
+      }
       return actor.submitForm(email, form);
     },
     onSuccess: () => {
@@ -40606,13 +41137,13 @@ function useSubmitForm() {
     }
   });
 }
-function useGetAllApplications() {
+function useGetLightweightApplications() {
   const { actor, isFetching: actorFetching } = useActor();
   return useQuery({
-    queryKey: ["allApplications"],
+    queryKey: ["lightweightApplications"],
     queryFn: async () => {
       if (!actor) throw new Error("Actor not available");
-      const result = await actor.getAllApplicationsForAdmin(ADMIN_PASSWORD$1);
+      const result = await actor.getLightweightApplicationsForAdmin(ADMIN_PASSWORD$2);
       return result;
     },
     enabled: !!actor && !actorFetching,
@@ -40620,6 +41151,24 @@ function useGetAllApplications() {
     staleTime: 0,
     retry: 3,
     retryDelay: 1e3
+  });
+}
+function useGetApplicationDetail(email) {
+  const { actor, isFetching: actorFetching } = useActor();
+  return useQuery({
+    queryKey: ["applicationDetail", email],
+    queryFn: async () => {
+      if (!actor) throw new Error("Actor not available");
+      if (!email) return null;
+      const result = await actor.getApplicationDetailForAdmin(ADMIN_PASSWORD$2, email);
+      if (Array.isArray(result)) {
+        return result[0] ?? null;
+      }
+      return result;
+    },
+    enabled: !!actor && !actorFetching && !!email,
+    staleTime: 3e4,
+    retry: 2
   });
 }
 function useGetAllAdmissionNumbers() {
@@ -40658,10 +41207,12 @@ function useApproveApplication() {
   return useMutation({
     mutationFn: async (email) => {
       if (!actor) throw new Error("Actor not available");
-      return actor.approveApplicationForAdmin(email, ADMIN_PASSWORD$1);
+      return actor.approveApplicationForAdmin(email, ADMIN_PASSWORD$2);
     },
     onSuccess: () => {
       queryClient2.invalidateQueries({ queryKey: ["allApplications"] });
+      queryClient2.invalidateQueries({ queryKey: ["lightweightApplications"] });
+      queryClient2.invalidateQueries({ queryKey: ["applicationDetail"] });
     }
   });
 }
@@ -40669,147 +41220,226 @@ function useRejectApplication() {
   const { actor } = useActor();
   const queryClient2 = useQueryClient();
   return useMutation({
-    mutationFn: async (email) => {
+    mutationFn: async ({
+      email,
+      reason
+    }) => {
       if (!actor) throw new Error("Actor not available");
-      return actor.rejectApplicationForAdmin(email, ADMIN_PASSWORD$1);
+      return actor.rejectApplicationForAdmin(email, ADMIN_PASSWORD$2, reason);
     },
     onSuccess: () => {
       queryClient2.invalidateQueries({ queryKey: ["allApplications"] });
+      queryClient2.invalidateQueries({ queryKey: ["lightweightApplications"] });
+      queryClient2.invalidateQueries({ queryKey: ["applicationDetail"] });
     }
   });
 }
-function exportToExcel(students, admissionNumbersMap) {
+function useDeleteApplications() {
+  const { actor } = useActor();
+  const queryClient2 = useQueryClient();
+  return useMutation({
+    mutationFn: async (emails) => {
+      if (!actor) throw new Error("Actor not available");
+      return actor.deleteApplicationForAdmin(emails, ADMIN_PASSWORD$2);
+    },
+    onSuccess: () => {
+      queryClient2.invalidateQueries({ queryKey: ["allApplications"] });
+      queryClient2.invalidateQueries({ queryKey: ["lightweightApplications"] });
+      queryClient2.invalidateQueries({ queryKey: ["allAdmissionNumbers"] });
+    }
+  });
+}
+function exportToExcel(applications, admissionNumbersMap) {
   const headers = [
-    "Admission Number",
+    "Admission No.",
     "Student Name",
     "Class",
+    "Stream",
     "Email",
-    "Registration Date",
-    "Status",
-    "Father Name",
-    "Mother Name",
-    "Date of Birth",
-    "Gender",
+    "Student Phone",
+    "Parent Contact",
     "Category",
     "Religion",
     "Caste",
-    "Physically Handicapped",
-    "Handicap Type",
-    "Handicap Percentage",
-    "Aadhar Number",
-    "Annual Family Income",
-    "Student PEN",
-    "APPAR Number",
-    "E-Shikshakosh Number",
-    "Student Phone",
-    "Student Email",
+    "Date of Birth",
+    "Gender",
     "Father's Name",
     "Mother's Name",
+    "Father's Name as per Aadhaar",
+    "Mother's Name as per Aadhaar",
+    "Father's Aadhaar",
+    "Mother's Aadhaar",
     "Father's Occupation",
     "Mother's Occupation",
     "Father's Contact",
-    "Mother's Contact",
-    "Father's Name as per Aadhaar",
-    "Mother's Name as per Aadhaar",
-    "Bank Account Holder's Name",
-    "Bank Account Number",
-    "IFSC Code",
-    "Bank Name",
-    "Mobile Number",
-    "Email ID",
-    "Father Aadhar",
-    "Mother Aadhar",
-    "Previous Exam",
-    "Previous Roll No",
-    "Previous School",
-    "Passing Year",
-    "Marks Obtained",
-    "Division",
+    "Mother's / Guardian Contact",
     "Village",
-    "Post Office",
-    "Police Station",
     "Block",
     "District",
     "State",
     "Pin Code",
-    "Guardian Declaration",
-    "Stream",
-    "M.I.L. Subjects",
-    "S.I.L. Subjects",
-    "Compulsory Subjects",
+    "MIL Subject",
+    "SIL Subject",
     "Extra Subject",
-    "Extra Subjects"
+    "Compulsory Subject Group-1",
+    "Compulsory Subject Group-2",
+    "Elective Subjects",
+    "Additional Subject",
+    "PEN Number",
+    "APAAR Number",
+    "E-Shikshakosh Number",
+    "Bank Account Holder",
+    "Bank Name",
+    "Account Number",
+    "IFSC Code",
+    "Status",
+    "Rejection Reason"
   ];
-  const rows = students.map((student) => {
-    var _a3, _b3, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k2, _l2, _m, _n, _o, _p;
+  const safe = (v2) => {
+    if (v2 === void 0 || v2 === null) return "";
+    const s2 = String(v2).trim();
+    return s2;
+  };
+  const getAdmNo = (student) => {
+    return (admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(student.email)) || student.admissionNumber || "";
+  };
+  const getClassLabel = (c2) => {
+    const map = {
+      class09th: "09",
+      class10th: "10",
+      class11th: "11",
+      class12th: "12"
+    };
+    return map[c2] || c2;
+  };
+  const getSubjectStr = (field) => {
+    if (!field) return "";
+    if (Array.isArray(field)) return field.join(", ");
+    return safe(field);
+  };
+  const rows = applications.map((student) => {
     const form = student.form;
+    const f = form;
+    const addr = (key) => {
+      var _a3;
+      const flat = f == null ? void 0 : f[key];
+      const nested = (_a3 = form == null ? void 0 : form.address) == null ? void 0 : _a3[key];
+      return safe(flat ?? nested);
+    };
+    const SEP = "|||";
+    const parseAadhaar = (raw) => {
+      const s2 = safe(raw);
+      if (s2.includes(SEP)) {
+        const idx = s2.indexOf(SEP);
+        return { number: s2.slice(0, idx), name: s2.slice(idx + SEP.length) };
+      }
+      return { number: s2, name: "" };
+    };
+    const fathersAadhaarParsed = parseAadhaar(
+      (form == null ? void 0 : form.fathersAadhaar) ?? (f == null ? void 0 : f.fatherAadhar)
+    );
+    const mothersAadhaarParsed = parseAadhaar(
+      (form == null ? void 0 : form.mothersAadhaar) ?? (f == null ? void 0 : f.motherAadhar)
+    );
+    const fathersNameAadhaar = fathersAadhaarParsed.name || safe(f == null ? void 0 : f.fathersNameAsPerAadhaar);
+    const mothersNameAadhaar = mothersAadhaarParsed.name || safe(f == null ? void 0 : f.mothersNameAsPerAadhaar);
+    const subjects = form == null ? void 0 : form.subjects;
+    const sf = subjects;
+    const milRaw = (sf == null ? void 0 : sf.mil) ?? (subjects == null ? void 0 : subjects.mil);
+    const silRaw = (sf == null ? void 0 : sf.sil) ?? (subjects == null ? void 0 : subjects.sil);
+    const electiveRaw = (sf == null ? void 0 : sf.electiveSubjects) ?? (subjects == null ? void 0 : subjects.electiveSubjects);
     return [
-      (admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(student.email)) || "-",
-      student.name,
-      student._class,
-      student.email,
-      new Date(Number(student.registrationDate) / 1e6).toLocaleDateString(),
-      student.status,
-      (form == null ? void 0 : form.fatherName) || "",
-      (form == null ? void 0 : form.motherName) || "",
-      (form == null ? void 0 : form.dateOfBirth) ? new Date(Number(form.dateOfBirth) / 1e6).toLocaleDateString() : "",
-      (form == null ? void 0 : form.gender) || "",
-      (form == null ? void 0 : form.category) || "",
-      (form == null ? void 0 : form.emailId) || "",
-      (form == null ? void 0 : form.mobileNumber) || "",
-      (form == null ? void 0 : form.physicallyHandicapped) ? "Yes" : "No",
-      (form == null ? void 0 : form.handicapType) || "",
-      (form == null ? void 0 : form.handicapPercentage) ? Number(form.handicapPercentage) : "",
-      (form == null ? void 0 : form.aadharNumber) || "",
-      (form == null ? void 0 : form.annualFamilyIncome) || "",
-      (form == null ? void 0 : form.studentPen) || "",
-      (form == null ? void 0 : form.apparNumber) || "",
-      (form == null ? void 0 : form.eShikshakoshNumber) || "",
-      (form == null ? void 0 : form.studentPhone) || "",
-      (form == null ? void 0 : form.studentEmail) || "",
-      (form == null ? void 0 : form.fathersName) || "",
-      (form == null ? void 0 : form.mothersName) || "",
-      (form == null ? void 0 : form.fathersOccupation) || "",
-      (form == null ? void 0 : form.mothersOccupation) || "",
-      (form == null ? void 0 : form.fathersContact) || "",
-      (form == null ? void 0 : form.mothersContact) || "",
-      (form == null ? void 0 : form.fathersNameAsPerAadhaar) || "",
-      (form == null ? void 0 : form.mothersNameAsPerAadhaar) || "",
-      (form == null ? void 0 : form.accountHolderName) || "",
-      (form == null ? void 0 : form.bankAccountNumber) || "",
-      (form == null ? void 0 : form.ifscCode) || "",
-      (form == null ? void 0 : form.bankName) || "",
-      (form == null ? void 0 : form.mobileNumber) || "",
-      (form == null ? void 0 : form.emailId) || "",
-      (form == null ? void 0 : form.fatherAadhar) || "",
-      (form == null ? void 0 : form.motherAadhar) || "",
-      (form == null ? void 0 : form.previousExam) || "",
-      (form == null ? void 0 : form.previousRollNo) || "",
-      (form == null ? void 0 : form.previousSchool) || "",
-      (form == null ? void 0 : form.passingYear) ? form.passingYear.toString() : "",
-      (form == null ? void 0 : form.marksObtained) ? form.marksObtained.toString() : "",
-      (form == null ? void 0 : form.passingDivision) || "",
-      ((_a3 = form == null ? void 0 : form.address) == null ? void 0 : _a3.village) || "",
-      ((_b3 = form == null ? void 0 : form.address) == null ? void 0 : _b3.postOffice) || "",
-      ((_c2 = form == null ? void 0 : form.address) == null ? void 0 : _c2.policeStation) || "",
-      ((_d2 = form == null ? void 0 : form.address) == null ? void 0 : _d2.block) || "",
-      ((_e2 = form == null ? void 0 : form.address) == null ? void 0 : _e2.district) || "",
-      ((_f2 = form == null ? void 0 : form.address) == null ? void 0 : _f2.state) || "",
-      ((_g2 = form == null ? void 0 : form.address) == null ? void 0 : _g2.pinCode) || "",
-      (form == null ? void 0 : form.guardianDeclaration) ? "Yes" : "No",
-      ((_h2 = form == null ? void 0 : form.subjects) == null ? void 0 : _h2.stream) || "",
-      ((_j2 = (_i2 = form == null ? void 0 : form.subjects) == null ? void 0 : _i2.mil) == null ? void 0 : _j2.join("; ")) || "",
-      ((_l2 = (_k2 = form == null ? void 0 : form.subjects) == null ? void 0 : _k2.sil) == null ? void 0 : _l2.join("; ")) || "",
-      ((_n = (_m = form == null ? void 0 : form.subjects) == null ? void 0 : _m.compulsory) == null ? void 0 : _n.join("; ")) || "",
-      ((_o = form == null ? void 0 : form.subjects) == null ? void 0 : _o.extra) || "",
-      ((_p = form == null ? void 0 : form.subjects) == null ? void 0 : _p.extraSubjects) || ""
+      getAdmNo(student),
+      safe(student.name || (f == null ? void 0 : f.studentName)),
+      getClassLabel(student._class),
+      safe(subjects == null ? void 0 : subjects.stream),
+      safe(student.email),
+      safe(form == null ? void 0 : form.studentPhone),
+      safe((form == null ? void 0 : form.mothersGuardianContact) || (f == null ? void 0 : f.mothersContact)),
+      safe(form == null ? void 0 : form.category),
+      (() => {
+        const religionMap = {
+          hinduism: "Hinduism",
+          islam: "Islam",
+          christianity: "Christianity",
+          buddhism: "Buddhism",
+          other: safe(form == null ? void 0 : form.religionOther) || "Other"
+        };
+        const r2 = form == null ? void 0 : form.religion;
+        return r2 ? religionMap[r2] || safe(r2) : safe(f == null ? void 0 : f.religion);
+      })(),
+      safe(form == null ? void 0 : form.caste),
+      (form == null ? void 0 : form.dateOfBirth) && Number(form.dateOfBirth) > 0 ? new Date(Number(form.dateOfBirth) / 1e6).toLocaleDateString(
+        "en-IN"
+      ) : "",
+      safe(form == null ? void 0 : form.gender),
+      safe((form == null ? void 0 : form.fathersName) || (f == null ? void 0 : f.fatherName)),
+      safe((form == null ? void 0 : form.mothersName) || (f == null ? void 0 : f.motherName)),
+      fathersNameAadhaar,
+      mothersNameAadhaar,
+      fathersAadhaarParsed.number,
+      mothersAadhaarParsed.number,
+      safe(form == null ? void 0 : form.fathersOccupation),
+      safe(form == null ? void 0 : form.mothersOccupation),
+      safe(form == null ? void 0 : form.fathersContact),
+      safe((form == null ? void 0 : form.mothersGuardianContact) || (f == null ? void 0 : f.mothersContact)),
+      addr("village"),
+      addr("block"),
+      addr("district"),
+      addr("state"),
+      addr("pinCode"),
+      getSubjectStr(milRaw),
+      getSubjectStr(silRaw),
+      safe(
+        (sf == null ? void 0 : sf.extraSubject) ?? (subjects == null ? void 0 : subjects.extraSubject) ?? (subjects == null ? void 0 : subjects.extra) ?? (sf == null ? void 0 : sf.extra)
+      ),
+      safe((sf == null ? void 0 : sf.compulsoryGroup1) ?? (subjects == null ? void 0 : subjects.compulsoryGroup1)),
+      safe((sf == null ? void 0 : sf.compulsoryGroup2) ?? (subjects == null ? void 0 : subjects.compulsoryGroup2)),
+      Array.isArray(electiveRaw) ? electiveRaw.join(", ") : safe(electiveRaw),
+      safe(
+        (sf == null ? void 0 : sf.additionalSubject) ?? (subjects == null ? void 0 : subjects.additionalSubject) ?? (sf == null ? void 0 : sf.extraSubjects) ?? (subjects == null ? void 0 : subjects.extraSubjects)
+      ),
+      safe(form == null ? void 0 : form.studentPen),
+      safe(form == null ? void 0 : form.apparNumber),
+      safe(form == null ? void 0 : form.eShikshakoshNumber),
+      safe(form == null ? void 0 : form.accountHolderName),
+      (() => {
+        const bankMap = {
+          stateBankOfIndia: "State Bank of India",
+          punjabNationalBank: "Punjab National Bank",
+          madhyaBiharGraminBank: "Madhya Bihar Gramin Bank",
+          dakshinBiharGraminBank: "Dakshin Bihar Gramin Bank",
+          unionBankOfIndia: "Union Bank of India",
+          indianPostPaymentBank: "Indian Post Payment Bank",
+          finoPaymentBank: "Fino Payment Bank",
+          other: safe(form == null ? void 0 : form.otherBankName) || "Other"
+        };
+        const b2 = form == null ? void 0 : form.bankName;
+        return b2 ? bankMap[b2] || safe(b2) : "";
+      })(),
+      safe(form == null ? void 0 : form.bankAccountNumber),
+      safe(form == null ? void 0 : form.ifscCode),
+      safe(student.status),
+      safe(
+        student.rejectionReason || (f == null ? void 0 : f.rejectionReason) || localStorage.getItem(`rejection_reason_${student.email}`) || ""
+      )
     ];
   });
+  const escapeCell = (val) => {
+    const str = String(val ?? "");
+    if (str.includes(",") || str.includes('"') || str.includes("\n")) {
+      return `"${str.replace(/"/g, '""')}"`;
+    }
+    return `"${str}"`;
+  };
   const csvContent = [
-    headers.map((h2) => `"${h2}"`).join(","),
-    ...rows.map((row) => row.map((cell) => `"${cell}"`).join(","))
+    headers.map(escapeCell).join(","),
+    ...rows.map((row) => row.map(escapeCell).join(","))
   ].join("\n");
-  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const bom = "\uFEFF";
+  const blob = new Blob([bom + csvContent], {
+    type: "text/csv;charset=utf-8;"
+  });
   const link = document.createElement("a");
   const url = URL.createObjectURL(blob);
   link.setAttribute("href", url);
@@ -40821,7 +41451,9 @@ function exportToExcel(students, admissionNumbersMap) {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+  URL.revokeObjectURL(url);
 }
+const ADMIN_PASSWORD$1 = "InterSchool@951";
 function DetailRow({
   label,
   value
@@ -40839,7 +41471,7 @@ function SectionTitle({ title }) {
   ] });
 }
 function ApplicationDetailModal({
-  student,
+  selectedEmail,
   admissionNumber,
   open,
   onOpenChange,
@@ -40848,12 +41480,15 @@ function ApplicationDetailModal({
   isApproving,
   isRejecting
 }) {
-  var _a3, _b3, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k2, _l2, _m, _n, _o, _p;
+  var _a3, _b3, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k2, _l2;
   const [rejectionReason, setRejectionReason] = reactExports.useState("");
   const [showRejectConfirm, setShowRejectConfirm] = reactExports.useState(false);
-  if (!student) return null;
-  const form = student.form;
-  const isPending = student.status === "pending";
+  const { data: student, isLoading: isLoadingDetail } = useGetApplicationDetail(
+    open ? selectedEmail : null
+  );
+  if (!open) return null;
+  const form = student == null ? void 0 : student.form;
+  const isPending = (student == null ? void 0 : student.status) === "pending";
   const getClassLabel = (c2) => {
     const map = {
       class09th: "9th",
@@ -40869,6 +41504,7 @@ function ApplicationDetailModal({
     year: "numeric"
   });
   const handleApprove = async () => {
+    if (!student) return;
     await onApprove(student.email);
     onOpenChange(false);
   };
@@ -40877,6 +41513,7 @@ function ApplicationDetailModal({
     setShowRejectConfirm(true);
   };
   const handleConfirmReject = async () => {
+    if (!student) return;
     if (!rejectionReason.trim()) {
       ue.error(
         "Please enter a rejection reason / कृपया अस्वीकृति का कारण दर्ज करें"
@@ -40917,11 +41554,20 @@ function ApplicationDetailModal({
               "Application Details",
               admissionNumber && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 text-xs font-mono text-primary bg-primary/10 px-2 py-0.5 rounded", children: admissionNumber })
             ] }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollArea, { className: "max-h-[65vh] px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "pb-4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollArea, { className: "max-h-[65vh] px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pb-4", children: isLoadingDetail ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center py-16", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-8 w-8 animate-spin text-primary" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-3 text-muted-foreground", children: "Loading application details..." })
+            ] }) : !student ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6 p-4 bg-muted rounded-md text-muted-foreground text-sm text-center", children: "Unable to load application details. Please try again." }) : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Registration Info" }),
               /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Admission Number", value: admissionNumber }),
               /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Name", value: student.name }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Class", value: getClassLabel(student._class) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                DetailRow,
+                {
+                  label: "Class",
+                  value: getClassLabel(student._class)
+                }
+              ),
               /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Email", value: student.email }),
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 DetailRow,
@@ -40930,9 +41576,36 @@ function ApplicationDetailModal({
                   value: formatDate(student.registrationDate)
                 }
               ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Status", value: student.status.toUpperCase() }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                DetailRow,
+                {
+                  label: "Status",
+                  value: student.status.toUpperCase()
+                }
+              ),
               !form ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6 p-4 bg-muted rounded-md text-muted-foreground text-sm text-center", children: "No admission form submitted yet." }) : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                (form.photoUrl || typeof form.photo === "string" && form.photo) && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center mt-3 mb-1", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "img",
+                    {
+                      src: (typeof form.photoUrl === "string" && form.photoUrl ? form.photoUrl : void 0) || (typeof form.photo === "string" && form.photo ? form.photo : void 0) || ((_a3 = form.photo) == null ? void 0 : _a3.url),
+                      alt: "Applicant",
+                      className: "w-24 h-32 object-cover border rounded shadow-sm mx-auto",
+                      onError: (e) => {
+                        e.target.style.display = "none";
+                      }
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground mt-1", children: "Applicant Photo" })
+                ] }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Personal Details" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "Student Name",
+                    value: student.name || form.studentName
+                  }
+                ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   DetailRow,
                   {
@@ -40942,8 +41615,23 @@ function ApplicationDetailModal({
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Gender", value: form.gender }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Category", value: form.category }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Religion (धर्म)", value: form.emailId }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Caste (जाति)", value: form.mobileNumber }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "Religion (धर्म)",
+                    value: (() => {
+                      const rMap = {
+                        hinduism: "Hinduism",
+                        islam: "Islam",
+                        christianity: "Christianity",
+                        buddhism: "Buddhism",
+                        other: form.religionOther || "Other"
+                      };
+                      return form.religion && rMap[form.religion] || form.religionOther || form.religion;
+                    })()
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Caste (जाति)", value: form.caste }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "PEN Number", value: form.studentPen }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "APPAR Number", value: form.apparNumber }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -40953,9 +41641,27 @@ function ApplicationDetailModal({
                     value: form.eShikshakoshNumber
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Student Phone", value: form.studentPhone }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Student Email", value: form.studentEmail }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Aadhaar Number", value: form.aadharNumber }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "Student Phone",
+                    value: form.studentPhone
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "Student Email",
+                    value: form.studentEmail
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "Aadhaar Number",
+                    value: form.aadharNumber
+                  }
+                ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   DetailRow,
                   {
@@ -40980,91 +41686,167 @@ function ApplicationDetailModal({
                   )
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Address" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Village", value: (_a3 = form.address) == null ? void 0 : _a3.village }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Police Station",
-                    value: (_b3 = form.address) == null ? void 0 : _b3.policeStation
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Block", value: (_c2 = form.address) == null ? void 0 : _c2.block }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Post Office",
-                    value: (_d2 = form.address) == null ? void 0 : _d2.postOffice
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "District", value: (_e2 = form.address) == null ? void 0 : _e2.district }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "State", value: (_f2 = form.address) == null ? void 0 : _f2.state }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Pin Code", value: (_g2 = form.address) == null ? void 0 : _g2.pinCode }),
+                (() => {
+                  const ff = form;
+                  const flatOrNested = (key) => {
+                    var _a4;
+                    return ff[key] || ((_a4 = form.address) == null ? void 0 : _a4[key]);
+                  };
+                  return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Village",
+                        value: flatOrNested("village")
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Police Station",
+                        value: flatOrNested("policeStation")
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Block",
+                        value: flatOrNested("block")
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Post Office",
+                        value: flatOrNested("postOffice")
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "District",
+                        value: flatOrNested("district")
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "State",
+                        value: flatOrNested("state")
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Pin Code",
+                        value: flatOrNested("pinCode")
+                      }
+                    )
+                  ] });
+                })(),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Parent's Details" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Father's Name",
-                    value: form.fathersName || form.fatherName
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Father's Name (Aadhaar)",
-                    value: form.fathersNameAsPerAadhaar
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Father's Occupation",
-                    value: form.fathersOccupation
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Father's Contact",
-                    value: form.fathersContact
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Father's Aadhaar", value: form.fatherAadhar }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Mother's Name",
-                    value: form.mothersName || form.motherName
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Mother's Name (Aadhaar)",
-                    value: form.mothersNameAsPerAadhaar
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Mother's Occupation",
-                    value: form.mothersOccupation
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Mother's / Guardian Contact Number",
-                    value: form.mothersContact
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Mother's Aadhaar", value: form.motherAadhar }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  DetailRow,
-                  {
-                    label: "Annual Family Income",
-                    value: form.annualFamilyIncome
-                  }
-                ),
+                (() => {
+                  const SEP = "|||";
+                  const parseAadhaar = (raw) => {
+                    const s2 = String(raw || "");
+                    if (s2.includes(SEP)) {
+                      const idx = s2.indexOf(SEP);
+                      return {
+                        number: s2.slice(0, idx),
+                        name: s2.slice(idx + SEP.length)
+                      };
+                    }
+                    return { number: s2, name: "" };
+                  };
+                  const ff = form;
+                  const fathersAadhaarParsed = parseAadhaar(
+                    form.fathersAadhaar || ff.fatherAadhar
+                  );
+                  const mothersAadhaarParsed = parseAadhaar(
+                    form.mothersAadhaar || ff.motherAadhar
+                  );
+                  const fathersNameAadhaar = fathersAadhaarParsed.name || form.fathersNameAsPerAadhaar || "";
+                  const mothersNameAadhaar = mothersAadhaarParsed.name || form.mothersNameAsPerAadhaar || "";
+                  return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Father's Name",
+                        value: form.fathersName || form.fatherName
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Father's Name (Aadhaar)",
+                        value: fathersNameAadhaar || void 0
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Father's Occupation",
+                        value: form.fathersOccupation
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Father's Contact",
+                        value: form.fathersContact
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Father's Aadhaar",
+                        value: fathersAadhaarParsed.number || void 0
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Mother's Name",
+                        value: form.mothersName || form.motherName
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Mother's Name (Aadhaar)",
+                        value: mothersNameAadhaar || void 0
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Mother's Occupation",
+                        value: form.mothersOccupation
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Mother's / Guardian Contact Number",
+                        value: form.mothersGuardianContact || form.mothersContact
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Mother's Aadhaar",
+                        value: mothersAadhaarParsed.number || void 0
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      DetailRow,
+                      {
+                        label: "Annual Family Income",
+                        value: form.annualFamilyIncome
+                      }
+                    )
+                  ] });
+                })(),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Bank Details" }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   DetailRow,
@@ -41114,71 +41896,166 @@ function ApplicationDetailModal({
                     value: form.panchayatName
                   }
                 ),
-                form.blockName && /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Block Name (ब्लॉक)", value: form.blockName }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Subject Selection" }),
-                ((_h2 = form.subjects) == null ? void 0 : _h2.stream) && /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Stream", value: form.subjects.stream }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "MIL", value: (_j2 = (_i2 = form.subjects) == null ? void 0 : _i2.mil) == null ? void 0 : _j2.join(", ") }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "SIL", value: (_l2 = (_k2 = form.subjects) == null ? void 0 : _k2.sil) == null ? void 0 : _l2.join(", ") }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                form.blockName && /* @__PURE__ */ jsxRuntimeExports.jsx(
                   DetailRow,
                   {
-                    label: "Compulsory Subjects",
-                    value: (_n = (_m = form.subjects) == null ? void 0 : _m.compulsory) == null ? void 0 : _n.join(", ")
+                    label: "Block Name (ब्लॉक)",
+                    value: form.blockName
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Subject Selection" }),
+                ((_b3 = form.subjects) == null ? void 0 : _b3.stream) && /* @__PURE__ */ jsxRuntimeExports.jsx(DetailRow, { label: "Stream", value: form.subjects.stream }),
+                ((_c2 = form.subjects) == null ? void 0 : _c2.mil) !== void 0 && ((_d2 = form.subjects) == null ? void 0 : _d2.mil) !== null && /* @__PURE__ */ jsxRuntimeExports.jsx(
                   DetailRow,
                   {
-                    label: "Extra Subjects",
-                    value: ((_o = form.subjects) == null ? void 0 : _o.extraSubjects) || ((_p = form.subjects) == null ? void 0 : _p.extra)
+                    label: "MIL",
+                    value: Array.isArray(form.subjects.mil) ? form.subjects.mil.join(", ") : form.subjects.mil
+                  }
+                ),
+                ((_e2 = form.subjects) == null ? void 0 : _e2.sil) !== void 0 && ((_f2 = form.subjects) == null ? void 0 : _f2.sil) !== null && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "SIL",
+                    value: Array.isArray(form.subjects.sil) ? form.subjects.sil.join(", ") : form.subjects.sil
+                  }
+                ),
+                ((_g2 = form.subjects) == null ? void 0 : _g2.compulsoryGroup1) && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "Compulsory Group-1",
+                    value: form.subjects.compulsoryGroup1
+                  }
+                ),
+                ((_h2 = form.subjects) == null ? void 0 : _h2.compulsoryGroup2) && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "Compulsory Group-2",
+                    value: form.subjects.compulsoryGroup2
+                  }
+                ),
+                (() => {
+                  var _a4, _b4;
+                  const electives = ((_a4 = form.subjects) == null ? void 0 : _a4.electiveSubjects) || ((_b4 = form.subjects) == null ? void 0 : _b4.compulsory);
+                  const arr = Array.isArray(electives) ? electives : [];
+                  return arr.length > 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    DetailRow,
+                    {
+                      label: "Elective / Compulsory Subjects",
+                      value: arr.join(", ")
+                    }
+                  ) : null;
+                })(),
+                (((_i2 = form.subjects) == null ? void 0 : _i2.additionalSubject) || ((_j2 = form.subjects) == null ? void 0 : _j2.extraSubjects) || ((_k2 = form.subjects) == null ? void 0 : _k2.extra) || ((_l2 = form.subjects) == null ? void 0 : _l2.extraSubject)) && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  DetailRow,
+                  {
+                    label: "Additional / Extra Subject",
+                    value: form.subjects.additionalSubject || form.subjects.extraSubjects || form.subjects.extraSubject || form.subjects.extra
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Documents Checklist / दस्तावेज़ चेकलिस्ट" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-1 mb-2", children: [
-                  { label: "Caste Certificate", hindi: "जाति प्रमाण पत्र" },
-                  { label: "Income Certificate", hindi: "आय प्रमाण पत्र" },
-                  {
-                    label: "Residence Certificate",
-                    hindi: "निवास प्रमाण पत्र"
-                  },
-                  {
-                    label: "Transfer Certificate (Original)",
-                    hindi: "स्थानांतरण प्रमाण पत्र (मूल)"
-                  },
-                  {
-                    label: "Previous Class Marksheets",
-                    hindi: "पिछली कक्षा की अंकसूची"
-                  },
-                  {
-                    label: "Student Aadhaar Card Photocopy",
-                    hindi: "छात्र/छात्रा आधार कार्ड फोटोकॉपी"
-                  },
-                  {
-                    label: "Mother's Aadhaar Card Photocopy",
-                    hindi: "माता का आधार कार्ड फोटोकॉपी"
-                  },
-                  {
-                    label: "Father's Aadhaar Card Photocopy",
-                    hindi: "पिता का आधार कार्ड फोटोकॉपी"
-                  }
-                ].map((doc) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                  "div",
-                  {
-                    className: "flex items-center gap-1.5 text-xs py-0.5",
-                    children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-green-600 font-bold", children: "✓" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                        doc.label,
-                        " ",
-                        /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-muted-foreground", lang: "hi", children: [
-                          "/ ",
-                          doc.hindi
-                        ] })
-                      ] })
-                    ]
-                  },
-                  doc.label
-                )) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-1 mb-2", children: (() => {
+                  const ff = form;
+                  const dc = ff.documentsChecklist ?? {};
+                  const isGeneral = form.category === "general";
+                  const isClass1012 = student._class === "class10th" || student._class === "class12th";
+                  const isOrphaned = !!(form.orphanedAndDestitute || ff.isOrphanedDestitute);
+                  const panchayatName = ff.panchayatName || form.panchayatName || "";
+                  const blockNameVal = ff.blockName || form.blockName || "";
+                  const requireBEO = student._class === "class09th" && (panchayatName.trim().toLowerCase() !== "kawakol panchayat" || blockNameVal.trim().toLowerCase() !== "block kawakol") && !!(panchayatName || blockNameVal) || !!ff.requireBEOLetter;
+                  const docs = [
+                    {
+                      key: "casteCertificate",
+                      label: "Caste Certificate",
+                      hindi: "जाति प्रमाण पत्र",
+                      skip: isGeneral
+                    },
+                    {
+                      key: "incomeCertificate",
+                      label: "Income Certificate",
+                      hindi: "आय प्रमाण पत्र",
+                      skip: isGeneral
+                    },
+                    {
+                      key: "residenceCertificate",
+                      label: "Residence Certificate",
+                      hindi: "निवास प्रमाण पत्र"
+                    },
+                    {
+                      key: "transferCertificate",
+                      label: "Transfer Certificate (Original)",
+                      hindi: "स्थानांतरण प्रमाण पत्र (मूल)",
+                      skip: isClass1012
+                    },
+                    {
+                      key: "previousMarksheets",
+                      label: "Previous Class Marksheets",
+                      hindi: "पिछली कक्षा की अंकसूची",
+                      skip: isClass1012
+                    },
+                    {
+                      key: "studentAadhaarCard",
+                      label: "Student Aadhaar Card Photocopy",
+                      hindi: "छात्र/छात्रा आधार कार्ड फोटोकॉपी"
+                    },
+                    {
+                      key: "mothersAadhaarCard",
+                      label: "Mother's Aadhaar Card Photocopy",
+                      hindi: "माता का आधार कार्ड फोटोकॉपी"
+                    },
+                    {
+                      key: "fathersAadhaarCard",
+                      label: "Father's Aadhaar Card Photocopy",
+                      hindi: "पिता का आधार कार्ड फोटोकॉपी"
+                    },
+                    ...isOrphaned ? [
+                      {
+                        key: "deathCertificate",
+                        label: "Mother & Father Death Certificate",
+                        hindi: "माता-पिता का मृत्यु प्रमाण पत्र"
+                      }
+                    ] : [],
+                    ...requireBEO ? [
+                      {
+                        key: "beoCertificate",
+                        label: "BEO Approval Letter (Original)",
+                        hindi: "BEO अनुमोदन पत्र (मूल)"
+                      }
+                    ] : []
+                  ];
+                  return docs.filter((d2) => !d2.skip).map((doc) => {
+                    const checked = dc[doc.key] === true;
+                    return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "div",
+                      {
+                        className: "flex items-center gap-1.5 text-xs py-0.5",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "span",
+                            {
+                              className: checked ? "text-green-600 font-bold" : "text-muted-foreground",
+                              children: checked ? "✓" : "☐"
+                            }
+                          ),
+                          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                            "span",
+                            {
+                              className: checked ? "" : "text-muted-foreground",
+                              children: [
+                                doc.label,
+                                " ",
+                                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { lang: "hi", children: [
+                                  "/ ",
+                                  doc.hindi
+                                ] })
+                              ]
+                            }
+                          )
+                        ]
+                      },
+                      doc.key
+                    );
+                  });
+                })() }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle, { title: "Declaration" }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   DetailRow,
@@ -41188,8 +42065,8 @@ function ApplicationDetailModal({
                   }
                 )
               ] })
-            ] }) }),
-            isPending && /* @__PURE__ */ jsxRuntimeExports.jsx(DialogFooter, { className: "px-6 py-4 border-t gap-2 flex-col items-stretch", children: showRejectConfirm ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full space-y-3", children: [
+            ] }) }) }),
+            !isLoadingDetail && student && isPending && /* @__PURE__ */ jsxRuntimeExports.jsx(DialogFooter, { className: "px-6 py-4 border-t gap-2 flex-col items-stretch", children: showRejectConfirm ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full space-y-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   Label,
@@ -41306,8 +42183,31 @@ const STATUS_TABS = [
     activeClass: "bg-destructive text-destructive-foreground shadow-sm"
   }
 ];
+const PAGE_SIZE_OPTIONS = [25, 50, 75, 100];
+function getAdmissionYear(admNum) {
+  if (!admNum) return null;
+  const parts = admNum.split("/");
+  if (parts.length < 3) return null;
+  const yearRange = parts[2];
+  return yearRange.split("-")[0] || null;
+}
+function getAdmissionClass(admNum, fallbackClass) {
+  if (admNum) {
+    const parts = admNum.split("/");
+    if (parts.length >= 2) return parts[1];
+  }
+  return fallbackClass;
+}
+function getAdmissionSeq(admNum) {
+  if (!admNum) return Number.MAX_SAFE_INTEGER;
+  const parts = admNum.split("/");
+  const last2 = parts[parts.length - 1];
+  const digits = last2.replace(/\D/g, "");
+  return digits ? Number.parseInt(digits, 10) : Number.MAX_SAFE_INTEGER;
+}
 function AdminDashboard() {
   const navigate = useNavigate();
+  const { actor } = useActor();
   const {
     data: applications,
     isLoading,
@@ -41315,21 +42215,35 @@ function AdminDashboard() {
     error,
     refetch,
     isFetching
-  } = useGetAllApplications();
+  } = useGetLightweightApplications();
   const { data: admissionNumbersMap } = useGetAllAdmissionNumbers();
   const approveMutation = useApproveApplication();
   const rejectMutation = useRejectApplication();
-  const [selectedStudent, setSelectedStudent] = reactExports.useState(null);
+  const deleteMutation = useDeleteApplications();
+  const [selectedEmail, setSelectedEmail] = reactExports.useState(null);
   const [detailOpen, setDetailOpen] = reactExports.useState(false);
   const [statusFilter, setStatusFilter] = reactExports.useState("all");
   const [yearFilter, setYearFilter] = reactExports.useState("all");
   const [classFilter, setClassFilter] = reactExports.useState("all");
+  const [isExporting, setIsExporting] = reactExports.useState(false);
+  const [searchQuery, setSearchQuery] = reactExports.useState("");
+  const [selectedEmails, setSelectedEmails] = reactExports.useState(/* @__PURE__ */ new Set());
+  const [showDeleteConfirm, setShowDeleteConfirm] = reactExports.useState(false);
+  const [pageIndex, setPageIndex] = reactExports.useState(0);
+  const [pageSize, setPageSize] = reactExports.useState(25);
   reactExports.useEffect(() => {
     const isAuthenticated = sessionStorage.getItem("adminAuthenticated");
     if (!isAuthenticated) {
       navigate({ to: "/admin/login" });
     }
   }, [navigate]);
+  const prevFilterRef = reactExports.useRef("");
+  const filterKey = `${statusFilter}|${yearFilter}|${classFilter}|${searchQuery}|${pageSize}`;
+  if (prevFilterRef.current !== filterKey) {
+    prevFilterRef.current = filterKey;
+    setPageIndex(0);
+    setSelectedEmails(/* @__PURE__ */ new Set());
+  }
   const handleLogout = () => {
     sessionStorage.removeItem("adminAuthenticated");
     ue.success("Logged out successfully");
@@ -41348,7 +42262,7 @@ function AdminDashboard() {
       if (reason) {
         localStorage.setItem(`rejection_reason_${email}`, reason);
       }
-      await rejectMutation.mutateAsync(email);
+      await rejectMutation.mutateAsync({ email, reason: reason ?? "" });
       ue.success("Application rejected");
     } catch (err) {
       ue.error(err.message || "Failed to reject application");
@@ -41364,21 +42278,46 @@ function AdminDashboard() {
     }
     handleReject(email, reason.trim() || void 0);
   };
-  const handleViewDetails = (student) => {
-    setSelectedStudent(student);
+  const handleViewDetails = (summary) => {
+    setSelectedEmail(summary.email);
     setDetailOpen(true);
   };
-  const handleExport = () => {
-    if (applications && applications.length > 0) {
-      exportToExcel(applications, admissionNumbersMap);
-      ue.success("Excel file downloaded successfully");
-    } else {
-      ue.error("No applications to export");
+  const handleExport = async () => {
+    if (!actor) {
+      ue.error("Backend not connected, please try again");
+      return;
+    }
+    setIsExporting(true);
+    try {
+      const exportData = await actor.getAllApplicationsForExport(ADMIN_PASSWORD$1);
+      if (!exportData || exportData.length === 0) {
+        ue.error("No applications to export");
+        return;
+      }
+      exportToExcel(exportData, admissionNumbersMap);
+      ue.success(
+        `Excel file downloaded — ${exportData.length} record(s) exported`
+      );
+    } catch (err) {
+      ue.error(err.message || "Failed to export applications");
+    } finally {
+      setIsExporting(false);
     }
   };
   const handleRefresh = () => {
     refetch();
     ue.info("Refreshing applications...");
+  };
+  const handleDeleteSelected = async () => {
+    try {
+      await deleteMutation.mutateAsync(Array.from(selectedEmails));
+      ue.success(`${selectedEmails.size} record(s) deleted successfully`);
+      setSelectedEmails(/* @__PURE__ */ new Set());
+      setShowDeleteConfirm(false);
+    } catch (err) {
+      ue.error(err.message || "Failed to delete records");
+      setShowDeleteConfirm(false);
+    }
   };
   const getStatusBadge = (status) => {
     switch (status) {
@@ -41403,6 +42342,10 @@ function AdminDashboard() {
   };
   const getClassLabel = (classValue) => {
     const classMap = {
+      "9": "09th",
+      "10": "10th",
+      "11": "11th",
+      "12": "12th",
       class09th: "09th",
       class10th: "10th",
       class11th: "11th",
@@ -41418,48 +42361,83 @@ function AdminDashboard() {
     approved: allApps.filter((a2) => a2.status === "approved").length,
     rejected: allApps.filter((a2) => a2.status === "rejected").length
   };
-  const getAdmissionYear = (admNum) => {
-    if (!admNum) return null;
-    const parts = admNum.split("/");
-    if (parts.length < 3) return null;
-    const yearRange = parts[2];
-    const startYear = yearRange.split("-")[0];
-    return startYear || null;
-  };
-  const getAdmissionClass = (admNum, fallbackClass) => {
-    if (admNum) {
-      const parts = admNum.split("/");
-      if (parts.length >= 2) {
-        return parts[1];
+  const yearClassFilteredApps = reactExports.useMemo(
+    () => allApps.filter((a2) => {
+      const admNum = a2.admissionNumber || (admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(a2.email));
+      if (yearFilter !== "all") {
+        const year = getAdmissionYear(admNum);
+        if (year !== yearFilter) return false;
       }
-    }
-    const m2 = fallbackClass.match(/(\d+)/);
-    return m2 ? String(Number.parseInt(m2[1], 10)) : fallbackClass;
+      if (classFilter !== "all") {
+        const cls = getAdmissionClass(admNum, a2.class_);
+        if (cls !== classFilter) return false;
+      }
+      return true;
+    }),
+    [allApps, yearFilter, classFilter, admissionNumbersMap]
+  );
+  const filteredStatusCounts = reactExports.useMemo(
+    () => ({
+      draft: yearClassFilteredApps.filter((a2) => a2.status === "draft").length,
+      pending: yearClassFilteredApps.filter((a2) => a2.status === "pending").length,
+      approved: yearClassFilteredApps.filter((a2) => a2.status === "approved").length,
+      rejected: yearClassFilteredApps.filter((a2) => a2.status === "rejected").length,
+      total: yearClassFilteredApps.length
+    }),
+    [yearClassFilteredApps]
+  );
+  const showSummaryPanel = yearFilter !== "all" || classFilter !== "all";
+  const filteredApps = reactExports.useMemo(
+    () => yearClassFilteredApps.filter((a2) => {
+      if (statusFilter !== "all" && a2.status !== statusFilter) return false;
+      if (searchQuery.trim()) {
+        const admNum = (a2.admissionNumber || (admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(a2.email)) || "").toLowerCase();
+        const name = (a2.studentName || "").toLowerCase();
+        const q2 = searchQuery.trim().toLowerCase();
+        if (!admNum.includes(q2) && !name.includes(q2)) return false;
+      }
+      return true;
+    }).sort((a2, b2) => {
+      const seqA = getAdmissionSeq(
+        a2.admissionNumber || (admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(a2.email))
+      );
+      const seqB = getAdmissionSeq(
+        b2.admissionNumber || (admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(b2.email))
+      );
+      return seqA - seqB;
+    }),
+    [yearClassFilteredApps, statusFilter, searchQuery, admissionNumbersMap]
+  );
+  const totalPages = Math.max(1, Math.ceil(filteredApps.length / pageSize));
+  const paginatedApps = filteredApps.slice(
+    pageIndex * pageSize,
+    (pageIndex + 1) * pageSize
+  );
+  const showingFrom = filteredApps.length === 0 ? 0 : pageIndex * pageSize + 1;
+  const showingTo = Math.min((pageIndex + 1) * pageSize, filteredApps.length);
+  const pageEmails = paginatedApps.map((a2) => a2.email);
+  const allPageSelected = pageEmails.length > 0 && pageEmails.every((e) => selectedEmails.has(e));
+  const somePageSelected = pageEmails.some((e) => selectedEmails.has(e));
+  const handleSelectAll = (checked) => {
+    setSelectedEmails((prev) => {
+      const next = new Set(prev);
+      if (checked) {
+        for (const e of pageEmails) next.add(e);
+      } else {
+        for (const e of pageEmails) next.delete(e);
+      }
+      return next;
+    });
   };
-  const getAdmissionSeq = (admNum) => {
-    if (!admNum) return Number.MAX_SAFE_INTEGER;
-    const parts = admNum.split("/");
-    const last2 = parts[parts.length - 1];
-    const digits = last2.replace(/\D/g, "");
-    return digits ? Number.parseInt(digits, 10) : Number.MAX_SAFE_INTEGER;
+  const handleSelectRow = (email, checked) => {
+    setSelectedEmails((prev) => {
+      const next = new Set(prev);
+      if (checked) next.add(email);
+      else next.delete(email);
+      return next;
+    });
   };
-  const filteredApps = allApps.filter((a2) => {
-    if (statusFilter !== "all" && a2.status !== statusFilter) return false;
-    const admNum = admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(a2.email);
-    if (yearFilter !== "all") {
-      const year = getAdmissionYear(admNum);
-      if (year !== yearFilter) return false;
-    }
-    if (classFilter !== "all") {
-      const cls = getAdmissionClass(admNum, a2._class);
-      if (cls !== classFilter) return false;
-    }
-    return true;
-  }).sort((a2, b2) => {
-    const seqA = getAdmissionSeq(admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(a2.email));
-    const seqB = getAdmissionSeq(admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(b2.email));
-    return seqA - seqB;
-  });
+  const selectedSummary = selectedEmail ? allApps.find((a2) => a2.email === selectedEmail) : null;
   if (isLoading) {
     return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center min-h-[calc(100vh-200px)]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-8 w-8 animate-spin text-primary" }) });
   }
@@ -41486,9 +42464,10 @@ function AdminDashboard() {
             {
               onClick: handleExport,
               variant: "outline",
+              disabled: isExporting,
               "data-ocid": "admin.export.button",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Download, { className: "mr-2 h-4 w-4" }),
+                isExporting ? /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "mr-2 h-4 w-4 animate-spin" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Download, { className: "mr-2 h-4 w-4" }),
                 "Export to Excel"
               ]
             }
@@ -41578,80 +42557,201 @@ function AdminDashboard() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "div",
           {
-            className: "mb-4 flex flex-wrap gap-4 items-center",
+            className: "mb-4 flex flex-wrap gap-4 items-start",
             "data-ocid": "admin.year_class_filters",
             children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "label",
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-4 items-center flex-1", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex items-center", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Search, { className: "absolute left-2.5 h-4 w-4 text-muted-foreground pointer-events-none" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    Input,
+                    {
+                      placeholder: "Search by Admission No. or Name...",
+                      value: searchQuery,
+                      onChange: (e) => setSearchQuery(e.target.value),
+                      className: "pl-8 pr-8 h-9 w-64 text-sm",
+                      "data-ocid": "admin.search_input"
+                    }
+                  ),
+                  searchQuery && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: () => setSearchQuery(""),
+                      className: "absolute right-2.5 text-muted-foreground hover:text-foreground transition-colors",
+                      "aria-label": "Clear search",
+                      "data-ocid": "admin.search_clear_button",
+                      children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { className: "h-3.5 w-3.5" })
+                    }
+                  )
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "label",
+                    {
+                      htmlFor: "year-filter",
+                      className: "text-sm font-medium text-foreground whitespace-nowrap",
+                      children: "Year"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      id: "year-filter",
+                      value: yearFilter,
+                      onChange: (e) => setYearFilter(e.target.value),
+                      "data-ocid": "admin.year_filter",
+                      className: "h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "all", children: "All Years" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "2026", children: "2026 (2026-27)" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "2027", children: "2027 (2027-28)" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "2028", children: "2028 (2028-29)" })
+                      ]
+                    }
+                  )
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "label",
+                    {
+                      htmlFor: "class-filter",
+                      className: "text-sm font-medium text-foreground whitespace-nowrap",
+                      children: "Class"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      id: "class-filter",
+                      value: classFilter,
+                      onChange: (e) => setClassFilter(e.target.value),
+                      "data-ocid": "admin.class_filter",
+                      className: "h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "all", children: "All Classes" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "9", children: "Class 09" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "10", children: "Class 10" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "11", children: "Class 11" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "12", children: "Class 12" })
+                      ]
+                    }
+                  )
+                ] }),
+                (yearFilter !== "all" || classFilter !== "all") && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "button",
                   {
-                    htmlFor: "year-filter",
-                    className: "text-sm font-medium text-foreground whitespace-nowrap",
-                    children: "Year"
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                  "select",
-                  {
-                    id: "year-filter",
-                    value: yearFilter,
-                    onChange: (e) => setYearFilter(e.target.value),
-                    "data-ocid": "admin.year_filter",
-                    className: "h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground",
-                    children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "all", children: "All Years" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "2026", children: "2026 (2026-27)" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "2027", children: "2027 (2027-28)" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "2028", children: "2028 (2028-29)" })
-                    ]
+                    type: "button",
+                    className: "text-xs text-primary underline underline-offset-2 hover:no-underline",
+                    onClick: () => {
+                      setYearFilter("all");
+                      setClassFilter("all");
+                    },
+                    "data-ocid": "admin.clear_filters",
+                    children: "Clear filters"
                   }
                 )
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "label",
-                  {
-                    htmlFor: "class-filter",
-                    className: "text-sm font-medium text-foreground whitespace-nowrap",
-                    children: "Class"
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                  "select",
-                  {
-                    id: "class-filter",
-                    value: classFilter,
-                    onChange: (e) => setClassFilter(e.target.value),
-                    "data-ocid": "admin.class_filter",
-                    className: "h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground",
-                    children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "all", children: "All Classes" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "9", children: "Class 09" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "10", children: "Class 10" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "11", children: "Class 11" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "12", children: "Class 12" })
-                    ]
-                  }
-                )
-              ] }),
-              (yearFilter !== "all" || classFilter !== "all") && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "button",
+              showSummaryPanel && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "div",
                 {
-                  type: "button",
-                  className: "text-xs text-primary underline underline-offset-2 hover:no-underline",
-                  onClick: () => {
-                    setYearFilter("all");
-                    setClassFilter("all");
-                  },
-                  "data-ocid": "admin.clear_filters",
-                  children: "Clear filters"
+                  className: "flex-shrink-0 border border-border rounded-lg bg-card p-3 shadow-sm",
+                  "data-ocid": "admin.status_summary_panel",
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2", children: "Filter Summary" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-x-6 gap-y-1.5", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex h-5 min-w-[1.5rem] items-center justify-center rounded-full bg-muted-foreground/15 px-1.5 text-xs font-semibold tabular-nums text-foreground", children: filteredStatusCounts.draft }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: "Draft" })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex h-5 min-w-[1.5rem] items-center justify-center rounded-full bg-yellow-100 px-1.5 text-xs font-semibold tabular-nums text-yellow-700", children: filteredStatusCounts.pending }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: "Pending" })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex h-5 min-w-[1.5rem] items-center justify-center rounded-full bg-green-100 px-1.5 text-xs font-semibold tabular-nums text-green-700", children: filteredStatusCounts.approved }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: "Approved" })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex h-5 min-w-[1.5rem] items-center justify-center rounded-full bg-red-100 px-1.5 text-xs font-semibold tabular-nums text-red-700", children: filteredStatusCounts.rejected }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: "Rejected" })
+                      ] })
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(Separator, { className: "my-2" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex h-5 min-w-[1.5rem] items-center justify-center rounded-full bg-primary/15 px-1.5 text-xs font-semibold tabular-nums text-primary", children: filteredStatusCounts.total }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-medium text-foreground", children: "Total" })
+                    ] })
+                  ]
                 }
               )
             ]
           }
         ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-3 flex items-center justify-between gap-3 flex-wrap", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+            selectedEmails.size > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              Button,
+              {
+                variant: "destructive",
+                size: "sm",
+                onClick: () => setShowDeleteConfirm(true),
+                disabled: deleteMutation.isPending,
+                "data-ocid": "admin.delete_selected_button",
+                children: [
+                  deleteMutation.isPending ? /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "mr-2 h-4 w-4 animate-spin" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "mr-2 h-4 w-4" }),
+                  "Delete Selected (",
+                  selectedEmails.size,
+                  ")"
+                ]
+              }
+            ),
+            selectedEmails.size > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "button",
+              {
+                type: "button",
+                className: "text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground",
+                onClick: () => setSelectedEmails(/* @__PURE__ */ new Set()),
+                "data-ocid": "admin.clear_selection_button",
+                children: "Clear selection"
+              }
+            )
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "label",
+              {
+                htmlFor: "page-size",
+                className: "text-sm text-muted-foreground whitespace-nowrap",
+                children: "Show:"
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "select",
+              {
+                id: "page-size",
+                value: pageSize,
+                onChange: (e) => setPageSize(Number(e.target.value)),
+                "data-ocid": "admin.page_size_select",
+                className: "h-8 rounded-md border border-input bg-background px-2 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground",
+                children: PAGE_SIZE_OPTIONS.map((n) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: n, children: n }, n))
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-muted-foreground whitespace-nowrap", children: "entries" })
+          ] })
+        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-md border", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Table, { "data-ocid": "admin.applications.table", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(TableHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(TableRow, { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "w-10 px-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+              Checkbox,
+              {
+                checked: allPageSelected,
+                onCheckedChange: (v2) => handleSelectAll(!!v2),
+                "aria-label": "Select all on this page",
+                "data-ocid": "admin.select_all_checkbox",
+                className: somePageSelected && !allPageSelected ? "opacity-70" : ""
+              }
+            ) }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { children: "Admission No." }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { children: "Student Name" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { children: "Class" }),
@@ -41660,87 +42760,230 @@ function AdminDashboard() {
             /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { children: "Status" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "text-right", children: "Actions" })
           ] }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(TableBody, { children: filteredApps.length > 0 ? filteredApps.map((student, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            TableRow,
-            {
-              "data-ocid": `admin.applications.item.${idx + 1}`,
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "font-mono text-xs text-primary", children: (admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(student.email)) || "-" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "font-medium", children: student.name }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: getClassLabel(student._class) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: student.email }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: new Date(
-                  Number(student.registrationDate) / 1e6
-                ).toLocaleDateString() }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: getStatusBadge(student.status) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "text-right", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-2 justify-end", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    Button,
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TableBody, { children: paginatedApps.length > 0 ? paginatedApps.map((summary, idx) => {
+            const isSelected = selectedEmails.has(summary.email);
+            return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              TableRow,
+              {
+                "data-ocid": `admin.applications.item.${pageIndex * pageSize + idx + 1}`,
+                className: isSelected ? "bg-primary/5" : void 0,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "px-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    Checkbox,
                     {
-                      size: "sm",
-                      variant: "outline",
-                      onClick: () => handleViewDetails(student),
-                      "data-ocid": `admin.applications.open_modal_button.${idx + 1}`,
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(Eye, { className: "mr-1 h-4 w-4" }),
-                        "View"
-                      ]
+                      checked: isSelected,
+                      onCheckedChange: (v2) => handleSelectRow(summary.email, !!v2),
+                      "aria-label": `Select ${summary.studentName}`,
+                      "data-ocid": `admin.applications.checkbox.${pageIndex * pageSize + idx + 1}`
                     }
-                  ),
-                  student.status === "pending" && /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                  ) }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "font-mono text-xs text-primary", children: summary.admissionNumber || (admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(summary.email)) || "-" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "font-medium", children: summary.studentName }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: getClassLabel(summary.class_) }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: summary.email }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: new Date(
+                    Number(summary.registrationDate) / 1e6
+                  ).toLocaleDateString() }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: getStatusBadge(summary.status) }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "text-right", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-2 justify-end", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       Button,
                       {
                         size: "sm",
-                        variant: "default",
-                        className: "bg-green-600 hover:bg-green-700",
-                        onClick: () => handleApprove(student.email),
-                        disabled: approveMutation.isPending,
-                        "data-ocid": `admin.applications.confirm_button.${idx + 1}`,
+                        variant: "outline",
+                        onClick: () => handleViewDetails(summary),
+                        "data-ocid": `admin.applications.open_modal_button.${pageIndex * pageSize + idx + 1}`,
                         children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "mr-1 h-4 w-4" }),
-                          "Approve"
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(Eye, { className: "mr-1 h-4 w-4" }),
+                          "View"
                         ]
                       }
                     ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      Button,
-                      {
-                        size: "sm",
-                        variant: "destructive",
-                        onClick: () => handleRejectFromRow(student.email),
-                        disabled: rejectMutation.isPending,
-                        "data-ocid": `admin.applications.delete_button.${idx + 1}`,
-                        children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleX, { className: "mr-1 h-4 w-4" }),
-                          "Reject"
-                        ]
-                      }
-                    )
-                  ] })
-                ] }) })
-              ]
-            },
-            student.email
-          )) : /* @__PURE__ */ jsxRuntimeExports.jsx(TableRow, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    summary.status === "pending" && /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        Button,
+                        {
+                          size: "sm",
+                          variant: "default",
+                          className: "bg-green-600 hover:bg-green-700",
+                          onClick: () => handleApprove(summary.email),
+                          disabled: approveMutation.isPending,
+                          "data-ocid": `admin.applications.confirm_button.${pageIndex * pageSize + idx + 1}`,
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "mr-1 h-4 w-4" }),
+                            "Approve"
+                          ]
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        Button,
+                        {
+                          size: "sm",
+                          variant: "destructive",
+                          onClick: () => handleRejectFromRow(summary.email),
+                          disabled: rejectMutation.isPending,
+                          "data-ocid": `admin.applications.delete_button.${pageIndex * pageSize + idx + 1}`,
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(CircleX, { className: "mr-1 h-4 w-4" }),
+                            "Reject"
+                          ]
+                        }
+                      )
+                    ] })
+                  ] }) })
+                ]
+              },
+              summary.email
+            );
+          }) : /* @__PURE__ */ jsxRuntimeExports.jsx(TableRow, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
             TableCell,
             {
-              colSpan: 7,
+              colSpan: 8,
               className: "text-center text-muted-foreground py-8",
               "data-ocid": "admin.applications.empty_state",
-              children: isFetching ? "Loading applications..." : statusFilter !== "all" ? `No ${statusFilter} applications found.` : "No applications found. Students must register and submit the admission form to appear here."
+              children: isFetching ? "Loading applications..." : searchQuery ? `No applications found matching "${searchQuery}".` : statusFilter !== "all" ? `No ${statusFilter} applications found.` : "No applications found. Students must register and submit the admission form to appear here."
             }
           ) }) })
-        ] }) })
+        ] }) }),
+        filteredApps.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 flex items-center justify-between flex-wrap gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "p",
+            {
+              className: "text-sm text-muted-foreground",
+              "data-ocid": "admin.pagination_info",
+              children: [
+                "Showing",
+                " ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-foreground", children: showingFrom }),
+                " to ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-foreground", children: showingTo }),
+                " of ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-foreground", children: filteredApps.length }),
+                " ",
+                "entr",
+                filteredApps.length !== 1 ? "ies" : "y"
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "div",
+            {
+              className: "flex items-center gap-1",
+              "data-ocid": "admin.pagination_controls",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  Button,
+                  {
+                    variant: "outline",
+                    size: "sm",
+                    onClick: () => setPageIndex((p2) => Math.max(0, p2 - 1)),
+                    disabled: pageIndex === 0,
+                    "data-ocid": "admin.pagination_prev",
+                    className: "h-8 px-3",
+                    children: "Previous"
+                  }
+                ),
+                Array.from({ length: totalPages }, (_2, i) => i).map((i) => {
+                  const isFirst = i === 0;
+                  const isLast = i === totalPages - 1;
+                  const isCurrent = i === pageIndex;
+                  const isNearCurrent = Math.abs(i - pageIndex) <= 1;
+                  if (!isFirst && !isLast && !isCurrent && !isNearCurrent) {
+                    if (i === 1 || i === totalPages - 2) {
+                      return /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "span",
+                        {
+                          className: "px-1 text-muted-foreground text-sm",
+                          children: "…"
+                        },
+                        i
+                      );
+                    }
+                    return null;
+                  }
+                  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    Button,
+                    {
+                      variant: isCurrent ? "default" : "outline",
+                      size: "sm",
+                      onClick: () => setPageIndex(i),
+                      className: "h-8 w-8 p-0",
+                      "data-ocid": `admin.pagination_page.${i + 1}`,
+                      children: i + 1
+                    },
+                    i
+                  );
+                }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  Button,
+                  {
+                    variant: "outline",
+                    size: "sm",
+                    onClick: () => setPageIndex((p2) => Math.min(totalPages - 1, p2 + 1)),
+                    disabled: pageIndex >= totalPages - 1,
+                    "data-ocid": "admin.pagination_next",
+                    className: "h-8 px-3",
+                    children: "Next"
+                  }
+                )
+              ]
+            }
+          )
+        ] })
       ] })
     ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Dialog, { open: showDeleteConfirm, onOpenChange: setShowDeleteConfirm, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogContent, { className: "max-w-md", "data-ocid": "admin.delete.dialog", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(DialogHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogTitle, { className: "text-destructive flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "h-5 w-5" }),
+        "Confirm Delete"
+      ] }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "py-2 text-sm text-foreground", children: [
+        "Are you sure you want to permanently delete",
+        " ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold", children: selectedEmails.size }),
+        " student record",
+        selectedEmails.size !== 1 ? "s" : "",
+        "? This cannot be undone."
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogFooter, { className: "gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Button,
+          {
+            variant: "outline",
+            onClick: () => setShowDeleteConfirm(false),
+            disabled: deleteMutation.isPending,
+            "data-ocid": "admin.delete.cancel_button",
+            children: "Cancel"
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          Button,
+          {
+            variant: "destructive",
+            onClick: handleDeleteSelected,
+            disabled: deleteMutation.isPending,
+            "data-ocid": "admin.delete.confirm_button",
+            children: [
+              deleteMutation.isPending ? /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "mr-2 h-4 w-4 animate-spin" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "mr-2 h-4 w-4" }),
+              "Delete ",
+              selectedEmails.size,
+              " Record",
+              selectedEmails.size !== 1 ? "s" : ""
+            ]
+          }
+        )
+      ] })
+    ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       ApplicationDetailModal,
       {
-        student: selectedStudent,
-        admissionNumber: selectedStudent ? admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(selectedStudent.email) : void 0,
+        selectedEmail,
+        admissionNumber: (selectedSummary == null ? void 0 : selectedSummary.admissionNumber) || (selectedEmail ? admissionNumbersMap == null ? void 0 : admissionNumbersMap.get(selectedEmail) : void 0),
         open: detailOpen,
-        onOpenChange: setDetailOpen,
+        onOpenChange: (val) => {
+          setDetailOpen(val);
+          if (!val) setSelectedEmail(null);
+        },
         onApprove: handleApprove,
         onReject: handleReject,
         isApproving: approveMutation.isPending,
@@ -41748,22 +42991,6 @@ function AdminDashboard() {
       }
     )
   ] });
-}
-function Input({ className, type, ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "input",
-    {
-      type,
-      "data-slot": "input",
-      className: cn(
-        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-        className
-      ),
-      ...props
-    }
-  );
 }
 const ADMIN_USERNAME = "interschoolkawakol";
 const ADMIN_PASSWORD = "InterSchool@951";
@@ -42157,50 +43384,6 @@ function wrapArray$1(array, startIndex) {
 }
 var Root$1 = RovingFocusGroup;
 var Item$1 = RovingFocusGroupItem;
-function useSize(element) {
-  const [size2, setSize] = reactExports.useState(void 0);
-  useLayoutEffect2(() => {
-    if (element) {
-      setSize({ width: element.offsetWidth, height: element.offsetHeight });
-      const resizeObserver = new ResizeObserver((entries) => {
-        if (!Array.isArray(entries)) {
-          return;
-        }
-        if (!entries.length) {
-          return;
-        }
-        const entry = entries[0];
-        let width;
-        let height;
-        if ("borderBoxSize" in entry) {
-          const borderSizeEntry = entry["borderBoxSize"];
-          const borderSize = Array.isArray(borderSizeEntry) ? borderSizeEntry[0] : borderSizeEntry;
-          width = borderSize["inlineSize"];
-          height = borderSize["blockSize"];
-        } else {
-          width = element.offsetWidth;
-          height = element.offsetHeight;
-        }
-        setSize({ width, height });
-      });
-      resizeObserver.observe(element, { box: "border-box" });
-      return () => resizeObserver.unobserve(element);
-    } else {
-      setSize(void 0);
-    }
-  }, [element]);
-  return size2;
-}
-function usePrevious(value) {
-  const ref = reactExports.useRef({ value, previous: value });
-  return reactExports.useMemo(() => {
-    if (ref.current.value !== value) {
-      ref.current.previous = ref.current.value;
-      ref.current.value = value;
-    }
-    return ref.current.previous;
-  }, [value]);
-}
 var RADIO_NAME = "Radio";
 var [createRadioContext, createRadioScope] = createContextScope(RADIO_NAME);
 var [RadioProvider, useRadioContext] = createRadioContext(RADIO_NAME);
@@ -42228,7 +43411,7 @@ var Radio = reactExports.forwardRef(
           type: "button",
           role: "radio",
           "aria-checked": checked,
-          "data-state": getState$1(checked),
+          "data-state": getState(checked),
           "data-disabled": disabled ? "" : void 0,
           disabled,
           value,
@@ -42261,15 +43444,15 @@ var Radio = reactExports.forwardRef(
   }
 );
 Radio.displayName = RADIO_NAME;
-var INDICATOR_NAME$1 = "RadioIndicator";
+var INDICATOR_NAME = "RadioIndicator";
 var RadioIndicator = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeRadio, forceMount, ...indicatorProps } = props;
-    const context = useRadioContext(INDICATOR_NAME$1, __scopeRadio);
+    const context = useRadioContext(INDICATOR_NAME, __scopeRadio);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.checked, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       Primitive$1.span,
       {
-        "data-state": getState$1(context.checked),
+        "data-state": getState(context.checked),
         "data-disabled": context.disabled ? "" : void 0,
         ...indicatorProps,
         ref: forwardedRef
@@ -42277,8 +43460,8 @@ var RadioIndicator = reactExports.forwardRef(
     ) });
   }
 );
-RadioIndicator.displayName = INDICATOR_NAME$1;
-var BUBBLE_INPUT_NAME$2 = "RadioBubbleInput";
+RadioIndicator.displayName = INDICATOR_NAME;
+var BUBBLE_INPUT_NAME$1 = "RadioBubbleInput";
 var RadioBubbleInput = reactExports.forwardRef(
   ({
     __scopeRadio,
@@ -42327,8 +43510,8 @@ var RadioBubbleInput = reactExports.forwardRef(
     );
   }
 );
-RadioBubbleInput.displayName = BUBBLE_INPUT_NAME$2;
-function getState$1(checked) {
+RadioBubbleInput.displayName = BUBBLE_INPUT_NAME$1;
+function getState(checked) {
   return checked ? "checked" : "unchecked";
 }
 var ARROW_KEYS = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
@@ -44847,12 +46030,12 @@ var Select$1 = (props) => {
   ) });
 };
 Select$1.displayName = SELECT_NAME;
-var TRIGGER_NAME$1 = "SelectTrigger";
+var TRIGGER_NAME = "SelectTrigger";
 var SelectTrigger$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeSelect, disabled = false, ...triggerProps } = props;
     const popperScope = usePopperScope(__scopeSelect);
-    const context = useSelectContext(TRIGGER_NAME$1, __scopeSelect);
+    const context = useSelectContext(TRIGGER_NAME, __scopeSelect);
     const isDisabled = context.disabled || disabled;
     const composedRefs = useComposedRefs(forwardedRef, context.onTriggerChange);
     const getItems = useCollection(__scopeSelect);
@@ -44924,7 +46107,7 @@ var SelectTrigger$1 = reactExports.forwardRef(
     ) });
   }
 );
-SelectTrigger$1.displayName = TRIGGER_NAME$1;
+SelectTrigger$1.displayName = TRIGGER_NAME;
 var VALUE_NAME = "SelectValue";
 var SelectValue$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -45788,7 +46971,7 @@ var SelectArrow = reactExports.forwardRef(
   }
 );
 SelectArrow.displayName = ARROW_NAME;
-var BUBBLE_INPUT_NAME$1 = "SelectBubbleInput";
+var BUBBLE_INPUT_NAME = "SelectBubbleInput";
 var SelectBubbleInput = reactExports.forwardRef(
   ({ __scopeSelect, value, ...props }, forwardedRef) => {
     const ref = reactExports.useRef(null);
@@ -45820,7 +47003,7 @@ var SelectBubbleInput = reactExports.forwardRef(
     );
   }
 );
-SelectBubbleInput.displayName = BUBBLE_INPUT_NAME$1;
+SelectBubbleInput.displayName = BUBBLE_INPUT_NAME;
 function shouldShowPlaceholder(value) {
   return value === "" || value === void 0;
 }
@@ -46224,287 +47407,6 @@ function BankDetailsSection({
       ] })
     ] })
   ] });
-}
-var CHECKBOX_NAME = "Checkbox";
-var [createCheckboxContext] = createContextScope(CHECKBOX_NAME);
-var [CheckboxProviderImpl, useCheckboxContext] = createCheckboxContext(CHECKBOX_NAME);
-function CheckboxProvider(props) {
-  const {
-    __scopeCheckbox,
-    checked: checkedProp,
-    children,
-    defaultChecked,
-    disabled,
-    form,
-    name,
-    onCheckedChange,
-    required,
-    value = "on",
-    // @ts-expect-error
-    internal_do_not_use_render
-  } = props;
-  const [checked, setChecked] = useControllableState({
-    prop: checkedProp,
-    defaultProp: defaultChecked ?? false,
-    onChange: onCheckedChange,
-    caller: CHECKBOX_NAME
-  });
-  const [control, setControl] = reactExports.useState(null);
-  const [bubbleInput, setBubbleInput] = reactExports.useState(null);
-  const hasConsumerStoppedPropagationRef = reactExports.useRef(false);
-  const isFormControl = control ? !!form || !!control.closest("form") : (
-    // We set this to true by default so that events bubble to forms without JS (SSR)
-    true
-  );
-  const context = {
-    checked,
-    disabled,
-    setChecked,
-    control,
-    setControl,
-    name,
-    form,
-    value,
-    hasConsumerStoppedPropagationRef,
-    required,
-    defaultChecked: isIndeterminate(defaultChecked) ? false : defaultChecked,
-    isFormControl,
-    bubbleInput,
-    setBubbleInput
-  };
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    CheckboxProviderImpl,
-    {
-      scope: __scopeCheckbox,
-      ...context,
-      children: isFunction(internal_do_not_use_render) ? internal_do_not_use_render(context) : children
-    }
-  );
-}
-var TRIGGER_NAME = "CheckboxTrigger";
-var CheckboxTrigger = reactExports.forwardRef(
-  ({ __scopeCheckbox, onKeyDown, onClick, ...checkboxProps }, forwardedRef) => {
-    const {
-      control,
-      value,
-      disabled,
-      checked,
-      required,
-      setControl,
-      setChecked,
-      hasConsumerStoppedPropagationRef,
-      isFormControl,
-      bubbleInput
-    } = useCheckboxContext(TRIGGER_NAME, __scopeCheckbox);
-    const composedRefs = useComposedRefs(forwardedRef, setControl);
-    const initialCheckedStateRef = reactExports.useRef(checked);
-    reactExports.useEffect(() => {
-      const form = control == null ? void 0 : control.form;
-      if (form) {
-        const reset = () => setChecked(initialCheckedStateRef.current);
-        form.addEventListener("reset", reset);
-        return () => form.removeEventListener("reset", reset);
-      }
-    }, [control, setChecked]);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Primitive$1.button,
-      {
-        type: "button",
-        role: "checkbox",
-        "aria-checked": isIndeterminate(checked) ? "mixed" : checked,
-        "aria-required": required,
-        "data-state": getState(checked),
-        "data-disabled": disabled ? "" : void 0,
-        disabled,
-        value,
-        ...checkboxProps,
-        ref: composedRefs,
-        onKeyDown: composeEventHandlers(onKeyDown, (event) => {
-          if (event.key === "Enter") event.preventDefault();
-        }),
-        onClick: composeEventHandlers(onClick, (event) => {
-          setChecked((prevChecked) => isIndeterminate(prevChecked) ? true : !prevChecked);
-          if (bubbleInput && isFormControl) {
-            hasConsumerStoppedPropagationRef.current = event.isPropagationStopped();
-            if (!hasConsumerStoppedPropagationRef.current) event.stopPropagation();
-          }
-        })
-      }
-    );
-  }
-);
-CheckboxTrigger.displayName = TRIGGER_NAME;
-var Checkbox$1 = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const {
-      __scopeCheckbox,
-      name,
-      checked,
-      defaultChecked,
-      required,
-      disabled,
-      value,
-      onCheckedChange,
-      form,
-      ...checkboxProps
-    } = props;
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      CheckboxProvider,
-      {
-        __scopeCheckbox,
-        checked,
-        defaultChecked,
-        disabled,
-        required,
-        onCheckedChange,
-        name,
-        form,
-        value,
-        internal_do_not_use_render: ({ isFormControl }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            CheckboxTrigger,
-            {
-              ...checkboxProps,
-              ref: forwardedRef,
-              __scopeCheckbox
-            }
-          ),
-          isFormControl && /* @__PURE__ */ jsxRuntimeExports.jsx(
-            CheckboxBubbleInput,
-            {
-              __scopeCheckbox
-            }
-          )
-        ] })
-      }
-    );
-  }
-);
-Checkbox$1.displayName = CHECKBOX_NAME;
-var INDICATOR_NAME = "CheckboxIndicator";
-var CheckboxIndicator = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeCheckbox, forceMount, ...indicatorProps } = props;
-    const context = useCheckboxContext(INDICATOR_NAME, __scopeCheckbox);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Presence,
-      {
-        present: forceMount || isIndeterminate(context.checked) || context.checked === true,
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Primitive$1.span,
-          {
-            "data-state": getState(context.checked),
-            "data-disabled": context.disabled ? "" : void 0,
-            ...indicatorProps,
-            ref: forwardedRef,
-            style: { pointerEvents: "none", ...props.style }
-          }
-        )
-      }
-    );
-  }
-);
-CheckboxIndicator.displayName = INDICATOR_NAME;
-var BUBBLE_INPUT_NAME = "CheckboxBubbleInput";
-var CheckboxBubbleInput = reactExports.forwardRef(
-  ({ __scopeCheckbox, ...props }, forwardedRef) => {
-    const {
-      control,
-      hasConsumerStoppedPropagationRef,
-      checked,
-      defaultChecked,
-      required,
-      disabled,
-      name,
-      value,
-      form,
-      bubbleInput,
-      setBubbleInput
-    } = useCheckboxContext(BUBBLE_INPUT_NAME, __scopeCheckbox);
-    const composedRefs = useComposedRefs(forwardedRef, setBubbleInput);
-    const prevChecked = usePrevious(checked);
-    const controlSize = useSize(control);
-    reactExports.useEffect(() => {
-      const input = bubbleInput;
-      if (!input) return;
-      const inputProto = window.HTMLInputElement.prototype;
-      const descriptor = Object.getOwnPropertyDescriptor(
-        inputProto,
-        "checked"
-      );
-      const setChecked = descriptor.set;
-      const bubbles = !hasConsumerStoppedPropagationRef.current;
-      if (prevChecked !== checked && setChecked) {
-        const event = new Event("click", { bubbles });
-        input.indeterminate = isIndeterminate(checked);
-        setChecked.call(input, isIndeterminate(checked) ? false : checked);
-        input.dispatchEvent(event);
-      }
-    }, [bubbleInput, prevChecked, checked, hasConsumerStoppedPropagationRef]);
-    const defaultCheckedRef = reactExports.useRef(isIndeterminate(checked) ? false : checked);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Primitive$1.input,
-      {
-        type: "checkbox",
-        "aria-hidden": true,
-        defaultChecked: defaultChecked ?? defaultCheckedRef.current,
-        required,
-        disabled,
-        name,
-        value,
-        form,
-        ...props,
-        tabIndex: -1,
-        ref: composedRefs,
-        style: {
-          ...props.style,
-          ...controlSize,
-          position: "absolute",
-          pointerEvents: "none",
-          opacity: 0,
-          margin: 0,
-          // We transform because the input is absolutely positioned but we have
-          // rendered it **after** the button. This pulls it back to sit on top
-          // of the button.
-          transform: "translateX(-100%)"
-        }
-      }
-    );
-  }
-);
-CheckboxBubbleInput.displayName = BUBBLE_INPUT_NAME;
-function isFunction(value) {
-  return typeof value === "function";
-}
-function isIndeterminate(checked) {
-  return checked === "indeterminate";
-}
-function getState(checked) {
-  return isIndeterminate(checked) ? "indeterminate" : checked ? "checked" : "unchecked";
-}
-function Checkbox({
-  className,
-  ...props
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Checkbox$1,
-    {
-      "data-slot": "checkbox",
-      className: cn(
-        "peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
-        className
-      ),
-      ...props,
-      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-        CheckboxIndicator,
-        {
-          "data-slot": "checkbox-indicator",
-          className: "flex items-center justify-center text-current transition-none",
-          children: /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "size-3.5" })
-        }
-      )
-    }
-  );
 }
 function Class9SubjectSelection({
   formData,
@@ -47552,9 +48454,17 @@ function PersonalDetailsSection({
   setFormData,
   disabled
 }) {
-  const [photoPreview, setPhotoPreview] = reactExports.useState(
-    formData.photo ? formData.photo.getDirectURL() : null
-  );
+  const [photoPreview, setPhotoPreview] = reactExports.useState(() => {
+    if (formData.photoUrl) return formData.photoUrl;
+    const photoBlob = formData.photo;
+    if (photoBlob && typeof photoBlob.getDirectURL === "function") {
+      try {
+        return photoBlob.getDirectURL();
+      } catch {
+      }
+    }
+    return null;
+  });
   const [isUploading, setIsUploading] = reactExports.useState(false);
   const fileInputRef = reactExports.useRef(null);
   const religionValue = formData.religion || "";
@@ -47586,7 +48496,20 @@ function PersonalDetailsSection({
       );
       const previewUrl = URL.createObjectURL(file);
       setPhotoPreview(previewUrl);
-      setFormData({ ...formData, photo: blob });
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        var _a4;
+        const dataUrl = (_a4 = ev.target) == null ? void 0 : _a4.result;
+        setFormData({
+          ...formData,
+          photo: blob,
+          photoUrl: dataUrl ?? previewUrl
+        });
+      };
+      reader.onerror = () => {
+        setFormData({ ...formData, photo: blob, photoUrl: previewUrl });
+      };
+      reader.readAsDataURL(file);
       ue.success("Photo uploaded successfully");
     } catch (error) {
       console.error("Photo upload error:", error);
@@ -47597,7 +48520,7 @@ function PersonalDetailsSection({
   };
   const handleRemovePhoto = () => {
     setPhotoPreview(null);
-    setFormData({ ...formData, photo: void 0 });
+    setFormData({ ...formData, photo: void 0, photoUrl: void 0 });
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
@@ -47772,11 +48695,10 @@ function PersonalDetailsSection({
                 /* @__PURE__ */ jsxRuntimeExports.jsx(SelectTrigger, { id: "category", children: /* @__PURE__ */ jsxRuntimeExports.jsx(SelectValue, { placeholder: "Select category" }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(SelectContent, { children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "general", children: "General" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "ews", children: "EWS" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "ebc", children: "EBC" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "bc", children: "BC" }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "sc", children: "SC" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "st", children: "ST" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "bci", children: "EBC" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "bcii", children: "BC" })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: "st", children: "ST" })
                 ] })
               ]
             }
@@ -48438,8 +49360,7 @@ function isCanisterUnavailableError(error) {
     return true;
   if (message.includes("Reject code: 5")) return true;
   if (message.includes("non_replicated_rejection")) return true;
-  if (message.includes("Request ID:") && message.includes("Reject code:"))
-    return true;
+  if (message.includes("IC0301")) return true;
   return false;
 }
 function isNetworkError(error) {
@@ -48535,14 +49456,72 @@ function AdmissionFormPage() {
   const [actionError, setActionError] = reactExports.useState(null);
   reactExports.useEffect(() => {
     if (student == null ? void 0 : student.form) {
-      setFormData(student.form);
+      const backendSubjects = student.form.subjects;
+      const unwrapOpt = (v2) => {
+        if (Array.isArray(v2)) return v2.length > 0 ? v2[0] : void 0;
+        return v2 || void 0;
+      };
+      const normalizedSubjects = {
+        mil: Array.isArray(backendSubjects == null ? void 0 : backendSubjects.mil) ? backendSubjects.mil.length > 0 ? backendSubjects.mil : [] : (backendSubjects == null ? void 0 : backendSubjects.mil) ? [backendSubjects.mil] : [],
+        sil: Array.isArray(backendSubjects == null ? void 0 : backendSubjects.sil) ? backendSubjects.sil.length > 0 ? backendSubjects.sil : [] : (backendSubjects == null ? void 0 : backendSubjects.sil) ? [backendSubjects.sil] : [],
+        compulsory: Array.isArray(backendSubjects == null ? void 0 : backendSubjects.electiveSubjects) ? backendSubjects.electiveSubjects : [],
+        extra: unwrapOpt(backendSubjects == null ? void 0 : backendSubjects.extraSubject),
+        stream: unwrapOpt(backendSubjects == null ? void 0 : backendSubjects.stream),
+        compulsoryGroup1: unwrapOpt(backendSubjects == null ? void 0 : backendSubjects.compulsoryGroup1),
+        compulsoryGroup2: unwrapOpt(backendSubjects == null ? void 0 : backendSubjects.compulsoryGroup2),
+        extraSubjects: unwrapOpt(backendSubjects == null ? void 0 : backendSubjects.additionalSubject)
+      };
+      const backendForm = student.form;
+      const bf = backendForm;
+      const SEP = "|||";
+      const decodeFathersAadhaar = (raw) => {
+        if (raw.includes(SEP)) {
+          const [num, name] = raw.split(SEP);
+          return { number: num, nameAsPerAadhaar: name };
+        }
+        return { number: raw, nameAsPerAadhaar: "" };
+      };
+      const decodeMothersAadhaar = (raw) => {
+        if (raw.includes(SEP)) {
+          const [num, name] = raw.split(SEP);
+          return { number: num, nameAsPerAadhaar: name };
+        }
+        return { number: raw, nameAsPerAadhaar: "" };
+      };
+      const fathersAadhaarRaw = bf.fathersAadhaar || "";
+      const mothersAadhaarRaw = bf.mothersAadhaar || "";
+      const fathersDecoded = decodeFathersAadhaar(fathersAadhaarRaw);
+      const mothersDecoded = decodeMothersAadhaar(mothersAadhaarRaw);
+      const fathersNameAsPerAadhaarVal = bf.fathersNameAsPerAadhaar || fathersDecoded.nameAsPerAadhaar;
+      const mothersNameAsPerAadhaarVal = bf.mothersNameAsPerAadhaar || mothersDecoded.nameAsPerAadhaar;
+      setFormData({
+        ...backendForm,
+        fatherName: backendForm.fathersName || "",
+        motherName: backendForm.mothersName || "",
+        fathersName: backendForm.fathersName || "",
+        mothersName: backendForm.mothersName || "",
+        // Restore Aadhaar numbers without the encoded name suffix
+        fatherAadhar: fathersDecoded.number,
+        motherAadhar: mothersDecoded.number,
+        fathersAadhaar: fathersDecoded.number,
+        mothersAadhaar: mothersDecoded.number,
+        fathersNameAsPerAadhaar: fathersNameAsPerAadhaarVal,
+        mothersNameAsPerAadhaar: mothersNameAsPerAadhaarVal,
+        // Restore mothersContact from mothersGuardianContact
+        mothersContact: bf.mothersGuardianContact || "",
+        subjects: normalizedSubjects
+      });
     }
   }, [student]);
   const isFormDisabled = (student == null ? void 0 : student.status) === "approved" || (student == null ? void 0 : student.status) === "rejected";
   const isGeneralCategory = formData.category === Category.general;
   const isClass9 = (student == null ? void 0 : student._class) === "class09th";
-  const isClass10or12 = (student == null ? void 0 : student._class) === "class10th" || (student == null ? void 0 : student._class) === "class12th";
-  const requireBEOLetter = isClass9 && (((_a3 = formData.panchayatName) == null ? void 0 : _a3.trim().toLowerCase()) !== "kawakol" || ((_b3 = formData.blockName) == null ? void 0 : _b3.trim().toLowerCase()) !== "kawakol");
+  const isClass10 = (student == null ? void 0 : student._class) === "class10th";
+  const isClass12 = (student == null ? void 0 : student._class) === "class12th";
+  const isClass10or12 = isClass10 || isClass12;
+  const panchayatOk = ((_a3 = formData.panchayatName) == null ? void 0 : _a3.trim().toLowerCase()) === "kawakol panchayat";
+  const blockOk = ((_b3 = formData.blockName) == null ? void 0 : _b3.trim().toLowerCase()) === "block kawakol";
+  const requireBEOLetter = isClass9 && (!panchayatOk || !blockOk);
   const toggleDocument = (id) => setDocumentsChecked((prev) => ({ ...prev, [id]: !prev[id] }));
   const validateForm = () => {
     var _a4, _b4, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k2, _l2, _m, _n, _o, _p, _q, _r, _s, _t2, _u, _v, _w, _x, _y, _z, _A, _B, _C, _D, _E, _F, _G, _H, _I, _J, _K, _L, _M, _N, _O, _P, _Q, _R, _S, _T, _U, _V, _W, _X;
@@ -48800,16 +49779,123 @@ function AdmissionFormPage() {
     }
     return true;
   };
+  const unwrapOptStr = (v2) => {
+    if (v2 === void 0 || v2 === null) return void 0;
+    if (Array.isArray(v2)) {
+      if (v2.length === 0) return void 0;
+      const inner = v2[0];
+      if (Array.isArray(inner)) {
+        return inner.length > 0 && inner[0] ? String(inner[0]).trim() || void 0 : void 0;
+      }
+      return inner && String(inner).trim() ? String(inner).trim() : void 0;
+    }
+    const s2 = String(v2).trim();
+    return s2 || void 0;
+  };
+  const buildBackendSubjects = (s2) => {
+    const mil = unwrapOptStr(s2 == null ? void 0 : s2.mil);
+    const sil = unwrapOptStr(s2 == null ? void 0 : s2.sil);
+    const extraSubject = unwrapOptStr((s2 == null ? void 0 : s2.extra) ?? (s2 == null ? void 0 : s2.extraSubject));
+    const compulsoryGroup1 = unwrapOptStr(s2 == null ? void 0 : s2.compulsoryGroup1);
+    const compulsoryGroup2 = unwrapOptStr(s2 == null ? void 0 : s2.compulsoryGroup2);
+    const additionalSubject = unwrapOptStr(
+      (s2 == null ? void 0 : s2.extraSubjects) ?? (s2 == null ? void 0 : s2.additionalSubject)
+    );
+    const stream = unwrapOptStr(s2 == null ? void 0 : s2.stream);
+    const electiveSubjects = (Array.isArray(s2 == null ? void 0 : s2.compulsory) ? s2.compulsory : Array.isArray(s2 == null ? void 0 : s2.electiveSubjects) ? s2.electiveSubjects : []).flat().filter((v2) => typeof v2 === "string" && v2.trim() !== "").map((v2) => v2.trim());
+    return {
+      mil,
+      sil,
+      extraSubject,
+      stream,
+      compulsoryGroup1,
+      compulsoryGroup2,
+      electiveSubjects,
+      additionalSubject
+    };
+  };
   const handleSaveDraft = async () => {
+    var _a4, _b4, _c2, _d2, _e2, _f2, _g2, _h2, _i2;
     setActionError(null);
     if (!(student == null ? void 0 : student.email)) {
       ue.error("Student email not found");
       return;
     }
+    const addr = formData.address;
+    const draftSubjects = buildBackendSubjects(formData.subjects);
+    const draftForm = {
+      // All text fields guaranteed non-undefined
+      bankAccountNumber: formData.bankAccountNumber || "",
+      studentEmail: formData.studentEmail || "",
+      eShikshakoshNumber: formData.eShikshakoshNumber || "",
+      caste: formData.caste || "",
+      apparNumber: formData.apparNumber || "",
+      accountHolderName: formData.accountHolderName || "",
+      studentPhone: formData.studentPhone || "",
+      religionOther: formData.religionOther || "",
+      studentPen: formData.studentPen || "",
+      mothersOccupation: formData.mothersOccupation || "",
+      policeStation: (addr == null ? void 0 : addr.policeStation) ?? formData.policeStation ?? "",
+      fathersNameAsPerAadhaar: formData.fathersNameAsPerAadhaar || "",
+      mothersNameAsPerAadhaar: formData.mothersNameAsPerAadhaar || "",
+      fathersName: formData.fathersName || formData.fatherName || "",
+      district: (addr == null ? void 0 : addr.district) ?? formData.district ?? "",
+      mothersName: formData.mothersName || formData.motherName || "",
+      fathersContact: formData.fathersContact || "",
+      aadharNumber: formData.aadharNumber || "",
+      village: (addr == null ? void 0 : addr.village) ?? formData.village ?? "",
+      pinCode: (addr == null ? void 0 : addr.pinCode) ?? formData.pinCode ?? "",
+      previousRollNo: formData.previousRollNo || "",
+      block: (addr == null ? void 0 : addr.block) ?? formData.block ?? "",
+      postOffice: (addr == null ? void 0 : addr.postOffice) ?? formData.postOffice ?? "",
+      mothersGuardianContact: formData.mothersContact || formData.mothersGuardianContact || "",
+      fathersAadhaar: formData.fatherAadhar || formData.fathersAadhaar || "",
+      mothersAadhaar: formData.motherAadhar || formData.mothersAadhaar || "",
+      annualFamilyIncome: formData.annualFamilyIncome || "",
+      fathersOccupation: formData.fathersOccupation || "",
+      previousExam: formData.previousExam || "",
+      previousSchool: formData.previousSchool || "",
+      ifscCode: formData.ifscCode || "",
+      // Bool fields
+      orphanedAndDestitute: isOrphanedDestitute === true,
+      hasEShikshakosh: formData.hasEShikshakosh === true,
+      physicallyHandicapped: formData.physicallyHandicapped === true,
+      guardianDeclaration: formData.guardianDeclaration === true,
+      hasPenAndApaar: formData.hasPenAndApaar === true,
+      // Nat fields
+      marksObtained: formData.marksObtained ?? BigInt(0),
+      passingYear: formData.passingYear ?? BigInt(2024),
+      dateOfBirth: formData.dateOfBirth ?? BigInt(0),
+      // Variant fields
+      gender: formData.gender ?? "male",
+      category: formData.category ?? "general",
+      state: (addr == null ? void 0 : addr.state) ?? formData.state ?? "bihar",
+      bankName: formData.bankName ?? "stateBankOfIndia",
+      passingDivision: formData.passingDivision ?? "first",
+      religion: formData.religion ?? "hinduism",
+      // Opt fields — pass plain values; backend.ts encoder handles Candid opt-wrapping
+      photoUrl: formData.photoUrl || void 0,
+      handicapType: formData.physicallyHandicapped ? formData.handicapType || void 0 : void 0,
+      handicapPercentage: formData.physicallyHandicapped && formData.handicapPercentage != null ? typeof formData.handicapPercentage === "bigint" ? formData.handicapPercentage : BigInt(Number(formData.handicapPercentage)) : void 0,
+      // Subjects
+      subjects: draftSubjects,
+      // Documents checklist — all booleans
+      documentsChecklist: {
+        casteCertificate: !!((_a4 = formData.documentsChecklist) == null ? void 0 : _a4.casteCertificate),
+        incomeCertificate: !!((_b4 = formData.documentsChecklist) == null ? void 0 : _b4.incomeCertificate),
+        residenceCertificate: !!((_c2 = formData.documentsChecklist) == null ? void 0 : _c2.residenceCertificate),
+        transferCertificate: !!((_d2 = formData.documentsChecklist) == null ? void 0 : _d2.transferCertificate),
+        previousMarksheets: !!((_e2 = formData.documentsChecklist) == null ? void 0 : _e2.previousMarksheets),
+        studentAadhaarCard: !!((_f2 = formData.documentsChecklist) == null ? void 0 : _f2.studentAadhaarCard),
+        mothersAadhaarCard: !!((_g2 = formData.documentsChecklist) == null ? void 0 : _g2.mothersAadhaarCard),
+        fathersAadhaarCard: !!((_h2 = formData.documentsChecklist) == null ? void 0 : _h2.fathersAadhaarCard),
+        deathCertificate: !!((_i2 = formData.documentsChecklist) == null ? void 0 : _i2.deathCertificate)
+      }
+    };
     try {
       await saveDraftMutation.mutateAsync({
         email: student.email,
-        form: formData
+        form: draftForm
       });
       ue.success("Draft saved successfully");
     } catch (error) {
@@ -48866,14 +49952,16 @@ function AdmissionFormPage() {
     const submissionForm = {
       // Personal
       studentName: formData.studentName ?? "",
-      fatherName: formData.fatherName ?? "",
-      motherName: formData.motherName ?? "",
+      fatherName: formData.fatherName ?? formData.fathersName ?? "",
+      motherName: formData.motherName ?? formData.mothersName ?? "",
       dateOfBirth: formData.dateOfBirth ?? BigInt(0),
       gender: formData.gender ?? "male",
       category: formData.category ?? "general",
       physicallyHandicapped: formData.physicallyHandicapped === true,
-      handicapType: formData.handicapType,
-      handicapPercentage: formData.handicapPercentage,
+      // handicapType: opt text — pass plain string | undefined; backend.ts handles Candid encoding
+      handicapType: formData.physicallyHandicapped ? formData.handicapType || void 0 : void 0,
+      // handicapPercentage: opt nat — pass plain bigint | undefined; backend.ts handles Candid encoding
+      handicapPercentage: formData.physicallyHandicapped && formData.handicapPercentage != null ? typeof formData.handicapPercentage === "bigint" ? formData.handicapPercentage : BigInt(Number(formData.handicapPercentage)) : void 0,
       aadharNumber: formData.aadharNumber ?? "",
       annualFamilyIncome: formData.annualFamilyIncome ?? "",
       religion: resolvedReligion,
@@ -48887,20 +49975,23 @@ function AdmissionFormPage() {
       studentEmail: formData.studentEmail ?? "",
       hasPenAndApaar: formData.hasPenAndApaar === true,
       hasEShikshakosh: formData.hasEShikshakosh === true,
-      // Parent Details
-      fathersName: formData.fathersName ?? "",
-      mothersName: formData.mothersName ?? "",
+      // Parent Details — ensure BOTH fathersName and mothersName are populated
+      // fathersName/mothersName come from ContactDetailsSection (Parent's Details)
+      // fatherName/motherName come from PersonalDetailsSection (Personal Details)
+      // Sync both directions so backend always has data regardless of which was filled
+      fathersName: formData.fathersName ?? formData.fatherName ?? "",
+      mothersName: formData.mothersName ?? formData.motherName ?? "",
       fathersOccupation: formData.fathersOccupation ?? "",
       mothersOccupation: formData.mothersOccupation ?? "",
       fathersContact: formData.fathersContact ?? "",
       mothersContact: formData.mothersContact ?? "",
       mothersGuardianContact: formData.mothersContact ?? formData.mothersGuardianContact ?? "",
-      fathersNameAsPerAadhaar: formData.fathersNameAsPerAadhaar ?? "",
-      mothersNameAsPerAadhaar: formData.mothersNameAsPerAadhaar ?? "",
-      fatherAadhar: formData.fatherAadhar ?? "",
-      motherAadhar: formData.motherAadhar ?? "",
-      fathersAadhaar: formData.fatherAadhar ?? formData.fathersAadhaar ?? "",
-      mothersAadhaar: formData.motherAadhar ?? formData.mothersAadhaar ?? "",
+      // Send Aadhaar names as their own direct text fields (IDL requires them separately)
+      fathersNameAsPerAadhaar: formData.fathersNameAsPerAadhaar || "",
+      mothersNameAsPerAadhaar: formData.mothersNameAsPerAadhaar || "",
+      // Send clean Aadhaar numbers without any encoding
+      fathersAadhaar: formData.fatherAadhar || formData.fathersAadhaar || "",
+      mothersAadhaar: formData.motherAadhar || formData.mothersAadhaar || "",
       // Bank
       accountHolderName: formData.accountHolderName ?? "",
       bankAccountNumber: formData.bankAccountNumber ?? "",
@@ -48925,22 +50016,16 @@ function AdmissionFormPage() {
       state: (addr == null ? void 0 : addr.state) ?? formData.state ?? "bihar",
       pinCode: (addr == null ? void 0 : addr.pinCode) ?? formData.pinCode ?? "",
       address: formData.address,
-      // Subjects
-      subjects: formData.subjects ?? {
-        mil: [],
-        sil: [],
-        compulsory: [],
-        electiveSubjects: []
-      },
+      // Subjects — map frontend UI field names to backend Candid field names.
+      subjects: buildBackendSubjects(formData.subjects),
       // Orphaned
       orphanedAndDestitute: isOrphanedDestitute === true,
       // Documents Checklist — all boolean, never undefined
       documentsChecklist: checklist,
       // Declaration
       guardianDeclaration: formData.guardianDeclaration === true,
-      // Photo
-      photo: formData.photo,
-      photoUrl: formData.photoUrl
+      // Photo — opt text: pass plain string | undefined; backend.ts handles Candid encoding
+      photoUrl: formData.photoUrl || void 0
     };
     try {
       await submitFormMutation.mutateAsync({
@@ -49844,6 +50929,7 @@ function LoginPage() {
         email: formData.email,
         password: formData.password
       });
+      sessionStorage.setItem("studentEmail", formData.email);
       const { data: student } = await refetchStudent();
       if (student) {
         if (student.status === "draft" || !student.form) {
@@ -49866,9 +50952,13 @@ function LoginPage() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(CardDescription, { className: "text-center", children: "Enter your credentials to access your admission form" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(CardContent, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: handleSubmit, className: "space-y-4", children: [
-      (actorLoading || !actor && !actorLoading) && /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { children: [
+      actorLoading && /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-4 w-4 animate-spin" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "Connecting to server, please wait..." })
+      ] }),
+      !actorLoading && !actor && /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { variant: "destructive", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "Could not connect to the server. Please refresh the page and try again." })
       ] }),
       submitError && /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { variant: "destructive", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
@@ -50087,7 +51177,7 @@ function RegisterPage() {
     setSubmitError(null);
     if (!actor) {
       setSubmitError(
-        "Connecting to server, please wait a moment and try again."
+        "Unable to connect to the registration server. Please refresh the page and try again."
       );
       return;
     }
@@ -50099,23 +51189,37 @@ function RegisterPage() {
         email: formData.email,
         password: formData.password
       });
+      sessionStorage.setItem("studentEmail", formData.email);
       ue.success("Registration successful! Please login to continue.");
       navigate({ to: "/login" });
     } catch (error) {
+      const rawMsg = error instanceof Error ? error.message : String(error);
+      console.error("[RegisterPage] Registration error (raw):", error);
       const friendlyMessage = getCanisterErrorMessage(error);
-      setSubmitError(friendlyMessage);
+      const UNAVAILABLE_PREFIX = "The registration service is temporarily unavailable";
+      if (friendlyMessage.startsWith(UNAVAILABLE_PREFIX)) {
+        setSubmitError(`${friendlyMessage}
+
+Technical detail: ${rawMsg}`);
+      } else {
+        setSubmitError(friendlyMessage !== rawMsg ? friendlyMessage : rawMsg);
+      }
     }
   };
-  const isSubmitDisabled = actorLoading || !actor || registerMutation.isPending || !emailVerified;
+  const isSubmitDisabled = actorLoading || registerMutation.isPending || !emailVerified;
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-[calc(100vh-200px)] flex items-center justify-center px-4 py-12", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "w-full max-w-lg", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs(CardHeader, { className: "space-y-1", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-2xl font-bold text-center", children: "Student Registration" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(CardDescription, { className: "text-center", children: "Step 1: Create your account to begin the admission process" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(CardContent, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: handleSubmit, className: "space-y-4", children: [
-      (actorLoading || !actor && !actorLoading) && /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { children: [
+      actorLoading && /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-4 w-4 animate-spin" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "Connecting to server, please wait..." })
+      ] }),
+      !actorLoading && !actor && /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { variant: "destructive", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "Could not connect to the registration server. Please refresh the page and try again." })
       ] }),
       submitError && /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { variant: "destructive", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
@@ -50354,12 +51458,13 @@ function PrintableAdmissionForm({
   student,
   admissionNumber
 }) {
-  var _a3, _b3, _c2, _d2, _e2, _f2, _g2, _h2;
+  var _a3, _b3, _c2, _d2, _e2;
   const handlePrint = () => {
     window.print();
   };
   if (!student.form) return null;
   const form = student.form;
+  const f = form;
   const getClassLabel = (classValue) => {
     const classMap = {
       class09th: "09th",
@@ -50380,11 +51485,10 @@ function PrintableAdmissionForm({
   const getCategoryLabel = (category) => {
     const categoryMap = {
       general: "General",
-      ews: "EWS",
+      ebc: "EBC",
+      bc: "BC",
       sc: "SC",
-      st: "ST",
-      bci: "EBC",
-      bcii: "BC"
+      st: "ST"
     };
     return categoryMap[category] || category;
   };
@@ -50397,7 +51501,7 @@ function PrintableAdmissionForm({
       unionBankOfIndia: "Union Bank of India",
       indianPostPaymentBank: "Indian Post Payment Bank",
       finoPaymentBank: "Fino Payment Bank",
-      other: "Other"
+      other: form.otherBankName || "Other"
     };
     return bankMap[bankName] || bankName;
   };
@@ -50426,7 +51530,13 @@ function PrintableAdmissionForm({
     };
     return streamMap[stream] || stream;
   };
-  const val = (v2, fallback = "-") => (v2 == null ? void 0 : v2.trim()) || fallback;
+  const val = (v2, fallback = "-") => v2 && String(v2).trim() ? String(v2).trim() : fallback;
+  const addrVal = (key) => {
+    var _a4;
+    const flat = f[key];
+    const nested = (_a4 = form.address) == null ? void 0 : _a4[key];
+    return val(flat || nested);
+  };
   const Field2 = ({
     label,
     value
@@ -50477,6 +51587,41 @@ function PrintableAdmissionForm({
       children: title
     }
   );
+  const studentName = val(student.name || f.studentName);
+  const fathersName = val(f.fathersName || f.fatherName);
+  const mothersName = val(f.mothersName || f.motherName);
+  const SEP = "|||";
+  const parseAadhaar = (raw) => {
+    const s2 = String(raw || "");
+    if (s2.includes(SEP)) {
+      const idx = s2.indexOf(SEP);
+      return { number: s2.slice(0, idx), name: s2.slice(idx + SEP.length) };
+    }
+    return { number: s2, name: "" };
+  };
+  const fathersAadhaarParsed = parseAadhaar(f.fathersAadhaar || "");
+  const mothersAadhaarParsed = parseAadhaar(f.mothersAadhaar || "");
+  const fathersAadhaar = val(fathersAadhaarParsed.number || f.fatherAadhar);
+  const mothersAadhaar = val(mothersAadhaarParsed.number || f.motherAadhar);
+  const mothersContact = val(f.mothersGuardianContact || f.mothersContact);
+  const fathersNameAsPerAadhaar = val(
+    fathersAadhaarParsed.name || f.fathersNameAsPerAadhaar || f.fatherNameAsPerAadhaar || f.fatherAadhaarName
+  );
+  const mothersNameAsPerAadhaar = val(
+    mothersAadhaarParsed.name || f.mothersNameAsPerAadhaar || f.motherNameAsPerAadhaar || f.motherAadhaarName
+  );
+  const religionMap = {
+    hinduism: "Hinduism",
+    islam: "Islam",
+    christianity: "Christianity",
+    buddhism: "Buddhism",
+    other: form.religionOther || "Other"
+  };
+  const religionDisplay = val(
+    form.religion && religionMap[form.religion] || f.religionOther || form.religion
+  );
+  const isClass1112 = student._class === "class11th" || student._class === "class12th";
+  const photoSrc = (typeof form.photoUrl === "string" && form.photoUrl ? form.photoUrl : void 0) || (typeof form.photo === "string" && form.photo ? form.photo : void 0) || ((_a3 = form.photo) == null ? void 0 : _a3.url);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "print-section", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { className: "no-print", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { children: "Admission Form - Print View" }),
@@ -50584,10 +51729,10 @@ function PrintableAdmissionForm({
                   ] })
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { textAlign: "center" }, children: [
-                  form.photo ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  photoSrc ? /* @__PURE__ */ jsxRuntimeExports.jsx(
                     "img",
                     {
-                      src: form.photo.getDirectURL(),
+                      src: photoSrc,
                       alt: "Student",
                       style: {
                         width: "80px",
@@ -50639,28 +51784,28 @@ function PrintableAdmissionForm({
                   Field2,
                   {
                     label: "Student Name (In Capital Letters)",
-                    value: form.studentName
+                    value: studentName
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Father's Name (In Capital Letters)",
-                    value: form.fatherName
+                    value: fathersName
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Mother's Name (In Capital Letters)",
-                    value: form.motherName
+                    value: mothersName
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Date of Birth (DOB)",
-                    value: form.dateOfBirth ? new Date(
+                    value: form.dateOfBirth && Number(form.dateOfBirth) > 0 ? new Date(
                       Number(form.dateOfBirth) / 1e6
                     ).toLocaleDateString("en-IN") : "-"
                   }
@@ -50673,8 +51818,8 @@ function PrintableAdmissionForm({
                     value: getCategoryLabel(form.category)
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Religion (धर्म)", value: form.emailId || "-" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Caste (जाति)", value: form.mobileNumber || "-" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Religion (धर्म)", value: religionDisplay }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Caste (जाति)", value: val(form.caste) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
@@ -50696,18 +51841,24 @@ function PrintableAdmissionForm({
                   Field2,
                   {
                     label: "Student Aadhaar Number (आधार नंबर)",
-                    value: form.aadharNumber
+                    value: val(form.aadharNumber)
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Annual Family Income (वार्षिक आय)",
-                    value: form.annualFamilyIncome
+                    value: val(form.annualFamilyIncome)
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Mobile Number (मोबाइल)", value: form.studentPhone }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Email ID (ईमेल)", value: form.studentEmail })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  Field2,
+                  {
+                    label: "Mobile Number (मोबाइल)",
+                    value: val(form.studentPhone)
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Email ID (ईमेल)", value: val(form.studentEmail) })
               ]
             }
           ),
@@ -50725,25 +51876,23 @@ function PrintableAdmissionForm({
                   Field2,
                   {
                     label: "Student PEN (11 characters)",
-                    value: form.studentPen
+                    value: val(form.studentPen)
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "APPAR Number (12 characters)",
-                    value: form.apparNumber
+                    value: val(form.apparNumber)
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "E-Shikshakosh Number (15 characters)",
-                    value: form.eShikshakoshNumber
+                    value: val(form.eShikshakoshNumber)
                   }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Student Phone", value: form.studentPhone }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Student Email", value: form.studentEmail })
+                )
               ]
             }
           ),
@@ -50757,44 +51906,56 @@ function PrintableAdmissionForm({
                 gap: "3px 10px"
               },
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Father's Name", value: form.fathersName }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Mother's Name", value: form.mothersName }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Father's Occupation", value: form.fathersOccupation }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Mother's Occupation", value: form.mothersOccupation }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Father's Contact", value: form.fathersContact }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Father's Name", value: fathersName }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Mother's Name", value: mothersName }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  Field2,
+                  {
+                    label: "Father's Occupation",
+                    value: val(form.fathersOccupation)
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  Field2,
+                  {
+                    label: "Mother's Occupation",
+                    value: val(form.mothersOccupation)
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Father's Contact", value: val(form.fathersContact) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Mother's / Guardian Contact Number",
-                    value: form.mothersContact || "—"
+                    value: mothersContact
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Father's Name as per Aadhaar",
-                    value: form.fathersNameAsPerAadhaar
+                    value: fathersNameAsPerAadhaar
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Mother's Name as per Aadhaar",
-                    value: form.mothersNameAsPerAadhaar
+                    value: mothersNameAsPerAadhaar
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Father's Aadhaar Card Number",
-                    value: form.fatherAadhar
+                    value: fathersAadhaar
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Mother's Aadhaar Card Number",
-                    value: form.motherAadhar
+                    value: mothersAadhaar
                   }
                 )
               ]
@@ -50814,17 +51975,17 @@ function PrintableAdmissionForm({
                   Field2,
                   {
                     label: "Account Holder's Name",
-                    value: form.accountHolderName
+                    value: val(form.accountHolderName)
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Bank Account Number (खाता संख्या)",
-                    value: form.bankAccountNumber
+                    value: val(form.bankAccountNumber)
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "IFSC Code (आईएफएससी)", value: form.ifscCode }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "IFSC Code (आईएफएससी)", value: val(form.ifscCode) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
@@ -50849,35 +52010,35 @@ function PrintableAdmissionForm({
                   Field2,
                   {
                     label: "Previous Exam Passed (पिछला कक्षा)",
-                    value: form.previousExam
+                    value: val(form.previousExam)
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Roll No. of Previous Class",
-                    value: form.previousRollNo
+                    value: val(form.previousRollNo)
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "School Name (स्कूल का नाम)",
-                    value: form.previousSchool
+                    value: val(form.previousSchool)
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Passing Year (उत्तीर्ण वर्ष)",
-                    value: (_a3 = form.passingYear) == null ? void 0 : _a3.toString()
+                    value: form.passingYear && Number(form.passingYear) > 0 ? String(Number(form.passingYear)) : "-"
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Marks Obtained (प्राप्त अंक)",
-                    value: form.marksObtained && Number(form.marksObtained) > 0 ? form.marksObtained.toString() : "-"
+                    value: form.marksObtained && Number(form.marksObtained) > 0 ? String(Number(form.marksObtained)) : "-"
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -50887,14 +52048,20 @@ function PrintableAdmissionForm({
                     value: form.marksObtained && Number(form.marksObtained) > 0 ? getPassingDivisionLabel(form.passingDivision) : "-"
                   }
                 ),
-                form.panchayatName && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                val(f.panchayatName) !== "-" && /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Panchayat Name (पंचायत का नाम)",
-                    value: form.panchayatName
+                    value: val(f.panchayatName)
                   }
                 ),
-                form.blockName && /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Block Name (ब्लॉक का नाम)", value: form.blockName })
+                val(f.blockName) !== "-" && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  Field2,
+                  {
+                    label: "Block Name (ब्लॉक का नाम)",
+                    value: val(f.blockName)
+                  }
+                )
               ]
             }
           ),
@@ -50908,37 +52075,33 @@ function PrintableAdmissionForm({
                 gap: "3px 10px"
               },
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Village (गाँव)", value: (_b3 = form.address) == null ? void 0 : _b3.village }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  Field2,
-                  {
-                    label: "Post Office (डाकघर)",
-                    value: (_c2 = form.address) == null ? void 0 : _c2.postOffice
-                  }
-                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Village (गाँव)", value: addrVal("village") }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Post Office (डाकघर)", value: addrVal("postOffice") }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "Police Station (पुलिस स्टेशन)",
-                    value: (_d2 = form.address) == null ? void 0 : _d2.policeStation
+                    value: addrVal("policeStation")
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Block (ब्लॉक)", value: (_e2 = form.address) == null ? void 0 : _e2.block }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "District (जिला)", value: (_f2 = form.address) == null ? void 0 : _f2.district }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Block (ब्लॉक)", value: addrVal("block") }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "District (जिला)", value: addrVal("district") }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Field2,
                   {
                     label: "State (राज्य)",
-                    value: getStateLabel((_g2 = form.address) == null ? void 0 : _g2.state)
+                    value: getStateLabel(
+                      f.state || ((_b3 = form.address) == null ? void 0 : _b3.state)
+                    )
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Pin Code (पिन कोड)", value: (_h2 = form.address) == null ? void 0 : _h2.pinCode })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "Pin Code (पिन कोड)", value: addrVal("pinCode") })
               ]
             }
           ),
           form.subjects && /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(SectionTitle2, { title: "7. Subject Selection — विषय चयन" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
               "div",
               {
                 style: {
@@ -50946,50 +52109,96 @@ function PrintableAdmissionForm({
                   gridTemplateColumns: "1fr 1fr 1fr",
                   gap: "3px 10px"
                 },
-                children: [
-                  form.subjects.stream && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    Field2,
-                    {
-                      label: "Stream (धारा)",
-                      value: getStreamLabel(form.subjects.stream)
-                    }
-                  ),
-                  form.subjects.mil && form.subjects.mil.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    Field2,
-                    {
-                      label: "M.I.L. Subject",
-                      value: form.subjects.mil.join(", ")
-                    }
-                  ),
-                  form.subjects.sil && form.subjects.sil.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    Field2,
-                    {
-                      label: "S.I.L. Subject",
-                      value: form.subjects.sil.join(", ")
-                    }
-                  ),
-                  form.subjects.compulsory && form.subjects.compulsory.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    Field2,
-                    {
-                      label: "Compulsory Subjects (अनिवार्य विषय)",
-                      value: form.subjects.compulsory.join(", ")
-                    }
-                  ),
-                  form.subjects.extra && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    Field2,
-                    {
-                      label: "Extra Subject (अतिरिक्त विषय)",
-                      value: form.subjects.extra
-                    }
-                  ),
-                  form.subjects.extraSubjects && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    Field2,
-                    {
-                      label: "Extra Subjects (11th/12th)",
-                      value: form.subjects.extraSubjects
-                    }
-                  )
-                ]
+                children: form.subjects.stream || isClass1112 || form.subjects.compulsoryGroup1 || form.subjects.compulsoryGroup2 ? (
+                  // Class 11/12 — stream-based subject display
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      Field2,
+                      {
+                        label: "Stream (धारा)",
+                        value: getStreamLabel(form.subjects.stream)
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      Field2,
+                      {
+                        label: "Compulsory Group-1 (अनिवार्य समूह-1)",
+                        value: val(
+                          form.subjects.compulsoryGroup1 || ((_c2 = f.subjects) == null ? void 0 : _c2.compulsoryGroup1)
+                        )
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      Field2,
+                      {
+                        label: "Compulsory Group-2 (अनिवार्य समूह-2)",
+                        value: val(
+                          form.subjects.compulsoryGroup2 || ((_d2 = f.subjects) == null ? void 0 : _d2.compulsoryGroup2)
+                        )
+                      }
+                    ),
+                    (() => {
+                      var _a4;
+                      const electives = ((_a4 = f.subjects) == null ? void 0 : _a4.electiveSubjects) || form.subjects.electiveSubjects || form.subjects.compulsory;
+                      const arr = Array.isArray(electives) ? electives : [];
+                      return arr.length > 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        Field2,
+                        {
+                          label: "Elective Subjects (ऐच्छिक विषय)",
+                          value: arr.join(", ")
+                        }
+                      ) : null;
+                    })(),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      Field2,
+                      {
+                        label: "Additional Subject (अतिरिक्त विषय)",
+                        value: val(
+                          ((_e2 = f.subjects) == null ? void 0 : _e2.additionalSubject) || form.subjects.additionalSubject || form.subjects.extraSubjects
+                        )
+                      }
+                    )
+                  ] })
+                ) : (
+                  // Class 9/10 — MIL/SIL subject display
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                    (() => {
+                      var _a4;
+                      const milRaw = ((_a4 = f.subjects) == null ? void 0 : _a4.mil) || form.subjects.mil;
+                      const milStr = Array.isArray(milRaw) ? milRaw.join(", ") : milRaw;
+                      return milStr ? /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "M.I.L. Subject", value: milStr }) : null;
+                    })(),
+                    (() => {
+                      var _a4;
+                      const silRaw = ((_a4 = f.subjects) == null ? void 0 : _a4.sil) || form.subjects.sil;
+                      const silStr = Array.isArray(silRaw) ? silRaw.join(", ") : silRaw;
+                      return silStr ? /* @__PURE__ */ jsxRuntimeExports.jsx(Field2, { label: "S.I.L. Subject", value: silStr }) : null;
+                    })(),
+                    (() => {
+                      var _a4;
+                      const compulsoryRaw = ((_a4 = f.subjects) == null ? void 0 : _a4.electiveSubjects) || form.subjects.electiveSubjects || form.subjects.compulsory;
+                      const arr = Array.isArray(compulsoryRaw) ? compulsoryRaw : [];
+                      return arr.length > 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        Field2,
+                        {
+                          label: "Compulsory Subjects (अनिवार्य विषय)",
+                          value: arr.join(", ")
+                        }
+                      ) : null;
+                    })(),
+                    (() => {
+                      var _a4;
+                      const extra = ((_a4 = f.subjects) == null ? void 0 : _a4.extraSubject) || form.subjects.extraSubject || form.subjects.extra;
+                      return extra ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        Field2,
+                        {
+                          label: "Extra Subject (अतिरिक्त विषय)",
+                          value: extra
+                        }
+                      ) : null;
+                    })()
+                  ] })
+                )
               }
             )
           ] }),
@@ -51023,80 +52232,128 @@ function PrintableAdmissionForm({
                       gridTemplateColumns: "1fr 1fr",
                       gap: "2px 8px"
                     },
-                    children: [
-                      { label: "Caste Certificate", hindi: "जाति प्रमाण पत्र" },
-                      { label: "Income Certificate", hindi: "आय प्रमाण पत्र" },
-                      { label: "Residence Certificate", hindi: "निवास प्रमाण पत्र" },
-                      {
-                        label: "Transfer Certificate (Original)",
-                        hindi: "स्थानांतरण प्रमाण पत्र (मूल)"
-                      },
-                      {
-                        label: "Previous Class Marksheets",
-                        hindi: "पिछली कक्षा की अंकसूची"
-                      },
-                      {
-                        label: "Student Aadhaar Card Photocopy",
-                        hindi: "छात्र/छात्रा आधार कार्ड फोटोकॉपी"
-                      },
-                      {
-                        label: "Mother's Aadhaar Card Photocopy",
-                        hindi: "माता का आधार कार्ड फोटोकॉपी"
-                      },
-                      {
-                        label: "Father's Aadhaar Card Photocopy",
-                        hindi: "पिता का आधार कार्ड फोटोकॉपी"
-                      }
-                    ].map((doc) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      "div",
-                      {
-                        style: {
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "4px",
-                          padding: "1px 0"
+                    children: (() => {
+                      const dc = f.documentsChecklist ?? {};
+                      const isGeneral = form.category === "general";
+                      const isClass1012 = student._class === "class10th" || student._class === "class12th";
+                      const isOrphaned = !!(form.orphanedAndDestitute || f.isOrphanedDestitute);
+                      const panchayatName = f.panchayatName || "";
+                      const blockNameVal = f.blockName || "";
+                      const requireBEO = student._class === "class09th" && (panchayatName.trim().toLowerCase() !== "kawakol panchayat" || blockNameVal.trim().toLowerCase() !== "block kawakol") && !!(panchayatName || blockNameVal) || !!f.requireBEOLetter;
+                      const docs = [
+                        {
+                          key: "casteCertificate",
+                          label: "Caste Certificate",
+                          hindi: "जाति प्रमाण पत्र",
+                          skip: isGeneral
                         },
-                        children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(
-                            "div",
-                            {
-                              style: {
-                                width: "10px",
-                                height: "10px",
-                                border: "1px solid #333",
-                                borderRadius: "2px",
-                                flexShrink: 0,
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                backgroundColor: "#e8f5e9"
-                              },
-                              children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                                "span",
+                        {
+                          key: "incomeCertificate",
+                          label: "Income Certificate",
+                          hindi: "आय प्रमाण पत्र",
+                          skip: isGeneral
+                        },
+                        {
+                          key: "residenceCertificate",
+                          label: "Residence Certificate",
+                          hindi: "निवास प्रमाण पत्र"
+                        },
+                        {
+                          key: "transferCertificate",
+                          label: "Transfer Certificate (Original)",
+                          hindi: "स्थानांतरण प्रमाण पत्र (मूल)",
+                          skip: isClass1012
+                        },
+                        {
+                          key: "previousMarksheets",
+                          label: "Previous Class Marksheets",
+                          hindi: "पिछली कक्षा की अंकसूची",
+                          skip: isClass1012
+                        },
+                        {
+                          key: "studentAadhaarCard",
+                          label: "Student Aadhaar Card Photocopy",
+                          hindi: "छात्र/छात्रा आधार कार्ड फोटोकॉपी"
+                        },
+                        {
+                          key: "mothersAadhaarCard",
+                          label: "Mother's Aadhaar Card Photocopy",
+                          hindi: "माता का आधार कार्ड फोटोकॉपी"
+                        },
+                        {
+                          key: "fathersAadhaarCard",
+                          label: "Father's Aadhaar Card Photocopy",
+                          hindi: "पिता का आधार कार्ड फोटोकॉपी"
+                        },
+                        ...isOrphaned ? [
+                          {
+                            key: "deathCertificate",
+                            label: "Mother & Father Death Certificate",
+                            hindi: "माता-पिता का मृत्यु प्रमाण पत्र"
+                          }
+                        ] : [],
+                        ...requireBEO ? [
+                          {
+                            key: "beoCertificate",
+                            label: "BEO Approval Letter (Original)",
+                            hindi: "BEO अनुमोदन पत्र (मूल)"
+                          }
+                        ] : []
+                      ];
+                      return docs.filter((d2) => !d2.skip).map((doc) => {
+                        const checked = dc[doc.key] === true;
+                        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                          "div",
+                          {
+                            style: {
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "4px",
+                              padding: "1px 0"
+                            },
+                            children: [
+                              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                                "div",
                                 {
                                   style: {
-                                    fontSize: "7pt",
-                                    color: "#2e7d32",
-                                    fontWeight: "bold",
-                                    lineHeight: 1
+                                    width: "10px",
+                                    height: "10px",
+                                    border: "1px solid #333",
+                                    borderRadius: "2px",
+                                    flexShrink: 0,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    backgroundColor: checked ? "#e8f5e9" : "#fff"
                                   },
-                                  children: "✓"
+                                  children: checked && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                                    "span",
+                                    {
+                                      style: {
+                                        fontSize: "7pt",
+                                        color: "#2e7d32",
+                                        fontWeight: "bold",
+                                        lineHeight: 1
+                                      },
+                                      children: "✓"
+                                    }
+                                  )
                                 }
-                              )
-                            }
-                          ),
-                          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { style: { fontSize: "7pt" }, children: [
-                            doc.label,
-                            " ",
-                            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { lang: "hi", style: { color: "#555" }, children: [
-                              "/ ",
-                              doc.hindi
-                            ] })
-                          ] })
-                        ]
-                      },
-                      doc.label
-                    ))
+                              ),
+                              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { style: { fontSize: "7pt" }, children: [
+                                doc.label,
+                                " ",
+                                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { lang: "hi", style: { color: "#555" }, children: [
+                                  "/ ",
+                                  doc.hindi
+                                ] })
+                              ] })
+                            ]
+                          },
+                          doc.key
+                        );
+                      });
+                    })()
                   }
                 )
               ]
@@ -51120,12 +52377,12 @@ function PrintableAdmissionForm({
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { style: { marginBottom: "3px" }, children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Note" }),
-                  " – As per the departmental letter bearing “Memo No. – 9 / Poshak Yo. – 02/2024 (Part) – 44, Patna, dated 20/01/2025,” students are strictly prohibited from wearing any attire other than the prescribed school uniform; specifically, no decorative or ostentatious clothing is permitted."
+                  ' – As per the departmental letter bearing "Memo No. – 9 / Poshak Yo. – 02/2024 (Part) – 44, Patna, dated 20/01/2025," students are strictly prohibited from wearing any attire other than the prescribed school uniform; specifically, no decorative or ostentatious clothing is permitted.'
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { style: { marginBottom: "4px" }, children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Boys’ Uniform:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Boys' Uniform:" }),
                   " Shirt Color – Sky Blue; Trousers Color – Navy Blue. ",
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Girls’ Uniform:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Girls' Uniform:" }),
                   " Kameez Color – Sky Blue; Salwar/Dupatta Color – Navy Blue."
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { lang: "hi", style: { marginBottom: "4px" }, children: [
@@ -51238,11 +52495,13 @@ function PrintableAdmissionForm({
   ] });
 }
 function StudentDashboard() {
+  var _a3, _b3, _c2, _d2, _e2;
   const navigate = useNavigate();
   const queryClient2 = useQueryClient();
   const { data: student, isLoading } = useGetCallerStudent();
   const { data: admissionNumber } = useGetAdmissionNumber(student == null ? void 0 : student.email);
   const handleLogout = () => {
+    sessionStorage.removeItem("studentEmail");
     queryClient2.clear();
     navigate({ to: "/login" });
   };
@@ -51305,6 +52564,7 @@ function StudentDashboard() {
     };
     return classMap[classValue] || classValue;
   };
+  const photoSrc = ((_a3 = student.form) == null ? void 0 : _a3.photoUrl) || ((_d2 = (_c2 = (_b3 = student.form) == null ? void 0 : _b3.photo) == null ? void 0 : _c2.getDirectURL) == null ? void 0 : _d2.call(_c2)) || (typeof ((_e2 = student.form) == null ? void 0 : _e2.photo) === "string" ? student.form.photo : void 0);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-5xl mx-auto px-4 py-8", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "mb-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
@@ -51325,6 +52585,27 @@ function StudentDashboard() {
         )
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "space-y-4", children: [
+        photoSrc && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: "flex flex-col items-center gap-2 pb-2",
+            "data-ocid": "dashboard.photo_section",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "img",
+                {
+                  src: photoSrc,
+                  alt: "Applicant",
+                  className: "w-24 h-32 object-cover border-2 border-primary/20 rounded shadow",
+                  onError: (e) => {
+                    e.target.style.display = "none";
+                  }
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground", children: "Applicant Photo" })
+            ]
+          }
+        ),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: "Student Name" }),
@@ -51346,9 +52627,7 @@ function StudentDashboard() {
         student.status !== "draft" && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-4 bg-muted rounded-lg", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm", children: getStatusMessage() }),
           student.status === "rejected" && (() => {
-            const reason = localStorage.getItem(
-              `rejection_reason_${student.email}`
-            );
+            const reason = student.rejectionReason || localStorage.getItem(`rejection_reason_${student.email}`);
             return reason ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
               "div",
               {

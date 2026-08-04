@@ -187,7 +187,7 @@ export default function RegisterPage() {
 
     if (!actor) {
       setSubmitError(
-        "Connecting to server, please wait a moment and try again.",
+        "Unable to connect to the registration server. Please refresh the page and try again.",
       );
       return;
     }
@@ -201,16 +201,28 @@ export default function RegisterPage() {
         email: formData.email,
         password: formData.password,
       });
+      // Store email so subsequent student fetches can use email-based lookup
+      sessionStorage.setItem("studentEmail", formData.email);
       toast.success("Registration successful! Please login to continue.");
       navigate({ to: "/login" });
     } catch (error: unknown) {
+      const rawMsg = error instanceof Error ? error.message : String(error);
+      console.error("[RegisterPage] Registration error (raw):", error);
+      // Surface validation/duplicate errors as-is; only translate genuine canister errors
       const friendlyMessage = getCanisterErrorMessage(error);
-      setSubmitError(friendlyMessage);
+      // If message was translated to the generic unavailability message, also show the raw detail
+      const UNAVAILABLE_PREFIX =
+        "The registration service is temporarily unavailable";
+      if (friendlyMessage.startsWith(UNAVAILABLE_PREFIX)) {
+        setSubmitError(`${friendlyMessage}\n\nTechnical detail: ${rawMsg}`);
+      } else {
+        setSubmitError(friendlyMessage !== rawMsg ? friendlyMessage : rawMsg);
+      }
     }
   };
 
   const isSubmitDisabled =
-    actorLoading || !actor || registerMutation.isPending || !emailVerified;
+    actorLoading || registerMutation.isPending || !emailVerified;
 
   return (
     <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 py-12">
@@ -225,11 +237,21 @@ export default function RegisterPage() {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            {(actorLoading || (!actor && !actorLoading)) && (
+            {actorLoading && (
               <Alert>
                 <Loader2 className="h-4 w-4 animate-spin" />
                 <AlertDescription>
                   Connecting to server, please wait...
+                </AlertDescription>
+              </Alert>
+            )}
+
+            {!actorLoading && !actor && (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>
+                  Could not connect to the registration server. Please refresh
+                  the page and try again.
                 </AlertDescription>
               </Alert>
             )}

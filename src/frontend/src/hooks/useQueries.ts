@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import type { AdmissionForm, Class, Student } from "../types";
+import type { AdmissionForm, Class, Student, StudentSummary } from "../types";
 import { useActor } from "./useBackendActor";
 
 const ADMIN_PASSWORD = "InterSchool@951";
@@ -60,6 +60,21 @@ export function useGetCallerStudent() {
     queryKey: ["callerStudent"],
     queryFn: async () => {
       if (!actor) throw new Error("Actor not available");
+      // Prefer email-based lookup to avoid IC anonymous-principal collision
+      const storedEmail = sessionStorage.getItem("studentEmail");
+      if (storedEmail) {
+        try {
+          const student = await (
+            actor as unknown as Record<
+              string,
+              (...args: unknown[]) => Promise<Student | null>
+            >
+          ).getStudent(storedEmail);
+          return student ?? null;
+        } catch {
+          // Fall through to getCallerStudent if getStudent fails
+        }
+      }
       return (
         actor as unknown as Record<
           string,
@@ -105,6 +120,16 @@ export function useSubmitForm() {
       form,
     }: { email: string; form: AdmissionForm }) => {
       if (!actor) throw new Error("Actor not available");
+      // Validate category before sending to backend
+      const validCategories = ["general", "ebc", "bc", "sc", "st"];
+      if (!validCategories.includes(form.category as string)) {
+        console.error(
+          `[useSubmitForm] Invalid category value: "${form.category}". Valid values are: ${validCategories.join(", ")}`,
+        );
+        throw new Error(
+          `Invalid category: "${form.category}". Must be one of: ${validCategories.join(", ")}`,
+        );
+      }
       return (
         actor as unknown as Record<
           string,
@@ -139,6 +164,55 @@ export function useGetAllApplications() {
     staleTime: 0,
     retry: 3,
     retryDelay: 1000,
+  });
+}
+
+export function useGetLightweightApplications() {
+  const { actor, isFetching: actorFetching } = useActor();
+
+  return useQuery<StudentSummary[]>({
+    queryKey: ["lightweightApplications"],
+    queryFn: async () => {
+      if (!actor) throw new Error("Actor not available");
+      const result = (await (
+        actor as unknown as Record<
+          string,
+          (...args: unknown[]) => Promise<StudentSummary[]>
+        >
+      ).getLightweightApplicationsForAdmin(ADMIN_PASSWORD)) as StudentSummary[];
+      return result;
+    },
+    enabled: !!actor && !actorFetching,
+    refetchOnMount: "always",
+    staleTime: 0,
+    retry: 3,
+    retryDelay: 1000,
+  });
+}
+
+export function useGetApplicationDetail(email: string | null) {
+  const { actor, isFetching: actorFetching } = useActor();
+
+  return useQuery<Student | null>({
+    queryKey: ["applicationDetail", email],
+    queryFn: async () => {
+      if (!actor) throw new Error("Actor not available");
+      if (!email) return null;
+      const result = (await (
+        actor as unknown as Record<
+          string,
+          (...args: unknown[]) => Promise<Student | null>
+        >
+      ).getApplicationDetailForAdmin(ADMIN_PASSWORD, email)) as Student | null;
+      // Unwrap Candid opt ([] | [Student]) if needed
+      if (Array.isArray(result)) {
+        return (result as Student[])[0] ?? null;
+      }
+      return result;
+    },
+    enabled: !!actor && !actorFetching && !!email,
+    staleTime: 30000,
+    retry: 2,
   });
 }
 
@@ -202,6 +276,8 @@ export function useApproveApplication() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["allApplications"] });
+      queryClient.invalidateQueries({ queryKey: ["lightweightApplications"] });
+      queryClient.invalidateQueries({ queryKey: ["applicationDetail"] });
     },
   });
 }
@@ -211,17 +287,44 @@ export function useRejectApplication() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async (email: string) => {
+    mutationFn: async ({
+      email,
+      reason,
+    }: { email: string; reason: string }) => {
       if (!actor) throw new Error("Actor not available");
       return (
         actor as unknown as Record<
           string,
           (...args: unknown[]) => Promise<unknown>
         >
-      ).rejectApplicationForAdmin(email, ADMIN_PASSWORD);
+      ).rejectApplicationForAdmin(email, ADMIN_PASSWORD, reason);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["allApplications"] });
+      queryClient.invalidateQueries({ queryKey: ["lightweightApplications"] });
+      queryClient.invalidateQueries({ queryKey: ["applicationDetail"] });
+    },
+  });
+}
+
+export function useDeleteApplications() {
+  const { actor } = useActor();
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (emails: string[]) => {
+      if (!actor) throw new Error("Actor not available");
+      return (
+        actor as unknown as Record<
+          string,
+          (...args: unknown[]) => Promise<unknown>
+        >
+      ).deleteApplicationForAdmin(emails, ADMIN_PASSWORD);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["allApplications"] });
+      queryClient.invalidateQueries({ queryKey: ["lightweightApplications"] });
+      queryClient.invalidateQueries({ queryKey: ["allAdmissionNumbers"] });
     },
   });
 }

@@ -7,17 +7,16 @@ export interface None {
     __kind__: "None";
 }
 export type Option<T> = Some<T> | None;
-export interface SubjectSelection {
-    mil?: string;
-    sil?: string;
-    extraSubject?: string;
-    stream?: Stream;
-    additionalSubject?: string;
-    compulsoryGroup1?: string;
-    compulsoryGroup2?: string;
-    electiveSubjects: Array<string>;
-}
 export type Time = bigint;
+export interface StudentSummary {
+    status: ApplicationStatus;
+    studentName: string;
+    class: string;
+    rejectionReason: string;
+    email: string;
+    admissionNumber: string;
+    registrationDate: bigint;
+}
 export interface Student {
     status: ApplicationStatus;
     principal: Principal;
@@ -47,6 +46,7 @@ export interface AdmissionForm {
     studentEmail: string;
     hasEShikshakosh: boolean;
     subjects: SubjectSelection;
+    fathersNameAsPerAadhaar: string;
     previousSchool: string;
     ifscCode: string;
     marksObtained: bigint;
@@ -63,6 +63,7 @@ export interface AdmissionForm {
     photoUrl?: string;
     mothersOccupation: string;
     policeStation: string;
+    mothersNameAsPerAadhaar: string;
     fathersName: string;
     bankName: BankName;
     district: string;
@@ -90,6 +91,16 @@ export interface AdmissionForm {
     previousExam: string;
     hasPenAndApaar: boolean;
     mothersAadhaar: string;
+}
+export interface SubjectSelection {
+    mil?: string;
+    sil?: string;
+    extraSubject?: string;
+    stream?: Stream;
+    additionalSubject?: string;
+    compulsoryGroup1?: string;
+    compulsoryGroup2?: string;
+    electiveSubjects: Array<string>;
 }
 export interface UserProfile {
     _class: Class;
@@ -156,19 +167,29 @@ export enum Stream {
 export interface backendInterface {
     approveApplication(email: string): Promise<void>;
     approveApplicationForAdmin(email: string, adminPassword: string): Promise<void>;
+    deleteApplicationForAdmin(emails: Array<string>, adminPassword: string): Promise<{
+        __kind__: "ok";
+        ok: string;
+    } | {
+        __kind__: "err";
+        err: string;
+    }>;
     generateOtp(email: string): Promise<string>;
     getAdmissionNumber(email: string): Promise<string>;
     getAllAdmissionNumbers(): Promise<Array<[string, string]>>;
     getAllApplications(): Promise<Array<Student>>;
     getAllApplicationsForAdmin(adminPassword: string): Promise<Array<Student>>;
+    getAllApplicationsForExport(adminPassword: string): Promise<Array<Student>>;
     getAllApprovedApplications(): Promise<Array<Student>>;
     getAllPendingApplications(): Promise<Array<Student>>;
     getAllRejectedApplications(): Promise<Array<Student>>;
+    getApplicationDetailForAdmin(adminPassword: string, email: string): Promise<Student | null>;
     getApplicationStatus(email: string): Promise<ApplicationStatus>;
     getApplicationsSortedByDate(): Promise<Array<Student>>;
     getCallerStudent(): Promise<Student | null>;
     getCallerUserProfile(): Promise<UserProfile | null>;
     getDraftData(email: string): Promise<AdmissionForm | null>;
+    getLightweightApplicationsForAdmin(adminPassword: string): Promise<Array<StudentSummary>>;
     getStudent(email: string): Promise<Student>;
     getUserProfile(user: Principal): Promise<UserProfile | null>;
     loginStudent(email: string, password: string): Promise<boolean>;

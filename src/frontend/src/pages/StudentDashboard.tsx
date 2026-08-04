@@ -25,6 +25,7 @@ export default function StudentDashboard() {
   const { data: admissionNumber } = useGetAdmissionNumber(student?.email);
 
   const handleLogout = () => {
+    sessionStorage.removeItem("studentEmail");
     queryClient.clear();
     navigate({ to: "/login" });
   };
@@ -89,7 +90,6 @@ export default function StudentDashboard() {
     }
   };
 
-  // Students can edit their form only when status is pending (under review)
   const canEdit = student.status === "pending" && !!student.form;
 
   const getClassLabel = (classValue: string) => {
@@ -101,6 +101,14 @@ export default function StudentDashboard() {
     };
     return classMap[classValue] || classValue;
   };
+
+  // Photo URL for display in the dashboard header
+  const photoSrc =
+    student.form?.photoUrl ||
+    (
+      student.form?.photo as unknown as { getDirectURL?: () => string }
+    )?.getDirectURL?.() ||
+    (typeof student.form?.photo === "string" ? student.form.photo : undefined);
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
@@ -121,6 +129,24 @@ export default function StudentDashboard() {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
+          {/* Applicant Photo — shown prominently when available */}
+          {photoSrc && (
+            <div
+              className="flex flex-col items-center gap-2 pb-2"
+              data-ocid="dashboard.photo_section"
+            >
+              <img
+                src={photoSrc}
+                alt="Applicant"
+                className="w-24 h-32 object-cover border-2 border-primary/20 rounded shadow"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
+              />
+              <p className="text-xs text-muted-foreground">Applicant Photo</p>
+            </div>
+          )}
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
               <p className="text-sm text-muted-foreground">Student Name</p>
@@ -153,9 +179,9 @@ export default function StudentDashboard() {
               <p className="text-sm">{getStatusMessage()}</p>
               {student.status === "rejected" &&
                 (() => {
-                  const reason = localStorage.getItem(
-                    `rejection_reason_${student.email}`,
-                  );
+                  const reason =
+                    student.rejectionReason ||
+                    localStorage.getItem(`rejection_reason_${student.email}`);
                   return reason ? (
                     <div
                       className="mt-2 p-3 bg-red-50 border border-red-200 rounded-md"

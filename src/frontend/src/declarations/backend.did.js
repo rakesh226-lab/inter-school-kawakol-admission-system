@@ -85,6 +85,7 @@ export const AdmissionForm = IDL.Record({
   'studentEmail' : IDL.Text,
   'hasEShikshakosh' : IDL.Bool,
   'subjects' : SubjectSelection,
+  'fathersNameAsPerAadhaar' : IDL.Text,
   'previousSchool' : IDL.Text,
   'ifscCode' : IDL.Text,
   'marksObtained' : IDL.Nat,
@@ -101,6 +102,7 @@ export const AdmissionForm = IDL.Record({
   'photoUrl' : IDL.Opt(IDL.Text),
   'mothersOccupation' : IDL.Text,
   'policeStation' : IDL.Text,
+  'mothersNameAsPerAadhaar' : IDL.Text,
   'fathersName' : IDL.Text,
   'bankName' : BankName,
   'district' : IDL.Text,
@@ -154,10 +156,24 @@ export const UserProfile = IDL.Record({
   'email' : IDL.Text,
   'isStudent' : IDL.Bool,
 });
+export const StudentSummary = IDL.Record({
+  'status' : ApplicationStatus,
+  'studentName' : IDL.Text,
+  'class' : IDL.Text,
+  'rejectionReason' : IDL.Text,
+  'email' : IDL.Text,
+  'admissionNumber' : IDL.Text,
+  'registrationDate' : IDL.Int,
+});
 
 export const idlService = IDL.Service({
   'approveApplication' : IDL.Func([IDL.Text], [], []),
   'approveApplicationForAdmin' : IDL.Func([IDL.Text, IDL.Text], [], []),
+  'deleteApplicationForAdmin' : IDL.Func(
+      [IDL.Vec(IDL.Text), IDL.Text],
+      [IDL.Variant({ 'ok' : IDL.Text, 'err' : IDL.Text })],
+      [],
+    ),
   'generateOtp' : IDL.Func([IDL.Text], [IDL.Text], []),
   'getAdmissionNumber' : IDL.Func([IDL.Text], [IDL.Text], ['query']),
   'getAllAdmissionNumbers' : IDL.Func(
@@ -171,14 +187,29 @@ export const idlService = IDL.Service({
       [IDL.Vec(Student)],
       ['query'],
     ),
+  'getAllApplicationsForExport' : IDL.Func(
+      [IDL.Text],
+      [IDL.Vec(Student)],
+      ['query'],
+    ),
   'getAllApprovedApplications' : IDL.Func([], [IDL.Vec(Student)], ['query']),
   'getAllPendingApplications' : IDL.Func([], [IDL.Vec(Student)], ['query']),
   'getAllRejectedApplications' : IDL.Func([], [IDL.Vec(Student)], ['query']),
+  'getApplicationDetailForAdmin' : IDL.Func(
+      [IDL.Text, IDL.Text],
+      [IDL.Opt(Student)],
+      ['query'],
+    ),
   'getApplicationStatus' : IDL.Func([IDL.Text], [ApplicationStatus], ['query']),
   'getApplicationsSortedByDate' : IDL.Func([], [IDL.Vec(Student)], ['query']),
   'getCallerStudent' : IDL.Func([], [IDL.Opt(Student)], ['query']),
   'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
   'getDraftData' : IDL.Func([IDL.Text], [IDL.Opt(AdmissionForm)], ['query']),
+  'getLightweightApplicationsForAdmin' : IDL.Func(
+      [IDL.Text],
+      [IDL.Vec(StudentSummary)],
+      ['query'],
+    ),
   'getStudent' : IDL.Func([IDL.Text], [Student], ['query']),
   'getUserProfile' : IDL.Func(
       [IDL.Principal],
@@ -285,6 +316,7 @@ export const idlFactory = ({ IDL }) => {
     'studentEmail' : IDL.Text,
     'hasEShikshakosh' : IDL.Bool,
     'subjects' : SubjectSelection,
+    'fathersNameAsPerAadhaar' : IDL.Text,
     'previousSchool' : IDL.Text,
     'ifscCode' : IDL.Text,
     'marksObtained' : IDL.Nat,
@@ -301,6 +333,7 @@ export const idlFactory = ({ IDL }) => {
     'photoUrl' : IDL.Opt(IDL.Text),
     'mothersOccupation' : IDL.Text,
     'policeStation' : IDL.Text,
+    'mothersNameAsPerAadhaar' : IDL.Text,
     'fathersName' : IDL.Text,
     'bankName' : BankName,
     'district' : IDL.Text,
@@ -354,10 +387,24 @@ export const idlFactory = ({ IDL }) => {
     'email' : IDL.Text,
     'isStudent' : IDL.Bool,
   });
+  const StudentSummary = IDL.Record({
+    'status' : ApplicationStatus,
+    'studentName' : IDL.Text,
+    'class' : IDL.Text,
+    'rejectionReason' : IDL.Text,
+    'email' : IDL.Text,
+    'admissionNumber' : IDL.Text,
+    'registrationDate' : IDL.Int,
+  });
   
   return IDL.Service({
     'approveApplication' : IDL.Func([IDL.Text], [], []),
     'approveApplicationForAdmin' : IDL.Func([IDL.Text, IDL.Text], [], []),
+    'deleteApplicationForAdmin' : IDL.Func(
+        [IDL.Vec(IDL.Text), IDL.Text],
+        [IDL.Variant({ 'ok' : IDL.Text, 'err' : IDL.Text })],
+        [],
+      ),
     'generateOtp' : IDL.Func([IDL.Text], [IDL.Text], []),
     'getAdmissionNumber' : IDL.Func([IDL.Text], [IDL.Text], ['query']),
     'getAllAdmissionNumbers' : IDL.Func(
@@ -371,9 +418,19 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Vec(Student)],
         ['query'],
       ),
+    'getAllApplicationsForExport' : IDL.Func(
+        [IDL.Text],
+        [IDL.Vec(Student)],
+        ['query'],
+      ),
     'getAllApprovedApplications' : IDL.Func([], [IDL.Vec(Student)], ['query']),
     'getAllPendingApplications' : IDL.Func([], [IDL.Vec(Student)], ['query']),
     'getAllRejectedApplications' : IDL.Func([], [IDL.Vec(Student)], ['query']),
+    'getApplicationDetailForAdmin' : IDL.Func(
+        [IDL.Text, IDL.Text],
+        [IDL.Opt(Student)],
+        ['query'],
+      ),
     'getApplicationStatus' : IDL.Func(
         [IDL.Text],
         [ApplicationStatus],
@@ -383,6 +440,11 @@ export const idlFactory = ({ IDL }) => {
     'getCallerStudent' : IDL.Func([], [IDL.Opt(Student)], ['query']),
     'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
     'getDraftData' : IDL.Func([IDL.Text], [IDL.Opt(AdmissionForm)], ['query']),
+    'getLightweightApplicationsForAdmin' : IDL.Func(
+        [IDL.Text],
+        [IDL.Vec(StudentSummary)],
+        ['query'],
+      ),
     'getStudent' : IDL.Func([IDL.Text], [Student], ['query']),
     'getUserProfile' : IDL.Func(
         [IDL.Principal],

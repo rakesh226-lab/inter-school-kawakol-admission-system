@@ -1,147 +1,232 @@
 import type { Student } from "../types";
 
 export function exportToExcel(
-  students: Student[],
+  applications: Student[],
   admissionNumbersMap?: Map<string, string>,
 ) {
-  // Create CSV content
   const headers = [
-    "Admission Number",
+    "Admission No.",
     "Student Name",
     "Class",
+    "Stream",
     "Email",
-    "Registration Date",
-    "Status",
-    "Father Name",
-    "Mother Name",
-    "Date of Birth",
-    "Gender",
+    "Student Phone",
+    "Parent Contact",
     "Category",
     "Religion",
     "Caste",
-    "Physically Handicapped",
-    "Handicap Type",
-    "Handicap Percentage",
-    "Aadhar Number",
-    "Annual Family Income",
-    "Student PEN",
-    "APPAR Number",
-    "E-Shikshakosh Number",
-    "Student Phone",
-    "Student Email",
+    "Date of Birth",
+    "Gender",
     "Father's Name",
     "Mother's Name",
+    "Father's Name as per Aadhaar",
+    "Mother's Name as per Aadhaar",
+    "Father's Aadhaar",
+    "Mother's Aadhaar",
     "Father's Occupation",
     "Mother's Occupation",
     "Father's Contact",
-    "Mother's Contact",
-    "Father's Name as per Aadhaar",
-    "Mother's Name as per Aadhaar",
-    "Bank Account Holder's Name",
-    "Bank Account Number",
-    "IFSC Code",
-    "Bank Name",
-    "Mobile Number",
-    "Email ID",
-    "Father Aadhar",
-    "Mother Aadhar",
-    "Previous Exam",
-    "Previous Roll No",
-    "Previous School",
-    "Passing Year",
-    "Marks Obtained",
-    "Division",
+    "Mother's / Guardian Contact",
     "Village",
-    "Post Office",
-    "Police Station",
     "Block",
     "District",
     "State",
     "Pin Code",
-    "Guardian Declaration",
-    "Stream",
-    "M.I.L. Subjects",
-    "S.I.L. Subjects",
-    "Compulsory Subjects",
+    "MIL Subject",
+    "SIL Subject",
     "Extra Subject",
-    "Extra Subjects",
+    "Compulsory Subject Group-1",
+    "Compulsory Subject Group-2",
+    "Elective Subjects",
+    "Additional Subject",
+    "PEN Number",
+    "APAAR Number",
+    "E-Shikshakosh Number",
+    "Bank Account Holder",
+    "Bank Name",
+    "Account Number",
+    "IFSC Code",
+    "Status",
+    "Rejection Reason",
   ];
 
-  const rows = students.map((student) => {
+  const safe = (v: unknown): string => {
+    if (v === undefined || v === null) return "";
+    const s = String(v).trim();
+    return s;
+  };
+
+  const getAdmNo = (student: Student): string => {
+    return (
+      admissionNumbersMap?.get(student.email) || student.admissionNumber || ""
+    );
+  };
+
+  const getClassLabel = (c: string): string => {
+    const map: Record<string, string> = {
+      class09th: "09",
+      class10th: "10",
+      class11th: "11",
+      class12th: "12",
+    };
+    return map[c] || c;
+  };
+
+  const getSubjectStr = (field: unknown): string => {
+    if (!field) return "";
+    if (Array.isArray(field)) return field.join(", ");
+    return safe(field);
+  };
+
+  const rows = applications.map((student) => {
     const form = student.form;
+    // Cast to loose record to handle both typed and untyped backend fields
+    const f = form as unknown as Record<string, unknown>;
+
+    // Address: flat fields first (backend canonical), then nested fallback
+    const addr = (key: string): string => {
+      const flat = f?.[key];
+      const nested =
+        form?.address?.[key as keyof NonNullable<typeof form.address>];
+      return safe(flat ?? nested);
+    };
+
+    // Decode aadhaar fields — encoded as "AADHARNUMBER|||NameAsPerAadhaar"
+    const SEP = "|||";
+    const parseAadhaar = (raw: unknown) => {
+      const s = safe(raw);
+      if (s.includes(SEP)) {
+        const idx = s.indexOf(SEP);
+        return { number: s.slice(0, idx), name: s.slice(idx + SEP.length) };
+      }
+      return { number: s, name: "" };
+    };
+    const fathersAadhaarParsed = parseAadhaar(
+      form?.fathersAadhaar ?? f?.fatherAadhar,
+    );
+    const mothersAadhaarParsed = parseAadhaar(
+      form?.mothersAadhaar ?? f?.motherAadhar,
+    );
+    const fathersNameAadhaar =
+      fathersAadhaarParsed.name || safe(f?.fathersNameAsPerAadhaar);
+    const mothersNameAadhaar =
+      mothersAadhaarParsed.name || safe(f?.mothersNameAsPerAadhaar);
+
+    const subjects = form?.subjects;
+    const sf = subjects as unknown as Record<string, unknown> | undefined;
+
+    const milRaw = sf?.mil ?? subjects?.mil;
+    const silRaw = sf?.sil ?? subjects?.sil;
+    const electiveRaw = sf?.electiveSubjects ?? subjects?.electiveSubjects;
+
     return [
-      admissionNumbersMap?.get(student.email) || "-",
-      student.name,
-      student._class,
-      student.email,
-      new Date(Number(student.registrationDate) / 1000000).toLocaleDateString(),
-      student.status,
-      form?.fatherName || "",
-      form?.motherName || "",
-      form?.dateOfBirth
-        ? new Date(Number(form.dateOfBirth) / 1000000).toLocaleDateString()
+      getAdmNo(student),
+      safe(student.name || f?.studentName),
+      getClassLabel(student._class),
+      safe(subjects?.stream),
+      safe(student.email),
+      safe(form?.studentPhone),
+      safe(form?.mothersGuardianContact || f?.mothersContact),
+      safe(form?.category),
+      (() => {
+        const religionMap: Record<string, string> = {
+          hinduism: "Hinduism",
+          islam: "Islam",
+          christianity: "Christianity",
+          buddhism: "Buddhism",
+          other: safe(form?.religionOther) || "Other",
+        };
+        const r = form?.religion as string | undefined;
+        return r ? religionMap[r] || safe(r) : safe(f?.religion);
+      })(),
+      safe(form?.caste),
+      form?.dateOfBirth && Number(form.dateOfBirth) > 0
+        ? new Date(Number(form.dateOfBirth) / 1000000).toLocaleDateString(
+            "en-IN",
+          )
         : "",
-      form?.gender || "",
-      form?.category || "",
-      form?.emailId || "",
-      form?.mobileNumber || "",
-      form?.physicallyHandicapped ? "Yes" : "No",
-      form?.handicapType || "",
-      form?.handicapPercentage ? Number(form.handicapPercentage) : "",
-      form?.aadharNumber || "",
-      form?.annualFamilyIncome || "",
-      form?.studentPen || "",
-      form?.apparNumber || "",
-      form?.eShikshakoshNumber || "",
-      form?.studentPhone || "",
-      form?.studentEmail || "",
-      form?.fathersName || "",
-      form?.mothersName || "",
-      form?.fathersOccupation || "",
-      form?.mothersOccupation || "",
-      form?.fathersContact || "",
-      form?.mothersContact || "",
-      form?.fathersNameAsPerAadhaar || "",
-      form?.mothersNameAsPerAadhaar || "",
-      form?.accountHolderName || "",
-      form?.bankAccountNumber || "",
-      form?.ifscCode || "",
-      form?.bankName || "",
-      form?.mobileNumber || "",
-      form?.emailId || "",
-      form?.fatherAadhar || "",
-      form?.motherAadhar || "",
-      form?.previousExam || "",
-      form?.previousRollNo || "",
-      form?.previousSchool || "",
-      form?.passingYear ? form.passingYear.toString() : "",
-      form?.marksObtained ? form.marksObtained.toString() : "",
-      form?.passingDivision || "",
-      form?.address?.village || "",
-      form?.address?.postOffice || "",
-      form?.address?.policeStation || "",
-      form?.address?.block || "",
-      form?.address?.district || "",
-      form?.address?.state || "",
-      form?.address?.pinCode || "",
-      form?.guardianDeclaration ? "Yes" : "No",
-      form?.subjects?.stream || "",
-      form?.subjects?.mil?.join("; ") || "",
-      form?.subjects?.sil?.join("; ") || "",
-      form?.subjects?.compulsory?.join("; ") || "",
-      form?.subjects?.extra || "",
-      form?.subjects?.extraSubjects || "",
+      safe(form?.gender),
+      safe(form?.fathersName || f?.fatherName),
+      safe(form?.mothersName || f?.motherName),
+      fathersNameAadhaar,
+      mothersNameAadhaar,
+      fathersAadhaarParsed.number,
+      mothersAadhaarParsed.number,
+      safe(form?.fathersOccupation),
+      safe(form?.mothersOccupation),
+      safe(form?.fathersContact),
+      safe(form?.mothersGuardianContact || f?.mothersContact),
+      addr("village"),
+      addr("block"),
+      addr("district"),
+      addr("state"),
+      addr("pinCode"),
+      getSubjectStr(milRaw),
+      getSubjectStr(silRaw),
+      safe(
+        sf?.extraSubject ??
+          subjects?.extraSubject ??
+          subjects?.extra ??
+          sf?.extra,
+      ),
+      safe(sf?.compulsoryGroup1 ?? subjects?.compulsoryGroup1),
+      safe(sf?.compulsoryGroup2 ?? subjects?.compulsoryGroup2),
+      Array.isArray(electiveRaw) ? electiveRaw.join(", ") : safe(electiveRaw),
+      safe(
+        sf?.additionalSubject ??
+          subjects?.additionalSubject ??
+          sf?.extraSubjects ??
+          subjects?.extraSubjects,
+      ),
+      safe(form?.studentPen),
+      safe(form?.apparNumber),
+      safe(form?.eShikshakoshNumber),
+      safe(form?.accountHolderName),
+      (() => {
+        const bankMap: Record<string, string> = {
+          stateBankOfIndia: "State Bank of India",
+          punjabNationalBank: "Punjab National Bank",
+          madhyaBiharGraminBank: "Madhya Bihar Gramin Bank",
+          dakshinBiharGraminBank: "Dakshin Bihar Gramin Bank",
+          unionBankOfIndia: "Union Bank of India",
+          indianPostPaymentBank: "Indian Post Payment Bank",
+          finoPaymentBank: "Fino Payment Bank",
+          other: safe(form?.otherBankName) || "Other",
+        };
+        const b = form?.bankName as string | undefined;
+        return b ? bankMap[b] || safe(b) : "";
+      })(),
+      safe(form?.bankAccountNumber),
+      safe(form?.ifscCode),
+      safe(student.status),
+      safe(
+        student.rejectionReason ||
+          f?.rejectionReason ||
+          localStorage.getItem(`rejection_reason_${student.email}`) ||
+          "",
+      ),
     ];
   });
 
-  // Convert to CSV
+  // Escape CSV cell: wrap in quotes and escape internal quotes
+  const escapeCell = (val: string): string => {
+    const str = String(val ?? "");
+    if (str.includes(",") || str.includes('"') || str.includes("\n")) {
+      return `"${str.replace(/"/g, '""')}"`;
+    }
+    return `"${str}"`;
+  };
+
   const csvContent = [
-    headers.map((h) => `"${h}"`).join(","),
-    ...rows.map((row) => row.map((cell) => `"${cell}"`).join(",")),
+    headers.map(escapeCell).join(","),
+    ...rows.map((row) => row.map(escapeCell).join(",")),
   ].join("\n");
 
-  // Create blob and download
-  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  // Add BOM for Excel UTF-8 compatibility
+  const bom = "\uFEFF";
+  const blob = new Blob([bom + csvContent], {
+    type: "text/csv;charset=utf-8;",
+  });
   const link = document.createElement("a");
   const url = URL.createObjectURL(blob);
   link.setAttribute("href", url);
@@ -153,4 +238,5 @@ export function exportToExcel(
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+  URL.revokeObjectURL(url);
 }

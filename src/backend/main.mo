@@ -8,7 +8,6 @@ import Int "mo:core/Int";
 
 
 
-
 actor {
 
   // ─── Types ───────────────────────────────────────────────────────────────
@@ -89,7 +88,9 @@ actor {
     fathersContact : Text;
     mothersGuardianContact : Text; // mandatory
     fathersAadhaar : Text;
+    fathersNameAsPerAadhaar : Text;
     mothersAadhaar : Text;
+    mothersNameAsPerAadhaar : Text;
     // Bank details
     annualFamilyIncome : Text;
     accountHolderName : Text;
@@ -257,7 +258,7 @@ actor {
           case (null) { Runtime.trap("No account found with this email") };
           case (?student) {
             students.add(email, { student with password = newPassword });
-            ignore otpStore.remove(email);
+            otpStore.remove(email);
           };
         };
       };
@@ -412,6 +413,60 @@ actor {
 
   // ─── Admin — Password-based (main admin API) ─────────────────────────────
 
+  // Lightweight summary type — no photo, no full form; for the admin table list
+  type StudentSummary = {
+    email : Text;
+    admissionNumber : Text;
+    studentName : Text;
+    class_ : Text;
+    status : ApplicationStatus;
+    registrationDate : Int;
+    rejectionReason : Text;
+  };
+
+  private func toSummary(s : Student) : StudentSummary {
+    {
+      email             = s.email;
+      admissionNumber   = s.admissionNumber;
+      studentName       = s.name;
+      class_            = classNumText(s._class);
+      status            = s.status;
+      registrationDate  = s.registrationDate;
+      rejectionReason   = switch (s.rejectionReason) { case (?r) r; case null "" };
+    }
+  };
+
+  // Returns lightweight summaries — no photos, safe within 3 MB
+  public query func getLightweightApplicationsForAdmin(adminPassword : Text) : async [StudentSummary] {
+    if (adminPassword != ADMIN_PASSWORD) {
+      Runtime.trap("Unauthorized: Invalid admin password");
+    };
+    students.values().toArray().map<Student, StudentSummary>(func(s) { toSummary(s) })
+  };
+
+  // Returns a single full Student record for the detail modal
+  public query func getApplicationDetailForAdmin(adminPassword : Text, email : Text) : async ?Student {
+    if (adminPassword != ADMIN_PASSWORD) {
+      Runtime.trap("Unauthorized: Invalid admin password");
+    };
+    students.get(email)
+  };
+
+  // Returns all Students with photoUrl stripped — for Excel export (no photos)
+  public query func getAllApplicationsForExport(adminPassword : Text) : async [Student] {
+    if (adminPassword != ADMIN_PASSWORD) {
+      Runtime.trap("Unauthorized: Invalid admin password");
+    };
+    students.values().toArray().map<Student, Student>(func(s) {
+      switch (s.form) {
+        case null { s };
+        case (?f) {
+          { s with form = ?{ f with photoUrl = null } }
+        };
+      }
+    })
+  };
+
   public query func getAllApplicationsForAdmin(adminPassword : Text) : async [Student] {
     if (adminPassword != ADMIN_PASSWORD) {
       Runtime.trap("Unauthorized: Invalid admin password");
@@ -452,6 +507,33 @@ actor {
         });
       };
     }
+  };
+
+  public shared func deleteApplicationForAdmin(
+    emails        : [Text],
+    adminPassword : Text,
+  ) : async { #ok : Text; #err : Text } {
+    if (adminPassword != ADMIN_PASSWORD) {
+      return #err "Unauthorized";
+    };
+    var deleted : Nat = 0;
+    for (email in emails.vals()) {
+      switch (students.get(email)) {
+        case (null) {};
+        case (?student) {
+          deleted += 1;
+          students.remove(email);
+          // Clean up principalToEmail — find the principal that maps to this email
+          switch (principalToEmail.entries().find(func((p, e) : (Principal, Text)) : Bool { e == email })) {
+            case (?(p, _)) { principalToEmail.remove(p) };
+            case (null) {};
+          };
+          // Clean up userProfiles for that principal
+          userProfiles.remove(student.principal);
+        };
+      };
+    };
+    #ok ("Deleted " # deleted.toText() # " record" # (if (deleted == 1) "" else "s"))
   };
 
   // ─── Admin — Filtered Queries ─────────────────────────────────────────────

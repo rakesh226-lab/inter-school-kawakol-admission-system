@@ -35,9 +35,21 @@ export default function PersonalDetailsSection({
   setFormData,
   disabled,
 }: PersonalDetailsSectionProps) {
-  const [photoPreview, setPhotoPreview] = useState<string | null>(
-    formData.photo ? formData.photo.getDirectURL() : null,
-  );
+  const [photoPreview, setPhotoPreview] = useState<string | null>(() => {
+    if (formData.photoUrl) return formData.photoUrl;
+    // Only call getDirectURL if the method actually exists (ExternalBlob with a live URL)
+    const photoBlob = formData.photo as unknown as
+      | { getDirectURL?: () => string }
+      | undefined;
+    if (photoBlob && typeof photoBlob.getDirectURL === "function") {
+      try {
+        return photoBlob.getDirectURL();
+      } catch {
+        /* ignore */
+      }
+    }
+    return null;
+  });
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -81,7 +93,21 @@ export default function PersonalDetailsSection({
       const previewUrl = URL.createObjectURL(file);
       setPhotoPreview(previewUrl);
 
-      setFormData({ ...formData, photo: blob });
+      // Also store photoUrl as a base64 data URL so it survives page reload and
+      // can be displayed in Print View / Admin modal without needing ExternalBlob.
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const dataUrl = ev.target?.result as string | undefined;
+        setFormData({
+          ...formData,
+          photo: blob,
+          photoUrl: dataUrl ?? previewUrl,
+        });
+      };
+      reader.onerror = () => {
+        setFormData({ ...formData, photo: blob, photoUrl: previewUrl });
+      };
+      reader.readAsDataURL(file);
       toast.success("Photo uploaded successfully");
     } catch (error) {
       console.error("Photo upload error:", error);
@@ -93,7 +119,7 @@ export default function PersonalDetailsSection({
 
   const handleRemovePhoto = () => {
     setPhotoPreview(null);
-    setFormData({ ...formData, photo: undefined });
+    setFormData({ ...formData, photo: undefined, photoUrl: undefined });
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
@@ -288,11 +314,10 @@ export default function PersonalDetailsSection({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="general">General</SelectItem>
-                <SelectItem value="ews">EWS</SelectItem>
+                <SelectItem value="ebc">EBC</SelectItem>
+                <SelectItem value="bc">BC</SelectItem>
                 <SelectItem value="sc">SC</SelectItem>
                 <SelectItem value="st">ST</SelectItem>
-                <SelectItem value="bci">EBC</SelectItem>
-                <SelectItem value="bcii">BC</SelectItem>
               </SelectContent>
             </Select>
           </div>

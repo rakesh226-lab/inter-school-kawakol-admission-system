@@ -17,6 +17,16 @@ type SubjectSelection =
    sil: opt text;
    stream: opt Stream;
  };
+type StudentSummary = 
+ record {
+   admissionNumber: text;
+   class: text;
+   email: text;
+   registrationDate: int;
+   rejectionReason: text;
+   status: ApplicationStatus;
+   studentName: text;
+ };
 type Student = 
  record {
    _class: Class;
@@ -125,6 +135,7 @@ type AdmissionForm =
    fathersAadhaar: text;
    fathersContact: text;
    fathersName: text;
+   fathersNameAsPerAadhaar: text;
    fathersOccupation: text;
    gender: Gender;
    guardianDeclaration: bool;
@@ -137,6 +148,7 @@ type AdmissionForm =
    mothersAadhaar: text;
    mothersGuardianContact: text;
    mothersName: text;
+   mothersNameAsPerAadhaar: text;
    mothersOccupation: text;
    orphanedAndDestitute: bool;
    passingDivision: PassingDivision;
@@ -161,6 +173,11 @@ type AdmissionForm =
 service : {
   approveApplication: (email: text) -> ();
   approveApplicationForAdmin: (email: text, adminPassword: text) -> ();
+  deleteApplicationForAdmin: (emails: vec text, adminPassword: text) ->
+   (variant {
+      err: text;
+      ok: text;
+    });
   generateOtp: (email: text) -> (text);
   getAdmissionNumber: (email: text) -> (text) query;
   getAllAdmissionNumbers: () -> (vec record {
@@ -169,14 +186,19 @@ service : {
                                      }) query;
   getAllApplications: () -> (vec Student) query;
   getAllApplicationsForAdmin: (adminPassword: text) -> (vec Student) query;
+  getAllApplicationsForExport: (adminPassword: text) -> (vec Student) query;
   getAllApprovedApplications: () -> (vec Student) query;
   getAllPendingApplications: () -> (vec Student) query;
   getAllRejectedApplications: () -> (vec Student) query;
+  getApplicationDetailForAdmin: (adminPassword: text, email: text) ->
+   (opt Student) query;
   getApplicationStatus: (email: text) -> (ApplicationStatus) query;
   getApplicationsSortedByDate: () -> (vec Student) query;
   getCallerStudent: () -> (opt Student) query;
   getCallerUserProfile: () -> (opt UserProfile) query;
   getDraftData: (email: text) -> (opt AdmissionForm) query;
+  getLightweightApplicationsForAdmin: (adminPassword: text) ->
+   (vec StudentSummary) query;
   getStudent: (email: text) -> (Student) query;
   getUserProfile: (user: principal) -> (opt UserProfile) query;
   loginStudent: (email: text, password: text) -> (bool) query;

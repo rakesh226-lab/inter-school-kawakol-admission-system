@@ -19,6 +19,8 @@ export default function PrintableAdmissionForm({
   if (!student.form) return null;
 
   const form = student.form;
+  // Cast form to a loose record so we can read both typed and untyped backend fields
+  const f = form as unknown as Record<string, unknown>;
 
   const getClassLabel = (classValue: string) => {
     const classMap: Record<string, string> = {
@@ -42,11 +44,10 @@ export default function PrintableAdmissionForm({
   const getCategoryLabel = (category: string) => {
     const categoryMap: Record<string, string> = {
       general: "General",
-      ews: "EWS",
+      ebc: "EBC",
+      bc: "BC",
       sc: "SC",
       st: "ST",
-      bci: "EBC",
-      bcii: "BC",
     };
     return categoryMap[category] || category;
   };
@@ -60,7 +61,7 @@ export default function PrintableAdmissionForm({
       unionBankOfIndia: "Union Bank of India",
       indianPostPaymentBank: "Indian Post Payment Bank",
       finoPaymentBank: "Fino Payment Bank",
-      other: "Other",
+      other: form.otherBankName || "Other",
     };
     return bankMap[bankName] || bankName;
   };
@@ -93,8 +94,17 @@ export default function PrintableAdmissionForm({
     return streamMap[stream] || stream;
   };
 
-  const val = (v: string | undefined | null, fallback = "-") =>
-    v?.trim() || fallback;
+  const val = (v: unknown, fallback = "-") =>
+    v && String(v).trim() ? String(v).trim() : fallback;
+
+  // Backend stores address as flat top-level fields on the form.
+  // Reads flat field first (backend canonical), then falls back to nested address object.
+  const addrVal = (key: string) => {
+    const flat = f[key];
+    const nested =
+      form.address?.[key as keyof NonNullable<typeof form.address>];
+    return val(flat || nested);
+  };
 
   // Helper field display
   const Field = ({
@@ -150,6 +160,67 @@ export default function PrintableAdmissionForm({
       {title}
     </div>
   );
+
+  // ---- Derived field values (backend canonical names) ----
+  // Student name: top-level student.name (form.studentName may be empty if backend ignores it)
+  const studentName = val(student.name || f.studentName);
+  // Father's / Mother's name: backend uses fathersName / mothersName (canonical)
+  const fathersName = val(f.fathersName || f.fatherName);
+  const mothersName = val(f.mothersName || f.motherName);
+  // Aadhaar: backend encodes name into aadhaar field as "AADHARNUMBER|||NameAsPerAadhaar"
+  const SEP = "|||";
+  const parseAadhaar = (raw: string) => {
+    const s = String(raw || "");
+    if (s.includes(SEP)) {
+      const idx = s.indexOf(SEP);
+      return { number: s.slice(0, idx), name: s.slice(idx + SEP.length) };
+    }
+    return { number: s, name: "" };
+  };
+  const fathersAadhaarParsed = parseAadhaar((f.fathersAadhaar as string) || "");
+  const mothersAadhaarParsed = parseAadhaar((f.mothersAadhaar as string) || "");
+  const fathersAadhaar = val(fathersAadhaarParsed.number || f.fatherAadhar);
+  const mothersAadhaar = val(mothersAadhaarParsed.number || f.motherAadhar);
+  // Mother contact: backend uses mothersGuardianContact
+  const mothersContact = val(f.mothersGuardianContact || f.mothersContact);
+  // Aadhaar names as per Aadhaar card — decoded from encoded fathersAadhaar/mothersAadhaar
+  // Falls back to separately-stored field if the encoding was not used
+  const fathersNameAsPerAadhaar = val(
+    fathersAadhaarParsed.name ||
+      f.fathersNameAsPerAadhaar ||
+      f.fatherNameAsPerAadhaar ||
+      f.fatherAadhaarName,
+  );
+  const mothersNameAsPerAadhaar = val(
+    mothersAadhaarParsed.name ||
+      f.mothersNameAsPerAadhaar ||
+      f.motherNameAsPerAadhaar ||
+      f.motherAadhaarName,
+  );
+  // Religion: enum value → display label
+  const religionMap: Record<string, string> = {
+    hinduism: "Hinduism",
+    islam: "Islam",
+    christianity: "Christianity",
+    buddhism: "Buddhism",
+    other: form.religionOther || "Other",
+  };
+  const religionDisplay = val(
+    (form.religion && religionMap[form.religion as string]) ||
+      (f.religionOther as string) ||
+      (form.religion as string),
+  );
+
+  const isClass1112 =
+    student._class === "class11th" || student._class === "class12th";
+
+  // Bug fix: read photoUrl as plain string — never call getDirectURL()
+  const photoSrc =
+    (typeof form.photoUrl === "string" && form.photoUrl
+      ? form.photoUrl
+      : undefined) ||
+    (typeof form.photo === "string" && form.photo ? form.photo : undefined) ||
+    (form.photo as unknown as { url?: string })?.url;
 
   return (
     <Card className="print-section">
@@ -256,9 +327,9 @@ export default function PrintableAdmissionForm({
             </div>
             {/* Photo */}
             <div style={{ textAlign: "center" }}>
-              {form.photo ? (
+              {photoSrc ? (
                 <img
-                  src={form.photo.getDirectURL()}
+                  src={photoSrc}
                   alt="Student"
                   style={{
                     width: "80px",
@@ -304,20 +375,20 @@ export default function PrintableAdmissionForm({
           >
             <Field
               label="Student Name (In Capital Letters)"
-              value={form.studentName}
+              value={studentName}
             />
             <Field
               label="Father's Name (In Capital Letters)"
-              value={form.fatherName}
+              value={fathersName}
             />
             <Field
               label="Mother's Name (In Capital Letters)"
-              value={form.motherName}
+              value={mothersName}
             />
             <Field
               label="Date of Birth (DOB)"
               value={
-                form.dateOfBirth
+                form.dateOfBirth && Number(form.dateOfBirth) > 0
                   ? new Date(
                       Number(form.dateOfBirth) / 1000000,
                     ).toLocaleDateString("en-IN")
@@ -329,8 +400,8 @@ export default function PrintableAdmissionForm({
               label="Category (जाति श्रेणी)"
               value={getCategoryLabel(form.category)}
             />
-            <Field label="Religion (धर्म)" value={form.emailId || "-"} />
-            <Field label="Caste (जाति)" value={form.mobileNumber || "-"} />
+            <Field label="Religion (धर्म)" value={religionDisplay} />
+            <Field label="Caste (जाति)" value={val(form.caste)} />
             <Field
               label="Physically Handicapped (शारीरिक रूप से विकलांग)"
               value={form.physicallyHandicapped ? "Yes" : "No"}
@@ -350,14 +421,17 @@ export default function PrintableAdmissionForm({
             )}
             <Field
               label="Student Aadhaar Number (आधार नंबर)"
-              value={form.aadharNumber}
+              value={val(form.aadharNumber)}
             />
             <Field
               label="Annual Family Income (वार्षिक आय)"
-              value={form.annualFamilyIncome}
+              value={val(form.annualFamilyIncome)}
             />
-            <Field label="Mobile Number (मोबाइल)" value={form.studentPhone} />
-            <Field label="Email ID (ईमेल)" value={form.studentEmail} />
+            <Field
+              label="Mobile Number (मोबाइल)"
+              value={val(form.studentPhone)}
+            />
+            <Field label="Email ID (ईमेल)" value={val(form.studentEmail)} />
           </div>
 
           {/* ---- SECTION 2: Student Identifiers ---- */}
@@ -371,18 +445,16 @@ export default function PrintableAdmissionForm({
           >
             <Field
               label="Student PEN (11 characters)"
-              value={form.studentPen}
+              value={val(form.studentPen)}
             />
             <Field
               label="APPAR Number (12 characters)"
-              value={form.apparNumber}
+              value={val(form.apparNumber)}
             />
             <Field
               label="E-Shikshakosh Number (15 characters)"
-              value={form.eShikshakoshNumber}
+              value={val(form.eShikshakoshNumber)}
             />
-            <Field label="Student Phone" value={form.studentPhone} />
-            <Field label="Student Email" value={form.studentEmail} />
           </div>
 
           {/* ---- SECTION 3: Parent's Details ---- */}
@@ -394,30 +466,36 @@ export default function PrintableAdmissionForm({
               gap: "3px 10px",
             }}
           >
-            <Field label="Father's Name" value={form.fathersName} />
-            <Field label="Mother's Name" value={form.mothersName} />
-            <Field label="Father's Occupation" value={form.fathersOccupation} />
-            <Field label="Mother's Occupation" value={form.mothersOccupation} />
-            <Field label="Father's Contact" value={form.fathersContact} />
+            <Field label="Father's Name" value={fathersName} />
+            <Field label="Mother's Name" value={mothersName} />
+            <Field
+              label="Father's Occupation"
+              value={val(form.fathersOccupation)}
+            />
+            <Field
+              label="Mother's Occupation"
+              value={val(form.mothersOccupation)}
+            />
+            <Field label="Father's Contact" value={val(form.fathersContact)} />
             <Field
               label="Mother's / Guardian Contact Number"
-              value={form.mothersContact || "—"}
+              value={mothersContact}
             />
             <Field
               label="Father's Name as per Aadhaar"
-              value={form.fathersNameAsPerAadhaar}
+              value={fathersNameAsPerAadhaar}
             />
             <Field
               label="Mother's Name as per Aadhaar"
-              value={form.mothersNameAsPerAadhaar}
+              value={mothersNameAsPerAadhaar}
             />
             <Field
               label="Father's Aadhaar Card Number"
-              value={form.fatherAadhar}
+              value={fathersAadhaar}
             />
             <Field
               label="Mother's Aadhaar Card Number"
-              value={form.motherAadhar}
+              value={mothersAadhaar}
             />
           </div>
 
@@ -432,13 +510,13 @@ export default function PrintableAdmissionForm({
           >
             <Field
               label="Account Holder's Name"
-              value={form.accountHolderName}
+              value={val(form.accountHolderName)}
             />
             <Field
               label="Bank Account Number (खाता संख्या)"
-              value={form.bankAccountNumber}
+              value={val(form.bankAccountNumber)}
             />
-            <Field label="IFSC Code (आईएफएससी)" value={form.ifscCode} />
+            <Field label="IFSC Code (आईएफएससी)" value={val(form.ifscCode)} />
             <Field
               label="Bank Name (बैंक का नाम)"
               value={getBankNameLabel(form.bankName)}
@@ -456,25 +534,29 @@ export default function PrintableAdmissionForm({
           >
             <Field
               label="Previous Exam Passed (पिछला कक्षा)"
-              value={form.previousExam}
+              value={val(form.previousExam)}
             />
             <Field
               label="Roll No. of Previous Class"
-              value={form.previousRollNo}
+              value={val(form.previousRollNo)}
             />
             <Field
               label="School Name (स्कूल का नाम)"
-              value={form.previousSchool}
+              value={val(form.previousSchool)}
             />
             <Field
               label="Passing Year (उत्तीर्ण वर्ष)"
-              value={form.passingYear?.toString()}
+              value={
+                form.passingYear && Number(form.passingYear) > 0
+                  ? String(Number(form.passingYear))
+                  : "-"
+              }
             />
             <Field
               label="Marks Obtained (प्राप्त अंक)"
               value={
                 form.marksObtained && Number(form.marksObtained) > 0
-                  ? form.marksObtained.toString()
+                  ? String(Number(form.marksObtained))
                   : "-"
               }
             />
@@ -486,14 +568,17 @@ export default function PrintableAdmissionForm({
                   : "-"
               }
             />
-            {form.panchayatName && (
+            {val(f.panchayatName) !== "-" && (
               <Field
                 label="Panchayat Name (पंचायत का नाम)"
-                value={form.panchayatName}
+                value={val(f.panchayatName)}
               />
             )}
-            {form.blockName && (
-              <Field label="Block Name (ब्लॉक का नाम)" value={form.blockName} />
+            {val(f.blockName) !== "-" && (
+              <Field
+                label="Block Name (ब्लॉक का नाम)"
+                value={val(f.blockName)}
+              />
             )}
           </div>
 
@@ -506,22 +591,21 @@ export default function PrintableAdmissionForm({
               gap: "3px 10px",
             }}
           >
-            <Field label="Village (गाँव)" value={form.address?.village} />
-            <Field
-              label="Post Office (डाकघर)"
-              value={form.address?.postOffice}
-            />
+            <Field label="Village (गाँव)" value={addrVal("village")} />
+            <Field label="Post Office (डाकघर)" value={addrVal("postOffice")} />
             <Field
               label="Police Station (पुलिस स्टेशन)"
-              value={form.address?.policeStation}
+              value={addrVal("policeStation")}
             />
-            <Field label="Block (ब्लॉक)" value={form.address?.block} />
-            <Field label="District (जिला)" value={form.address?.district} />
+            <Field label="Block (ब्लॉक)" value={addrVal("block")} />
+            <Field label="District (जिला)" value={addrVal("district")} />
             <Field
               label="State (राज्य)"
-              value={getStateLabel(form.address?.state)}
+              value={getStateLabel(
+                (f.state as string | undefined) || form.address?.state,
+              )}
             />
-            <Field label="Pin Code (पिन कोड)" value={form.address?.pinCode} />
+            <Field label="Pin Code (पिन कोड)" value={addrVal("pinCode")} />
           </div>
 
           {/* ---- SECTION 7: Subject Selection ---- */}
@@ -535,42 +619,113 @@ export default function PrintableAdmissionForm({
                   gap: "3px 10px",
                 }}
               >
-                {form.subjects.stream && (
-                  <Field
-                    label="Stream (धारा)"
-                    value={getStreamLabel(form.subjects.stream)}
-                  />
-                )}
-                {form.subjects.mil && form.subjects.mil.length > 0 && (
-                  <Field
-                    label="M.I.L. Subject"
-                    value={form.subjects.mil.join(", ")}
-                  />
-                )}
-                {form.subjects.sil && form.subjects.sil.length > 0 && (
-                  <Field
-                    label="S.I.L. Subject"
-                    value={form.subjects.sil.join(", ")}
-                  />
-                )}
-                {form.subjects.compulsory &&
-                  form.subjects.compulsory.length > 0 && (
+                {/* Bug fix: show stream-based section if stream present, OR if compulsory groups have values, OR class is 11/12 */}
+                {form.subjects.stream ||
+                isClass1112 ||
+                form.subjects.compulsoryGroup1 ||
+                form.subjects.compulsoryGroup2 ? (
+                  // Class 11/12 — stream-based subject display
+                  <>
                     <Field
-                      label="Compulsory Subjects (अनिवार्य विषय)"
-                      value={form.subjects.compulsory.join(", ")}
+                      label="Stream (धारा)"
+                      value={getStreamLabel(form.subjects.stream)}
                     />
-                  )}
-                {form.subjects.extra && (
-                  <Field
-                    label="Extra Subject (अतिरिक्त विषय)"
-                    value={form.subjects.extra}
-                  />
-                )}
-                {form.subjects.extraSubjects && (
-                  <Field
-                    label="Extra Subjects (11th/12th)"
-                    value={form.subjects.extraSubjects}
-                  />
+                    <Field
+                      label="Compulsory Group-1 (अनिवार्य समूह-1)"
+                      value={val(
+                        form.subjects.compulsoryGroup1 ||
+                          (f.subjects as Record<string, unknown>)
+                            ?.compulsoryGroup1,
+                      )}
+                    />
+                    <Field
+                      label="Compulsory Group-2 (अनिवार्य समूह-2)"
+                      value={val(
+                        form.subjects.compulsoryGroup2 ||
+                          (f.subjects as Record<string, unknown>)
+                            ?.compulsoryGroup2,
+                      )}
+                    />
+                    {(() => {
+                      const electives =
+                        (f.subjects as Record<string, unknown>)
+                          ?.electiveSubjects ||
+                        form.subjects.electiveSubjects ||
+                        form.subjects.compulsory;
+                      const arr = Array.isArray(electives) ? electives : [];
+                      return arr.length > 0 ? (
+                        <Field
+                          label="Elective Subjects (ऐच्छिक विषय)"
+                          value={arr.join(", ")}
+                        />
+                      ) : null;
+                    })()}
+                    <Field
+                      label="Additional Subject (अतिरिक्त विषय)"
+                      value={val(
+                        (f.subjects as Record<string, unknown>)
+                          ?.additionalSubject ||
+                          form.subjects.additionalSubject ||
+                          form.subjects.extraSubjects,
+                      )}
+                    />
+                  </>
+                ) : (
+                  // Class 9/10 — MIL/SIL subject display
+                  <>
+                    {(() => {
+                      const milRaw =
+                        (f.subjects as Record<string, unknown>)?.mil ||
+                        form.subjects.mil;
+                      const milStr = Array.isArray(milRaw)
+                        ? milRaw.join(", ")
+                        : (milRaw as string | undefined);
+                      return milStr ? (
+                        <Field label="M.I.L. Subject" value={milStr} />
+                      ) : null;
+                    })()}
+                    {(() => {
+                      const silRaw =
+                        (f.subjects as Record<string, unknown>)?.sil ||
+                        form.subjects.sil;
+                      const silStr = Array.isArray(silRaw)
+                        ? silRaw.join(", ")
+                        : (silRaw as string | undefined);
+                      return silStr ? (
+                        <Field label="S.I.L. Subject" value={silStr} />
+                      ) : null;
+                    })()}
+                    {(() => {
+                      // Backend stores compulsory subjects as electiveSubjects
+                      // UI stores them as compulsory array
+                      const compulsoryRaw =
+                        (f.subjects as Record<string, unknown>)
+                          ?.electiveSubjects ||
+                        form.subjects.electiveSubjects ||
+                        form.subjects.compulsory;
+                      const arr = Array.isArray(compulsoryRaw)
+                        ? compulsoryRaw
+                        : [];
+                      return arr.length > 0 ? (
+                        <Field
+                          label="Compulsory Subjects (अनिवार्य विषय)"
+                          value={arr.join(", ")}
+                        />
+                      ) : null;
+                    })()}
+                    {(() => {
+                      const extra =
+                        (f.subjects as Record<string, unknown>)?.extraSubject ||
+                        form.subjects.extraSubject ||
+                        form.subjects.extra;
+                      return extra ? (
+                        <Field
+                          label="Extra Subject (अतिरिक्त विषय)"
+                          value={extra as string}
+                        />
+                      ) : null;
+                    })()}
+                  </>
                 )}
               </div>
             </>
@@ -603,72 +758,153 @@ export default function PrintableAdmissionForm({
                 gap: "2px 8px",
               }}
             >
-              {[
-                { label: "Caste Certificate", hindi: "जाति प्रमाण पत्र" },
-                { label: "Income Certificate", hindi: "आय प्रमाण पत्र" },
-                { label: "Residence Certificate", hindi: "निवास प्रमाण पत्र" },
-                {
-                  label: "Transfer Certificate (Original)",
-                  hindi: "स्थानांतरण प्रमाण पत्र (मूल)",
-                },
-                {
-                  label: "Previous Class Marksheets",
-                  hindi: "पिछली कक्षा की अंकसूची",
-                },
-                {
-                  label: "Student Aadhaar Card Photocopy",
-                  hindi: "छात्र/छात्रा आधार कार्ड फोटोकॉपी",
-                },
-                {
-                  label: "Mother's Aadhaar Card Photocopy",
-                  hindi: "माता का आधार कार्ड फोटोकॉपी",
-                },
-                {
-                  label: "Father's Aadhaar Card Photocopy",
-                  hindi: "पिता का आधार कार्ड फोटोकॉपी",
-                },
-              ].map((doc) => (
-                <div
-                  key={doc.label}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "4px",
-                    padding: "1px 0",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "10px",
-                      height: "10px",
-                      border: "1px solid #333",
-                      borderRadius: "2px",
-                      flexShrink: 0,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      backgroundColor: "#e8f5e9",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: "7pt",
-                        color: "#2e7d32",
-                        fontWeight: "bold",
-                        lineHeight: 1,
-                      }}
-                    >
-                      ✓
-                    </span>
-                  </div>
-                  <span style={{ fontSize: "7pt" }}>
-                    {doc.label}{" "}
-                    <span lang="hi" style={{ color: "#555" }}>
-                      / {doc.hindi}
-                    </span>
-                  </span>
-                </div>
-              ))}
+              {(() => {
+                // Bug fix: read actual documentsChecklist booleans from form
+                const dc =
+                  (f.documentsChecklist as
+                    | Record<string, boolean>
+                    | undefined) ?? {};
+                const isGeneral = form.category === "general";
+                const isClass1012 =
+                  student._class === "class10th" ||
+                  student._class === "class12th";
+                // Bug fix: backend field is orphanedAndDestitute, not isOrphanedDestitute
+                const isOrphaned = !!(
+                  form.orphanedAndDestitute ||
+                  (f.isOrphanedDestitute as boolean)
+                );
+                // Bug fix: derive requireBEO from panchayatName/blockName
+                const panchayatName =
+                  (f.panchayatName as string | undefined) || "";
+                const blockNameVal = (f.blockName as string | undefined) || "";
+                const requireBEO =
+                  (student._class === "class09th" &&
+                    (panchayatName.trim().toLowerCase() !==
+                      "kawakol panchayat" ||
+                      blockNameVal.trim().toLowerCase() !== "block kawakol") &&
+                    !!(panchayatName || blockNameVal)) ||
+                  !!(f.requireBEOLetter as boolean);
+
+                const docs: {
+                  key: string;
+                  label: string;
+                  hindi: string;
+                  skip?: boolean;
+                }[] = [
+                  {
+                    key: "casteCertificate",
+                    label: "Caste Certificate",
+                    hindi: "जाति प्रमाण पत्र",
+                    skip: isGeneral,
+                  },
+                  {
+                    key: "incomeCertificate",
+                    label: "Income Certificate",
+                    hindi: "आय प्रमाण पत्र",
+                    skip: isGeneral,
+                  },
+                  {
+                    key: "residenceCertificate",
+                    label: "Residence Certificate",
+                    hindi: "निवास प्रमाण पत्र",
+                  },
+                  {
+                    key: "transferCertificate",
+                    label: "Transfer Certificate (Original)",
+                    hindi: "स्थानांतरण प्रमाण पत्र (मूल)",
+                    skip: isClass1012,
+                  },
+                  {
+                    key: "previousMarksheets",
+                    label: "Previous Class Marksheets",
+                    hindi: "पिछली कक्षा की अंकसूची",
+                    skip: isClass1012,
+                  },
+                  {
+                    key: "studentAadhaarCard",
+                    label: "Student Aadhaar Card Photocopy",
+                    hindi: "छात्र/छात्रा आधार कार्ड फोटोकॉपी",
+                  },
+                  {
+                    key: "mothersAadhaarCard",
+                    label: "Mother's Aadhaar Card Photocopy",
+                    hindi: "माता का आधार कार्ड फोटोकॉपी",
+                  },
+                  {
+                    key: "fathersAadhaarCard",
+                    label: "Father's Aadhaar Card Photocopy",
+                    hindi: "पिता का आधार कार्ड फोटोकॉपी",
+                  },
+                  ...(isOrphaned
+                    ? [
+                        {
+                          key: "deathCertificate",
+                          label: "Mother & Father Death Certificate",
+                          hindi: "माता-पिता का मृत्यु प्रमाण पत्र",
+                        },
+                      ]
+                    : []),
+                  ...(requireBEO
+                    ? [
+                        {
+                          key: "beoCertificate",
+                          label: "BEO Approval Letter (Original)",
+                          hindi: "BEO अनुमोदन पत्र (मूल)",
+                        },
+                      ]
+                    : []),
+                ];
+
+                return docs
+                  .filter((d) => !d.skip)
+                  .map((doc) => {
+                    const checked = dc[doc.key] === true;
+                    return (
+                      <div
+                        key={doc.key}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "4px",
+                          padding: "1px 0",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "10px",
+                            height: "10px",
+                            border: "1px solid #333",
+                            borderRadius: "2px",
+                            flexShrink: 0,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            backgroundColor: checked ? "#e8f5e9" : "#fff",
+                          }}
+                        >
+                          {checked && (
+                            <span
+                              style={{
+                                fontSize: "7pt",
+                                color: "#2e7d32",
+                                fontWeight: "bold",
+                                lineHeight: 1,
+                              }}
+                            >
+                              ✓
+                            </span>
+                          )}
+                        </div>
+                        <span style={{ fontSize: "7pt" }}>
+                          {doc.label}{" "}
+                          <span lang="hi" style={{ color: "#555" }}>
+                            / {doc.hindi}
+                          </span>
+                        </span>
+                      </div>
+                    );
+                  });
+              })()}
             </div>
           </div>
 
@@ -695,14 +931,14 @@ export default function PrintableAdmissionForm({
             </p>
             <p style={{ marginBottom: "3px" }}>
               <strong>Note</strong> – As per the departmental letter bearing
-              “Memo No. – 9 / Poshak Yo. – 02/2024 (Part) – 44, Patna, dated
-              20/01/2025,” students are strictly prohibited from wearing any
+              "Memo No. – 9 / Poshak Yo. – 02/2024 (Part) – 44, Patna, dated
+              20/01/2025," students are strictly prohibited from wearing any
               attire other than the prescribed school uniform; specifically, no
               decorative or ostentatious clothing is permitted.
             </p>
             <p style={{ marginBottom: "4px" }}>
-              <strong>Boys’ Uniform:</strong> Shirt Color – Sky Blue; Trousers
-              Color – Navy Blue. <strong>Girls’ Uniform:</strong> Kameez Color –
+              <strong>Boys' Uniform:</strong> Shirt Color – Sky Blue; Trousers
+              Color – Navy Blue. <strong>Girls' Uniform:</strong> Kameez Color –
               Sky Blue; Salwar/Dupatta Color – Navy Blue.
             </p>
             <p lang="hi" style={{ marginBottom: "4px" }}>

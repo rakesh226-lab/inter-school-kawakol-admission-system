@@ -111,7 +111,106 @@ export default function AdmissionFormPage() {
 
   useEffect(() => {
     if (student?.form) {
-      setFormData(student.form);
+      // Normalize subjects from backend shape to UI shape.
+      // IDL.Opt fields are decoded as [] (None) or [value] (Some).
+      // UI components expect mil/sil as string[], stream/extra/etc as string|undefined.
+      const backendSubjects = student.form.subjects as unknown as {
+        mil?: string | string[];
+        sil?: string | string[];
+        electiveSubjects?: string[];
+        extraSubject?: string | string[];
+        additionalSubject?: string | string[];
+        stream?: string | string[];
+        compulsoryGroup1?: string | string[];
+        compulsoryGroup2?: string | string[];
+      };
+
+      // Helper: unwrap IDL.Opt ([value] or []) to string | undefined
+      const unwrapOpt = (
+        v: string | string[] | undefined,
+      ): string | undefined => {
+        if (Array.isArray(v)) return v.length > 0 ? v[0] : undefined;
+        return v || undefined;
+      };
+
+      const normalizedSubjects = {
+        mil: Array.isArray(backendSubjects?.mil)
+          ? backendSubjects.mil.length > 0
+            ? backendSubjects.mil
+            : []
+          : backendSubjects?.mil
+            ? [backendSubjects.mil]
+            : [],
+        sil: Array.isArray(backendSubjects?.sil)
+          ? backendSubjects.sil.length > 0
+            ? backendSubjects.sil
+            : []
+          : backendSubjects?.sil
+            ? [backendSubjects.sil]
+            : [],
+        compulsory: Array.isArray(backendSubjects?.electiveSubjects)
+          ? backendSubjects.electiveSubjects
+          : [],
+        extra: unwrapOpt(backendSubjects?.extraSubject),
+        stream: unwrapOpt(backendSubjects?.stream) as
+          | import("../types").Stream
+          | undefined,
+        compulsoryGroup1: unwrapOpt(backendSubjects?.compulsoryGroup1),
+        compulsoryGroup2: unwrapOpt(backendSubjects?.compulsoryGroup2),
+        extraSubjects: unwrapOpt(backendSubjects?.additionalSubject),
+      };
+
+      const backendForm = student.form;
+      const bf = backendForm as unknown as Record<string, unknown>;
+
+      // Decode fathersAadhaar / mothersAadhaar — we encode them as
+      // "AADHARNUMBER|||NameAsPerAadhaar" to work around IDL field limits.
+      const SEP = "|||";
+      const decodeFathersAadhaar = (raw: string) => {
+        if (raw.includes(SEP)) {
+          const [num, name] = raw.split(SEP);
+          return { number: num, nameAsPerAadhaar: name };
+        }
+        return { number: raw, nameAsPerAadhaar: "" };
+      };
+      const decodeMothersAadhaar = (raw: string) => {
+        if (raw.includes(SEP)) {
+          const [num, name] = raw.split(SEP);
+          return { number: num, nameAsPerAadhaar: name };
+        }
+        return { number: raw, nameAsPerAadhaar: "" };
+      };
+
+      const fathersAadhaarRaw = (bf.fathersAadhaar as string) || "";
+      const mothersAadhaarRaw = (bf.mothersAadhaar as string) || "";
+      const fathersDecoded = decodeFathersAadhaar(fathersAadhaarRaw);
+      const mothersDecoded = decodeMothersAadhaar(mothersAadhaarRaw);
+
+      // Prefer the decoded name; fall back to direct field if somehow stored separately
+      const fathersNameAsPerAadhaarVal =
+        (bf.fathersNameAsPerAadhaar as string) ||
+        fathersDecoded.nameAsPerAadhaar;
+      const mothersNameAsPerAadhaarVal =
+        (bf.mothersNameAsPerAadhaar as string) ||
+        mothersDecoded.nameAsPerAadhaar;
+
+      setFormData({
+        ...backendForm,
+        fatherName: backendForm.fathersName || "",
+        motherName: backendForm.mothersName || "",
+        fathersName: backendForm.fathersName || "",
+        mothersName: backendForm.mothersName || "",
+        // Restore Aadhaar numbers without the encoded name suffix
+        fatherAadhar: fathersDecoded.number,
+        motherAadhar: mothersDecoded.number,
+        fathersAadhaar: fathersDecoded.number,
+        mothersAadhaar: mothersDecoded.number,
+        fathersNameAsPerAadhaar: fathersNameAsPerAadhaarVal,
+        mothersNameAsPerAadhaar: mothersNameAsPerAadhaarVal,
+        // Restore mothersContact from mothersGuardianContact
+        mothersContact: (bf.mothersGuardianContact as string) || "",
+        subjects: normalizedSubjects,
+      });
     }
   }, [student]);
 
@@ -120,14 +219,15 @@ export default function AdmissionFormPage() {
 
   const isGeneralCategory = formData.category === Category.general;
   const isClass9 = student?._class === "class09th";
-  const isClass10or12 =
-    student?._class === "class10th" || student?._class === "class12th";
+  const isClass10 = student?._class === "class10th";
+  const isClass12 = student?._class === "class12th";
+  const isClass10or12 = isClass10 || isClass12;
 
-  // BEO letter required for Class 9 when panchayat or block is not "kawakol"
-  const requireBEOLetter =
-    isClass9 &&
-    (formData.panchayatName?.trim().toLowerCase() !== "kawakol" ||
-      formData.blockName?.trim().toLowerCase() !== "kawakol");
+  // BEO letter required for Class 9 when panchayat or block doesn't match "Kawakol Panchayat" / "Block Kawakol"
+  const panchayatOk =
+    formData.panchayatName?.trim().toLowerCase() === "kawakol panchayat";
+  const blockOk = formData.blockName?.trim().toLowerCase() === "block kawakol";
+  const requireBEOLetter = isClass9 && (!panchayatOk || !blockOk);
 
   const toggleDocument = (id: string) =>
     setDocumentsChecked((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -414,6 +514,69 @@ export default function AdmissionFormPage() {
     return true;
   };
 
+  // unwrapOptStr: converts any stored shape to a plain string | undefined.
+  // Handles: undefined/null, plain string, IDL opt [] → undefined, ["val"] → "val",
+  // double-wrapped [["val"]] → "val" (stale backend round-trip).
+  // NOTE: The backend.ts generated layer (to_candid_SubjectSelection) expects SubjectSelection
+  // with plain optional strings (mil?: string, stream?: Stream) and handles Candid opt-encoding
+  // itself — so we must NOT manually wrap into [] | [string] for subject fields.
+  const unwrapOptStr = (v: unknown): string | undefined => {
+    if (v === undefined || v === null) return undefined;
+    if (Array.isArray(v)) {
+      if (v.length === 0) return undefined;
+      const inner = v[0];
+      if (Array.isArray(inner)) {
+        return inner.length > 0 && inner[0]
+          ? String(inner[0]).trim() || undefined
+          : undefined;
+      }
+      return inner && String(inner).trim() ? String(inner).trim() : undefined;
+    }
+    const s = String(v).trim();
+    return s || undefined;
+  };
+
+  const buildBackendSubjects = (s: typeof formData.subjects) => {
+    // Returns a SubjectSelection-compatible object with plain optional strings.
+    // The backend.ts generated to_candid_SubjectSelection_n40 will Candid-encode them.
+    // mil, sil, compulsoryGroup1/2, extraSubject, additionalSubject: string | undefined
+    // stream: Stream | undefined (plain string like "science", NOT {science:null})
+    // electiveSubjects: string[] (flat array of plain strings)
+    const mil = unwrapOptStr(s?.mil);
+    const sil = unwrapOptStr(s?.sil);
+    const extraSubject = unwrapOptStr(s?.extra ?? s?.extraSubject);
+    const compulsoryGroup1 = unwrapOptStr(s?.compulsoryGroup1);
+    const compulsoryGroup2 = unwrapOptStr(s?.compulsoryGroup2);
+    const additionalSubject = unwrapOptStr(
+      s?.extraSubjects ?? s?.additionalSubject,
+    );
+    const stream = unwrapOptStr(s?.stream) as
+      | import("../types").Stream
+      | undefined;
+
+    const electiveSubjects = (
+      Array.isArray(s?.compulsory)
+        ? s.compulsory
+        : Array.isArray(s?.electiveSubjects)
+          ? s.electiveSubjects
+          : []
+    )
+      .flat()
+      .filter((v): v is string => typeof v === "string" && v.trim() !== "")
+      .map((v) => v.trim());
+
+    return {
+      mil,
+      sil,
+      extraSubject,
+      stream,
+      compulsoryGroup1,
+      compulsoryGroup2,
+      electiveSubjects,
+      additionalSubject,
+    };
+  };
+
   const handleSaveDraft = async () => {
     setActionError(null);
     if (!student?.email) {
@@ -421,10 +584,93 @@ export default function AdmissionFormPage() {
       return;
     }
 
+    const addr = formData.address;
+    const draftSubjects = buildBackendSubjects(formData.subjects);
+    const draftForm = {
+      // All text fields guaranteed non-undefined
+      bankAccountNumber: formData.bankAccountNumber || "",
+      studentEmail: formData.studentEmail || "",
+      eShikshakoshNumber: formData.eShikshakoshNumber || "",
+      caste: formData.caste || "",
+      apparNumber: formData.apparNumber || "",
+      accountHolderName: formData.accountHolderName || "",
+      studentPhone: formData.studentPhone || "",
+      religionOther: formData.religionOther || "",
+      studentPen: formData.studentPen || "",
+      mothersOccupation: formData.mothersOccupation || "",
+      policeStation: addr?.policeStation ?? formData.policeStation ?? "",
+      fathersNameAsPerAadhaar: formData.fathersNameAsPerAadhaar || "",
+      mothersNameAsPerAadhaar: formData.mothersNameAsPerAadhaar || "",
+      fathersName: formData.fathersName || formData.fatherName || "",
+      district: addr?.district ?? formData.district ?? "",
+      mothersName: formData.mothersName || formData.motherName || "",
+      fathersContact: formData.fathersContact || "",
+      aadharNumber: formData.aadharNumber || "",
+      village: addr?.village ?? formData.village ?? "",
+      pinCode: addr?.pinCode ?? formData.pinCode ?? "",
+      previousRollNo: formData.previousRollNo || "",
+      block: addr?.block ?? formData.block ?? "",
+      postOffice: addr?.postOffice ?? formData.postOffice ?? "",
+      mothersGuardianContact:
+        formData.mothersContact || formData.mothersGuardianContact || "",
+      fathersAadhaar: formData.fatherAadhar || formData.fathersAadhaar || "",
+      mothersAadhaar: formData.motherAadhar || formData.mothersAadhaar || "",
+      annualFamilyIncome: formData.annualFamilyIncome || "",
+      fathersOccupation: formData.fathersOccupation || "",
+      previousExam: formData.previousExam || "",
+      previousSchool: formData.previousSchool || "",
+      ifscCode: formData.ifscCode || "",
+      // Bool fields
+      orphanedAndDestitute: isOrphanedDestitute === true,
+      hasEShikshakosh: formData.hasEShikshakosh === true,
+      physicallyHandicapped: formData.physicallyHandicapped === true,
+      guardianDeclaration: formData.guardianDeclaration === true,
+      hasPenAndApaar: formData.hasPenAndApaar === true,
+      // Nat fields
+      marksObtained: formData.marksObtained ?? BigInt(0),
+      passingYear: formData.passingYear ?? BigInt(2024),
+      dateOfBirth: formData.dateOfBirth ?? BigInt(0),
+      // Variant fields
+      gender: formData.gender ?? "male",
+      category: formData.category ?? "general",
+      state: (addr?.state ??
+        formData.state ??
+        "bihar") as AdmissionForm["state"],
+      bankName: formData.bankName ?? "stateBankOfIndia",
+      passingDivision: formData.passingDivision ?? "first",
+      religion: formData.religion ?? "hinduism",
+      // Opt fields — pass plain values; backend.ts encoder handles Candid opt-wrapping
+      photoUrl: formData.photoUrl || undefined,
+      handicapType: formData.physicallyHandicapped
+        ? formData.handicapType || undefined
+        : undefined,
+      handicapPercentage:
+        formData.physicallyHandicapped && formData.handicapPercentage != null
+          ? typeof formData.handicapPercentage === "bigint"
+            ? formData.handicapPercentage
+            : BigInt(Number(formData.handicapPercentage))
+          : undefined,
+      // Subjects
+      subjects: draftSubjects,
+      // Documents checklist — all booleans
+      documentsChecklist: {
+        casteCertificate: !!formData.documentsChecklist?.casteCertificate,
+        incomeCertificate: !!formData.documentsChecklist?.incomeCertificate,
+        residenceCertificate:
+          !!formData.documentsChecklist?.residenceCertificate,
+        transferCertificate: !!formData.documentsChecklist?.transferCertificate,
+        previousMarksheets: !!formData.documentsChecklist?.previousMarksheets,
+        studentAadhaarCard: !!formData.documentsChecklist?.studentAadhaarCard,
+        mothersAadhaarCard: !!formData.documentsChecklist?.mothersAadhaarCard,
+        fathersAadhaarCard: !!formData.documentsChecklist?.fathersAadhaarCard,
+        deathCertificate: !!formData.documentsChecklist?.deathCertificate,
+      },
+    } as unknown as AdmissionForm;
+
     try {
       await saveDraftMutation.mutateAsync({
         email: student.email,
-        form: formData as AdmissionForm,
+        form: draftForm,
       });
       toast.success("Draft saved successfully");
     } catch (error: unknown) {
@@ -499,14 +745,23 @@ export default function AdmissionFormPage() {
     const submissionForm = {
       // Personal
       studentName: formData.studentName ?? "",
-      fatherName: formData.fatherName ?? "",
-      motherName: formData.motherName ?? "",
+      fatherName: formData.fatherName ?? formData.fathersName ?? "",
+      motherName: formData.motherName ?? formData.mothersName ?? "",
       dateOfBirth: formData.dateOfBirth ?? BigInt(0),
       gender: formData.gender ?? "male",
       category: formData.category ?? "general",
       physicallyHandicapped: formData.physicallyHandicapped === true,
-      handicapType: formData.handicapType,
-      handicapPercentage: formData.handicapPercentage,
+      // handicapType: opt text — pass plain string | undefined; backend.ts handles Candid encoding
+      handicapType: formData.physicallyHandicapped
+        ? formData.handicapType || undefined
+        : undefined,
+      // handicapPercentage: opt nat — pass plain bigint | undefined; backend.ts handles Candid encoding
+      handicapPercentage:
+        formData.physicallyHandicapped && formData.handicapPercentage != null
+          ? typeof formData.handicapPercentage === "bigint"
+            ? formData.handicapPercentage
+            : BigInt(Number(formData.handicapPercentage))
+          : undefined,
       aadharNumber: formData.aadharNumber ?? "",
       annualFamilyIncome: formData.annualFamilyIncome ?? "",
       religion: resolvedReligion as AdmissionForm["religion"],
@@ -522,21 +777,24 @@ export default function AdmissionFormPage() {
       hasPenAndApaar: formData.hasPenAndApaar === true,
       hasEShikshakosh: formData.hasEShikshakosh === true,
 
-      // Parent Details
-      fathersName: formData.fathersName ?? "",
-      mothersName: formData.mothersName ?? "",
+      // Parent Details — ensure BOTH fathersName and mothersName are populated
+      // fathersName/mothersName come from ContactDetailsSection (Parent's Details)
+      // fatherName/motherName come from PersonalDetailsSection (Personal Details)
+      // Sync both directions so backend always has data regardless of which was filled
+      fathersName: formData.fathersName ?? formData.fatherName ?? "",
+      mothersName: formData.mothersName ?? formData.motherName ?? "",
       fathersOccupation: formData.fathersOccupation ?? "",
       mothersOccupation: formData.mothersOccupation ?? "",
       fathersContact: formData.fathersContact ?? "",
       mothersContact: formData.mothersContact ?? "",
       mothersGuardianContact:
         formData.mothersContact ?? formData.mothersGuardianContact ?? "",
-      fathersNameAsPerAadhaar: formData.fathersNameAsPerAadhaar ?? "",
-      mothersNameAsPerAadhaar: formData.mothersNameAsPerAadhaar ?? "",
-      fatherAadhar: formData.fatherAadhar ?? "",
-      motherAadhar: formData.motherAadhar ?? "",
-      fathersAadhaar: formData.fatherAadhar ?? formData.fathersAadhaar ?? "",
-      mothersAadhaar: formData.motherAadhar ?? formData.mothersAadhaar ?? "",
+      // Send Aadhaar names as their own direct text fields (IDL requires them separately)
+      fathersNameAsPerAadhaar: formData.fathersNameAsPerAadhaar || "",
+      mothersNameAsPerAadhaar: formData.mothersNameAsPerAadhaar || "",
+      // Send clean Aadhaar numbers without any encoding
+      fathersAadhaar: formData.fatherAadhar || formData.fathersAadhaar || "",
+      mothersAadhaar: formData.motherAadhar || formData.mothersAadhaar || "",
 
       // Bank
       accountHolderName: formData.accountHolderName ?? "",
@@ -567,13 +825,8 @@ export default function AdmissionFormPage() {
       pinCode: addr?.pinCode ?? formData.pinCode ?? "",
       address: formData.address,
 
-      // Subjects
-      subjects: formData.subjects ?? {
-        mil: [],
-        sil: [],
-        compulsory: [],
-        electiveSubjects: [],
-      },
+      // Subjects — map frontend UI field names to backend Candid field names.
+      subjects: buildBackendSubjects(formData.subjects),
 
       // Orphaned
       orphanedAndDestitute: isOrphanedDestitute === true,
@@ -584,9 +837,8 @@ export default function AdmissionFormPage() {
       // Declaration
       guardianDeclaration: formData.guardianDeclaration === true,
 
-      // Photo
-      photo: formData.photo,
-      photoUrl: formData.photoUrl,
+      // Photo — opt text: pass plain string | undefined; backend.ts handles Candid encoding
+      photoUrl: formData.photoUrl || undefined,
     } as unknown as AdmissionForm;
 
     try {
